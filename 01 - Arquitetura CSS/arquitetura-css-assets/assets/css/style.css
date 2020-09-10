@@ -1,0 +1,25 @@
+@import url('./cabecalho.css');
+
+@import url('./menu/menu-lista.css');
+@import url('./menu/menu-item.css');
+@import url('./menu/menu-link.css');
+
+@import url('./banner/banner.css');
+@import url('./banner/banner-imagem.css');
+@import url('./banner/banner-titulo.css');
+
+@import url('./sobre/sobre.css');
+@import url('./sobre/sobre-titulo.css');
+@import url('./sobre/sobre-descricao.css');
+
+@import url('./receitas.css');
+@import url('./receita/receita.css');
+@import url('./receita/receita-imagem.css');
+@import url('./receita/receita-conteudo.css');
+@import url('./receita/receita-titulo.css');
+@import url('./receita/receita-descricao.css');
+@import url('./receita/receita-botao.css');
+
+@import url('./quemSomos/quemSomos.css');
+@import url('./quemSomos/quemSomos-titulo.css');
+@import url('./quemSomos/quemSomos-descricao.css');
