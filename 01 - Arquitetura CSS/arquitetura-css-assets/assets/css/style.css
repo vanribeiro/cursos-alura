@@ -1,4 +1,5 @@
 @import url('./cabecalho.css');
+@import url('./logo.css');
 
 @import url('./menu/menu-lista.css');
 @import url('./menu/menu-item.css');
@@ -23,3 +24,11 @@
 @import url('./quemSomos/quemSomos.css');
 @import url('./quemSomos/quemSomos-titulo.css');
 @import url('./quemSomos/quemSomos-descricao.css');
+
+@import url('./pessoas.css');
+@import url('./pessoa/pessoa.css');
+@import url('./pessoa/pessoa-nome.css');
+@import url('./pessoa/pessoa-imagem.css');
+@import url('./pessoa/pessoa-funcao.css');
+
+@import url('./rodape.css');
