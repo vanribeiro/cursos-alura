@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body{
+        background-color: #1a1a1a;
+      }
+
+      polygon {
+        fill: none;
+        stroke: #ebebeb;
+        stroke-width: 5px;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 1000;
+        animation: loader 2s linear infinite;
+      }
+
+      @keyframes loader {
+        
+        to{
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .bolinha {
+        animation: loaderBall linear 10s infinite;
+        stroke: red;
+        stroke-width: 2px;
+        stroke-dasharray: 5;
+        stroke-dashoffset: 1000;
+      }
+    
+      @keyframes loaderBall {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+    </style>
+    <title>Examples</title>
+</head>
+<body>
+  <!-- <svg width="500" height="210">
+    <polygon points="200,0 300,200 100,200"/>
+  </svg> -->
+
+    <svg width="200" height="200">
+        <circle class="bolinha" cx="100" cy="100" r="40" />
+    </svg>
+</body>
+</html>
