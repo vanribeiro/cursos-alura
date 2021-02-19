@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg style="display: none;">
+        <defs>
+          <circle id="red" cx="50" cy="50" r="40" fill="red" stroke="black" />
+          <circle id="yellow" cx="50" cy="50" r="40" fill="yellow" stroke="black" />
+          <circle id="green" cx="50" cy="50" r="40" fill="green" stroke="black" />
+        </defs>
+    </svg>
+    <svg width="10%" height="10%" viewBox="0 0 100 100">
+        <use xlink:href="#red"/>
+    </svg>
+    <svg width="20%" height="20%" viewBox="0 0 100 100">
+        <use xlink:href="#yellow"/>
+    </svg>
+    <svg width="30%" height="30%" viewBox="0 0 100 100">
+        <use xlink:href="#green"/>
+    </svg>
+</body>
+</html>
