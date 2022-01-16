@@ -13,7 +13,7 @@ class DateHelper{
     }
 
     static textoParaData(texto){
-        let padraoDeData = /\d{4}-\d{2}-\d{2}/;
+        let padraoDeData = /^\d{4}-\d{2}-\d{2}$/;
         if(!padraoDeData.test(texto)) throw new Error('Deve estar no formato aaaa-mm-dd');
         return new Date(...texto.split('-').map((item, indice) => indice === 1 ? item - 1 : item));
     }
