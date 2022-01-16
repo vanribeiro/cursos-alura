@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>POO com JS</h1>
+    <script>
+        
+        class Conta {
+
+            constructor (saldo){
+                this._saldo = saldo;
+            }
+
+            get saldo (){
+                return this._saldo;
+            }
+
+            atualiza(taxa){
+                throw new Error('O método atualiza deve ser sobrescrito')
+            }
+
+        }
+
+        class ContaCorrente extends Conta{
+
+            constructor(saldo){
+                super(saldo);
+            }
+
+            atualiza(taxa){
+                this._saldo = this._saldo + taxa;
+            }
+
+        }
+
+        class ContaPoupanca extends Conta{
+
+            constructor(saldo){
+                super(saldo);
+            }
+
+            atualiza(taxa){
+                this._saldo = this._saldo + (2 * taxa);
+            }
+
+        }
+
+        let contaCorrente = new ContaCorrente(600);
+        contaCorrente.atualiza(0.8);
+        console.log(contaCorrente.saldo)
+
+        let contaPoupanca = new ContaPoupanca(600);
+        contaPoupanca.atualiza(0.8);
+        console.log(contaPoupanca.saldo);
+
+    </script>
+</body>
+</html>
