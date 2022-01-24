@@ -1,33 +1,26 @@
-class Cliente {
-    nome;
-    cpf;
-}
-
-class ContaCorrente{
-    agencia;
-    // #saldo; Proposta de JS ainda não aprovada para atributos privados
-    _saldo = 0; // Convenção da comunidade
-
-    sacar(valor){
-        if(this._saldo >= valor) return this._saldo -= valor;
-    }
-
-    depositar(valor){
-        // Early return
-        if(valor <= 0) return;
-        this._saldo += valor;
-    }
-
-}
+import Cliente from './Cliente.js';
+import ContaCorrente from './ContaCorrente.js';
 
 const cliente01 = new Cliente();
 cliente01.nome = "Ricardo";
-cliente01.cpf = 111111111111;
+cliente01.cpf = 11111111111;
 
 const contaCorrenteRicardo = new ContaCorrente();
 contaCorrenteRicardo.agencia = 1001;
+contaCorrenteRicardo.cliente = cliente01;
+contaCorrenteRicardo.depositar(1500);
 
-contaCorrenteRicardo.depositar(100);
-const valorSacado = contaCorrenteRicardo.sacar(50);
+const cliente02 = new Cliente();
+cliente02.nome = "Alice";
+cliente02.cpf = 22222222222;
 
-console.log(valorSacado);
+const contaCorrenteAlice = new ContaCorrente();
+contaCorrenteAlice.agencia = 1002;
+contaCorrenteAlice.cliente = cliente02;
+contaCorrenteAlice.depositar(600);
+
+
+contaCorrenteRicardo.transferir(200, contaCorrenteAlice);
+
+console.log(contaCorrenteRicardo);
+console.log(contaCorrenteAlice);
