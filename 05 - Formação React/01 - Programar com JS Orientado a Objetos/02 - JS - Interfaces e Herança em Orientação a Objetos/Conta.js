@@ -1,8 +1,14 @@
+//Classe Abstrata é classe que não pode ser instanciada, apenas herdada.
 class Conta{
     constructor(saldo, cliente, agencia){
+        if(this.constructor === Conta) {
+            throw new Error("Você não deveria instanciar uma objeto do tipo Conta diretamente, pois esta é uma classe abstrata.");
+        } 
+
         this._saldo = saldo;
         this._cliente = cliente;
         this._agencia = agencia;
+
     }
 
     set cliente(novoValor){
@@ -17,9 +23,9 @@ class Conta{
         return this._saldo;
     }
 
+    // Método abstrato é um método que é criado para ser sobrescrito e não ser chamado diretamente.
     sacar(valor){
-        let taxa = 1;
-        return this._sacar(valor, taxa);
+        throw new Error("O método sacar() da Conta é abstrato");
     }
     
     _sacar(valor, taxa){
