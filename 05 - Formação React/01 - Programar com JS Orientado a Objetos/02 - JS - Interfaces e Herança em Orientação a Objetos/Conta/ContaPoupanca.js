@@ -6,9 +6,9 @@ class ContaPoupanca extends Conta{
         super(saldoInicial, cliente, agencia);
     }
 
-    depositar(valor){
-        if(valor >= 100) this._saldo += valor;
-        return;
+    sacar(valor){
+        const taxa = 1.02;
+        return this._sacar(valor, taxa);
     }
 }
 
