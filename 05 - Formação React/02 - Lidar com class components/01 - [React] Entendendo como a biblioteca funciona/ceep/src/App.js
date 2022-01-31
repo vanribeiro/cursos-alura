@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import FormularioCadastro from "./components/FormularioCadastro";
+import ListaDeNotas from './components/ListaDeNotas';
 
-function App() {
-  return (
-    <h1>
-      Title
-    </h1>
-  );
+class App extends Component {
+  render(){
+    return (
+      <section>
+        <FormularioCadastro />
+        <ListaDeNotas />
+      </section>
+    );
+  }
 }
-//react -> lib
-//React -> ecossistema
+
 export default App;

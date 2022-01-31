@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/estilos/reset.css';
+import './assets/estilos/app.css';
 import App from './App';
 
 ReactDOM.render(
