@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, TextField, Switch, FormControlLabel } from "@mui/material";
 
 function FormularioDeCadastro() {
+  const [nome, setNome] = useState('');
+  const [sobrenome, setSobrenome] = useState('');
+  const [cpf, setCPF] = useState('');
+
+  const handleNome = (event) => {
+    let tempNome = event.target.value;
+    if(tempNome.length >= 3){
+      tempNome = tempNome.substring(0, 3);
+    }
+    setNome(tempNome);
+  }
+
+  const handleSobrenome = (event) => {
+    setSobrenome(event.target.value);
+  }
+
+  const handleCPF = (event) => {
+    setCPF(event.target.value);
+  }
+
   return (
-    <form>
+    <form onSubmit={(event) => {
+      event.preventDefault();
+      console.log(`${nome} ${sobrenome} | CPF: ${cpf}`);
+    }}>
       <TextField
+        value={nome}
+        onChange={handleNome}
         id="nome"
         label="Nome"
         variant="outlined"
@@ -12,6 +37,8 @@ function FormularioDeCadastro() {
         margin="normal"
       />
       <TextField
+        value={sobrenome}
+        onChange={handleSobrenome}
         id="sobrenome"
         label="Sobrenome"
         variant="outlined"
@@ -19,6 +46,8 @@ function FormularioDeCadastro() {
         margin="normal"
       />
       <TextField
+        value={cpf}
+        onChange={handleCPF}
         id="cpf"
         label="CPF"
         variant="outlined"
