@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { Button, TextField, Switch, FormControlLabel } from "@mui/material";
 
-function FormularioDeCadastro() {
-  const [nome, setNome] = useState('');
-  const [sobrenome, setSobrenome] = useState('');
-  const [cpf, setCPF] = useState('');
+function FormularioDeCadastro({aoEnviar, validarCPF}) {
+  const [nome, setNome] = useState("");
+  const [sobrenome, setSobrenome] = useState("");
+  const [cpf, setCPF] = useState("");
+  const [promocoes, setPromocoes] = useState(true);
+  const [novidades, setNovidades] = useState(true);
+  const [erros, setErros]= useState({ cpf:{ valido:true, texto:"" } });
 
   const handleNome = (event) => {
-    let tempNome = event.target.value;
-    if(tempNome.length >= 3){
-      tempNome = tempNome.substring(0, 3);
-    }
-    setNome(tempNome);
+    setNome(event.target.value);
   }
 
   const handleSobrenome = (event) => {
@@ -22,11 +21,23 @@ function FormularioDeCadastro() {
     setCPF(event.target.value);
   }
 
+  const handlePromocoes = (event) => {
+    setPromocoes(event.target.checked);
+  }
+
+  const handleNovidades = (event) => {
+    setNovidades(event.target.checked);
+  }
+
+  const handleForm = (event) => {
+    event.preventDefault();
+    aoEnviar({nome, sobrenome, cpf, promocoes, novidades});
+  }
+
   return (
-    <form onSubmit={(event) => {
-      event.preventDefault();
-      console.log(`${nome} ${sobrenome} | CPF: ${cpf}`);
-    }}>
+    <form
+      onSubmit={handleForm}
+    >
       <TextField
         value={nome}
         onChange={handleNome}
@@ -44,23 +55,44 @@ function FormularioDeCadastro() {
         variant="outlined"
         fullWidth
         margin="normal"
-      />
+        />
       <TextField
         value={cpf}
+        onBlur={(event) => {
+          const ehValido = validarCPF(event.target.value);
+          console.log(ehValido)
+          setErros({ cpf: ehValido });
+        }}
         onChange={handleCPF}
+        error={!erros.cpf.valido}
+        helperText={erros.cpf.texto}
         id="cpf"
         label="CPF"
         variant="outlined"
         fullWidth
         margin="normal"
       />
+
       <FormControlLabel
         label="Promoções"
-        control={<Switch name="promocoes" defaultChecked={true} />}
+        control={
+          <Switch
+            checked={promocoes}
+            onChange={handlePromocoes}
+            name="promocoes"
+          />
+        }
       />
+
       <FormControlLabel
         label="Novidades"
-        control={<Switch name="novidades" defaultChecked={true} />}
+        control={
+          <Switch
+            checked={novidades}
+            name="novidades"
+            onChange={handleNovidades}
+          />
+        }
       />
 
       <Button variant="contained" type="submit">
