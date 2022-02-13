@@ -21,9 +21,20 @@ const validarNome = (nome) => {
         return { valido: true, texto: "" };
     } 
 }
+
+const validaCEP = (cep) => {
+    const cleanedCEP = cep.replace(/\D/g, '');
+    const cepRegexp = /^[0-9]{8}$/;
+    if(cep === "" && !cepRegexp.test(cleanedCEP)){
+        return { valido: false, texto: "CEP deve ter 8 dígitos" }
+    } else{
+        return { valido: true, texto: "" };
+    }
+}
   
 export {
     validarNome,
     validarCPF,
-    validarSenha
+    validarSenha,
+    validaCEP
 }

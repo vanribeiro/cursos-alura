@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FormularioDeCadastro from "./components/FormularioDeCadastro/FormularioDeCadastro";
 import { Container, Typography } from "@mui/material";
-import { validarCPF, validarSenha, validarNome } from "./models/cadastro.js";
+import { validarCPF, validarSenha, validarNome, validaCEP } from "./models/cadastro.js";
 import "fontsource-roboto";
 import ValidacoesCadastro from "./contexts/ValidacoesCadastro";
 
@@ -15,7 +15,7 @@ class App extends Component {
           Formulário de Cadastro
         </Typography>
         <ValidacoesCadastro.Provider
-          value={{ cpf: validarCPF, senha: validarSenha, nome: validarNome }}
+          value={{ cpf: validarCPF, senha: validarSenha, nome: validarNome, cep: validaCEP }}
         >
           <FormularioDeCadastro aoEnviar={aoEnviarForm} />
         </ValidacoesCadastro.Provider>
