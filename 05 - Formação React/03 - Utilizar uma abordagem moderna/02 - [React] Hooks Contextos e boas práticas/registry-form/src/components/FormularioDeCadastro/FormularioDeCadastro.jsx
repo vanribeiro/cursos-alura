@@ -5,7 +5,7 @@ import DadosEntrega from "./DadosEntrega";
 import DadosPessoais from "./DadosPessoais";
 import DadosUsuario from "./DadosUsuario";
 
-function FormularioDeCadastro({ aoEnviar, validarCPF }) {
+function FormularioDeCadastro({ aoEnviar }) {
   const [etapaAtual, setEpataAtual] = useState(0);
   const [dadosColetados, setDados] = useState({});
 
@@ -15,11 +15,14 @@ function FormularioDeCadastro({ aoEnviar, validarCPF }) {
     }
   });
 
+  const sxTypography = { marginTop: '20px', textAlign: "center" };
+  const sxStepper = { margin: '20px auto'};
+
   const formularios = [
-    <DadosUsuario aoEnviar={coletarDados} />,
-    <DadosPessoais aoEnviar={coletarDados} validarCPF={validarCPF} />,
-    <DadosEntrega aoEnviar={coletarDados} />,
-    <Typography sx={{ textAlign: "center" }} variant="h5">
+    <DadosUsuario aoEnviar={coletarDados}/>,
+    <DadosPessoais aoEnviar={coletarDados} />,
+    <DadosEntrega aoEnviar={coletarDados}/>,
+    <Typography sx={sxTypography} variant="h5">
       Obrigado pelo Cadastro!
     </Typography>,
   ];
@@ -35,7 +38,7 @@ function FormularioDeCadastro({ aoEnviar, validarCPF }) {
 
   return (
     <>
-      <Stepper activeStep={etapaAtual}>
+      <Stepper sx={sxStepper} activeStep={etapaAtual}>
         <Step>
           <StepLabel>Login</StepLabel>
         </Step>
