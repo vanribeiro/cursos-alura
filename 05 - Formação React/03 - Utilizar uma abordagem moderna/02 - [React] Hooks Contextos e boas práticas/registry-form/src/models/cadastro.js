@@ -15,7 +15,7 @@ const validarSenha = (senha) => {
 }
 
 const validarNome = (nome) => {
-    if (nome.length < 4) {
+    if (nome.length < 3) {
         return { valido: false, texto: "Nome deve ter no mínimo 03 caracteres" };
     } else{
         return { valido: true, texto: "" };

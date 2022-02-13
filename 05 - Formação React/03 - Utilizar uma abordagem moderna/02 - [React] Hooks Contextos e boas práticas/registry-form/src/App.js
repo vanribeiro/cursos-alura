@@ -5,6 +5,8 @@ import { validarCPF, validarSenha, validarNome } from "./models/cadastro.js";
 import "fontsource-roboto";
 import ValidacoesCadastro from "./contexts/ValidacoesCadastro";
 
+// Link do curso: https://github.com/alura-cursos/1898-react-multpartForm/
+
 class App extends Component {
   render() {
     return (
