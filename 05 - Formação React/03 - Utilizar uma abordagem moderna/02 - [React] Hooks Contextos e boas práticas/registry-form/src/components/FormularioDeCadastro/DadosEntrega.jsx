@@ -41,8 +41,9 @@ function DadosEntrega({aoEnviar}) {
       <TextField
         id="cep"
         type="text"
-        required
+        name="cep"
         label="CEP"
+        required
         variant="outlined"
         margin="normal"
         fullWidth
@@ -54,8 +55,9 @@ function DadosEntrega({aoEnviar}) {
           sx={width75CSS}
           id="endereco"
           type="text"
-          required
+          name="endereco"
           label="Endereço"
+          required
           variant="outlined"
           margin="normal"
           value={endereco}
@@ -65,8 +67,9 @@ function DadosEntrega({aoEnviar}) {
           sx={width24CSS}
           id="numero"
           type="number"
-          required
+          name="numero"
           label="Número"
+          required
           variant="outlined"
           margin="normal"
           value={numero}
@@ -78,8 +81,9 @@ function DadosEntrega({aoEnviar}) {
           sx={width75CSS}
           id="cidade"
           type="text"
-          required
+          name="cidade"
           label="Cidade"
+          required
           variant="outlined"
           margin="normal"
           value={cidade}
@@ -89,8 +93,9 @@ function DadosEntrega({aoEnviar}) {
           sx={width24CSS}
           id="estado"
           type="text"
-          required
+          name="estado"
           label="Estado"
+          required
           variant="outlined"
           margin="normal"
           value={estado}
