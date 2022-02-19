@@ -4,7 +4,7 @@ import Conta from './conta/Conta';
 import Transacoes from './transacoes/Transacoes';
 import api from './api';
 
-import './App.css';
+import './assets/estilo/App.css';
 
 export const calcularNovoSaldo = (valores, saldo) => {
   if (valores.transacao === 'deposito') {
