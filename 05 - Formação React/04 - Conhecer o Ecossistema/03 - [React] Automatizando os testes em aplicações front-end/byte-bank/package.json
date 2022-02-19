@@ -11,9 +11,9 @@
     "react-scripts": "^5.0.0"
   },
   "scripts": {
-    "start": "BROWSER=none react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll --testMatch **/src/**/*.test.js --detectOpenHandles",
     "eject": "react-scripts eject",
     "backend": "json-server db.json -p 3001"
   },

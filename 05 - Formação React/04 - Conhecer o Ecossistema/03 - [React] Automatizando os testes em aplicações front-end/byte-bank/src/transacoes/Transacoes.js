@@ -7,7 +7,7 @@ const Transacoes = ({ transacoes }) => {
     return <div data-testid="transacoes">
         {transacoes && transacoes
             .map(({id, transacao, valor, data}) =>
-            <Transacao key={`${id}-${transacao}`} tipo={transacao} valor={valor} data={data}
+            <Transacao key={`${id}-${transacao}`} tipo={transacao} valor={valor.toString()} data={data}
         />)}
     </div>
 };

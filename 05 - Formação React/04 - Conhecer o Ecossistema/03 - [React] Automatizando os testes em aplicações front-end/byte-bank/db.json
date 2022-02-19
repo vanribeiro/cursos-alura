@@ -1,6 +1,6 @@
 {
   "conta": {
-    "saldo": 1005
+    "saldo": 990
   },
   "transacoes": [
     {
@@ -26,6 +26,162 @@
       "valor": "5",
       "data": "18/02/2022",
       "id": 4
+    },
+    {
+      "transacao": "deposito",
+      "valor": "50",
+      "data": "19/02/2022",
+      "id": 5
+    },
+    {
+      "transacao": "saque",
+      "valor": "55",
+      "data": "19/02/2022",
+      "id": 6
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 7
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 8
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 9
+    },
+    {
+      "transacao": "",
+      "valor": 0,
+      "data": "19/02/2022",
+      "id": 10
+    },
+    {
+      "transacao": "",
+      "valor": 0,
+      "data": "19/02/2022",
+      "id": 11
+    },
+    {
+      "transacao": "",
+      "valor": 0,
+      "data": "19/02/2022",
+      "id": 12
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 13
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 14
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 15
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 16
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 17
+    },
+    {
+      "transacao": "saque",
+      "valor": "1005",
+      "data": "19/02/2022",
+      "id": 18
+    },
+    {
+      "transacao": "saque",
+      "valor": "1005",
+      "data": "19/02/2022",
+      "id": 19
+    },
+    {
+      "transacao": "",
+      "valor": "991",
+      "data": "19/02/2022",
+      "id": 20
+    },
+    {
+      "transacao": "saque",
+      "valor": "1005",
+      "data": "19/02/2022",
+      "id": 21
+    },
+    {
+      "transacao": "saque",
+      "valor": "1005",
+      "data": "19/02/2022",
+      "id": 22
+    },
+    {
+      "transacao": "deposito",
+      "valor": "901",
+      "data": "19/02/2022",
+      "id": 23
+    },
+    {
+      "transacao": "deposito",
+      "valor": "100",
+      "data": "19/02/2022",
+      "id": 24
+    },
+    {
+      "transacao": "saque",
+      "valor": "1001",
+      "data": "19/02/2022",
+      "id": 25
+    },
+    {
+      "transacao": "saque",
+      "valor": "1005",
+      "data": "19/02/2022",
+      "id": 26
+    },
+    {
+      "transacao": "deposito",
+      "valor": "1001",
+      "data": "19/02/2022",
+      "id": 27
+    },
+    {
+      "transacao": "saque",
+      "valor": "1005",
+      "data": "19/02/2022",
+      "id": 28
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 29
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "19/02/2022",
+      "id": 30
     }
   ]
 }
