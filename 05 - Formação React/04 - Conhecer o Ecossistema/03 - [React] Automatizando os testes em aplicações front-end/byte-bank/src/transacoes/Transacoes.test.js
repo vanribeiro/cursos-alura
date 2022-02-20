@@ -6,7 +6,7 @@ describe('Componente que lista todas as transações do extrato', () => {
         const infoTransacoes = [{
             id: 4, 
             transacao: "deposito", 
-            valor: 50, 
+            valor: "50", 
             data:"19/02/2022"
         }];
 
