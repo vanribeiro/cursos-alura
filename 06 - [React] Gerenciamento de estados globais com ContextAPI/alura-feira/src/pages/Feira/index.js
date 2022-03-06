@@ -7,7 +7,7 @@ import feira from './feira.json';
 import Produto from 'components/Produto';
 import NavBar from './NavBar';
 import { useContext } from 'react';
-import { UsuarioContext } from 'common/contexts/UsuarioContext';
+import { UsuarioContext } from './../../common/contexts/Usuario';
 
 
 function Feira() {

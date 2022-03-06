@@ -10,8 +10,8 @@ import {
   InputAdornment 
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-import { UsuarioContext } from 'common/contexts/UsuarioContext';
 import { useContext } from 'react';
+import { UsuarioContext } from 'common/contexts/Usuario';
 
 
 function Login() {
