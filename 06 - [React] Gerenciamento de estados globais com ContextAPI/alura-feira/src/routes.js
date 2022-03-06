@@ -2,7 +2,8 @@ import Carrinho from 'pages/Carrinho';
 import Feira from 'pages/Feira';
 import Login from 'pages/Login';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { UsuarioProvider } from './common/contexts/UsuarioContext';
+import { UsuarioProvider } from './common/contexts/Usuario';
+import { CarrinhoProvider } from 'common/contexts/Carrinho';
 
 const Router = () => {
 
@@ -14,9 +15,11 @@ const Router = () => {
                         <Route exact path="/">
                                 <Login />
                         </Route>
-                        <Route path="/feira">
-                            <Feira />
-                        </Route>
+                        <CarrinhoProvider>
+                            <Route path="/feira">
+                                <Feira />
+                            </Route>
+                        </CarrinhoProvider>
                     </UsuarioProvider>
                     <Route path="/carrinho">
                         <Carrinho />
