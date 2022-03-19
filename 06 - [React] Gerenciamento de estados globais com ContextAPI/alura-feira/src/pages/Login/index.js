@@ -10,8 +10,8 @@ import {
   InputAdornment 
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-import { useContext } from 'react';
-import { UsuarioContext } from 'common/contexts/Usuario';
+import React,{ useContext } from 'react';
+import { UsuarioContext } from './../../common/contexts/Usuario';
 
 
 function Login() {
@@ -64,6 +64,7 @@ function Login() {
         variant="contained"
         color="primary"
         onClick={handleClickAvancar}
+        disabled={nome.length < 3}
       >
         Avançar
       </Button>

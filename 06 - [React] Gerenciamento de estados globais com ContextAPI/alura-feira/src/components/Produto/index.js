@@ -1,9 +1,9 @@
 import { Container } from './styles';
-import { memo } from 'react';
+import React,{ memo } from 'react';
 import { IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { useCarrinhoContext } from './../../common/contexts/Carrinho';
+import { useCarrinhoContext } from '../../common/contexts/Carrinho';
 
 function Produto({
   nome,
@@ -34,6 +34,7 @@ function Produto({
           <IconButton 
             color="secondary"
             onClick={handleClickRemover}
+            disabled={!produtoNoCarrinho}
           >
             <RemoveIcon />
           </IconButton>

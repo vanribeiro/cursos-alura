@@ -1,9 +1,11 @@
-import Carrinho from 'pages/Carrinho';
-import Feira from 'pages/Feira';
-import Login from 'pages/Login';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Carrinho from './pages/Carrinho';
+import Feira from './pages/Feira';
+import Login from './pages/Login';
 import { UsuarioProvider } from './common/contexts/Usuario';
-import { CarrinhoProvider } from 'common/contexts/Carrinho';
+import { CarrinhoProvider } from './common/contexts/Carrinho';
+import { PagamentoProvider } from 'common/contexts/Pagamento';
 
 const Router = () => {
 
@@ -13,17 +15,19 @@ const Router = () => {
                 <Switch>
                     <UsuarioProvider>
                         <Route exact path="/">
-                                <Login />
+                            <Login />
                         </Route>
                         <CarrinhoProvider>
-                            <Route path="/feira">
-                                <Feira />
-                            </Route>
+                            <PagamentoProvider>
+                                <Route path="/feira">
+                                    <Feira />
+                                </Route>
+                                <Route path="/carrinho">
+                                    <Carrinho />
+                                </Route>
+                            </PagamentoProvider>
                         </CarrinhoProvider>
                     </UsuarioProvider>
-                    <Route path="/carrinho">
-                        <Carrinho />
-                    </Route>
                 </Switch>
             </BrowserRouter>
         </>
