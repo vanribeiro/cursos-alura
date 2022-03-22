@@ -1,31 +1,46 @@
 class Negociacao{
-    private _data;
-    private _quantidade;
-    private _valor;
 
-    constructor(data, quantidade, valor){
-        this._data = data;
-        this._quantidade = quantidade;
-        this._valor = valor;
+    constructor(
+        private _data: Date, 
+        private _quantidade: number, 
+        private _valor: number
+    ){}
+
+    get data(): Date{
+        const data = new Date(this._data.getTime());
+        return data;
     }
 
-    get data(){
-        return this._data;
-    }
-
-    get quantidade(){
+    get quantidade(): number{
         return this._quantidade;
     }
 
-    get valor() {
+    get valor(): number {
         return this._valor;
     }
 
-    get volume(){
+    get volume(): number{
         return this._quantidade * this._valor;
     }
 }
 
-export {
-    Negociacao
-}
+export default Negociacao;
+
+/**
+ * Isto:
+ * A classe atual como se encontra
+ * 
+ * Tem o mesmo efeito disto:
+ * class Negociacao{
+
+        constructor(
+            private readonly _data: Date, 
+            private readonly _quantidade: number, 
+            private readonly _valor: number
+        ){}
+
+        get volume(): number{
+            return this._quantidade * this._valor;
+        }
+    }
+ */
