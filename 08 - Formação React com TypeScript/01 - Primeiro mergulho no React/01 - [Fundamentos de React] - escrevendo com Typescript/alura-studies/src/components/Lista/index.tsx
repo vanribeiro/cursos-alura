@@ -1,29 +1,31 @@
-const Lista = () => {
-    const tarefas = [
-        { titulo: "React", tempo: "02:00:00" },
-        { titulo: "JavaScript", tempo: "01:00:00" },
-        { titulo: "TypeScript", tempo: "03:00:00" },
-    ]
+import { ITarefa } from "../../types/tarefas";
+import style from "./Lista.module.scss";
+import Item from "./Item";
 
-    return (
-        <aside>
-            <h2>Estudos do dia</h2>
-            <ul>
-                {tarefas.map((tarefa, index) => {
-                    return (
-                        <li key={index}>
-                            <h3>
-                                {tarefa.titulo}
-                            </h3>
-                            <span>
-                                {tarefa.tempo}
-                            </span>
-                        </li>
-                    )
-                })}
-            </ul>
-        </aside>
-    )
-}
+const Lista = ({ tarefas }: { tarefas: ITarefa[] }) => {
+
+	return (
+		<aside>
+			<h2>Estudos do dia</h2>
+			<ul className={style.listaTarefas}>
+				{tarefas.map((tarefa, index) => {
+					return (
+						<>
+							<Item
+								id={tarefa.id}
+								key={`${tarefa.id}-${index}`}
+								titulo={tarefa.titulo}
+								tempo={tarefa.tempo}
+								completado={tarefa.completado}
+								selecionado={tarefa.selecionado}
+							/>
+						</>
+					);
+				})}
+			</ul>
+		</aside>
+	);
+	
+};
 
 export default Lista;

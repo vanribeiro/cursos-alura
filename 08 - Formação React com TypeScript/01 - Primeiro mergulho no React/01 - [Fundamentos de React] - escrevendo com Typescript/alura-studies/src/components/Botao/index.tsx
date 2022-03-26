@@ -1,16 +1,17 @@
-const Botao = () => {
+import style from "./Botao.module.scss";
 
-    return (
-        <button
-            style={{
-                backgroundColor: 'black',
-                color: 'white',
-                border: 'none'
-            }}
-        >
-            Botão
-        </button>
-    );
-}
+const Botao = ({
+	texto,
+	type,
+}: {
+	texto: string;
+	type?: "button" | "submit" | "reset" | undefined;
+}) => {
+	return (
+		<button className={style.botao} type={type}>
+			{texto}
+		</button>
+	);
+};
 
 export default Botao;
