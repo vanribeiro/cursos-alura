@@ -2,7 +2,12 @@ import { ITarefa } from "../../types/tarefas";
 import style from "./Lista.module.scss";
 import Item from "./Item";
 
-const Lista = ({ tarefas }: { tarefas: ITarefa[] }) => {
+interface Props {
+	tarefas: ITarefa[],
+	selecionaTarefa: (tarefaSelecionada: ITarefa) => void
+}
+
+const Lista = ({ tarefas, selecionaTarefa }: Props) => {
 
 	return (
 		<aside>
@@ -12,6 +17,7 @@ const Lista = ({ tarefas }: { tarefas: ITarefa[] }) => {
 					return (
 						<>
 							<Item
+								selecionaTarefa={selecionaTarefa}
 								id={tarefa.id}
 								key={`${tarefa.id}-${index}`}
 								titulo={tarefa.titulo}
