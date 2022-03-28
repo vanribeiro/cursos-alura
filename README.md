@@ -8,9 +8,11 @@ Este repositório contém código, anotações de exercícios e a parte prática
 
 ## Em Andamento:
 - [Formação React com TypeScript](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/):
-    - [Fundamentos de React: escrevendo com Typescript](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/01%20-%20Primeiro%20mergulho%20no%20React/01%20-%20[Fundamentos%20de%20React]%20-%20escrevendo%20com%20Typescript)
+    - [React: lidando com arquivos estáticos](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/01%20-%20Primeiro%20mergulho%20no%20React/02%20-%20[React]%20-%20lidando%20com%20arquivos%20estáticos)
 
 ## Finalizados:
+- [Formação React com TypeScript](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/):
+    - [Fundamentos de React: escrevendo com Typescript](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/01%20-%20Primeiro%20mergulho%20no%20React/01%20-%20[Fundamentos%20de%20React]%20-%20escrevendo%20com%20Typescript)
 - [Formação TypeScript](/07%20-%20Forma%C3%A7%C3%A3o%20TypeScript/):
     - [TypeScript parte 1: evoluindo seu JavaScript](/07%20-%20Forma%C3%A7%C3%A3o%20TypeScript/01%20-%20Evoluindo%20seu%20JavaScript)
 - [React: Gerenciamento de estados globais com ContextAPI](/06%20-%20%5BReact%5D%20Gerenciamento%20de%20estados%20globais%20com%20ContextAPI/)
