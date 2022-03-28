@@ -13,18 +13,17 @@ const Lista = ({ tarefas, selecionaTarefa }: Props) => {
 		<aside>
 			<h2>Estudos do dia</h2>
 			<ul className={style.listaTarefas}>
-				{tarefas.map((tarefa, index) => {
+				{tarefas.map((tarefa) => {
 					return (
 						<>
 							<Item
 								selecionaTarefa={selecionaTarefa}
 								id={tarefa.id}
-								key={`${tarefa.id}-${index}`}
+								key={tarefa.id}
 								titulo={tarefa.titulo}
 								tempo={tarefa.tempo}
 								completado={tarefa.completado}
-								selecionado={tarefa.selecionado}
-							/>
+								selecionado={tarefa.selecionado} />
 						</>
 					);
 				})}
