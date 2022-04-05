@@ -6,3 +6,8 @@ body{
   box-sizing: border-box;
   font-family: 'Italiana', serif;
 }
+
+figure{
+  margin: 0;
+  padding: 0;
+}

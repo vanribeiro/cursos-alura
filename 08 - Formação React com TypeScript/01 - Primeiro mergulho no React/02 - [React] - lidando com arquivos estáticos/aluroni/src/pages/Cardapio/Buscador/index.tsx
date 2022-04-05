@@ -13,7 +13,7 @@ const Buscador = ({ busca, setBusca }: Props) => {
 
 	return (
 		<div className={style.buscador}>
-			<input type="text" value={busca} onChange={handlerChangeBusca} />
+			<input type="text" value={busca} onChange={handlerChangeBusca} placeholder="Buscar"/>
 			<CgSearch size={20} color="#4c4d5e" />
 		</div>
 	);
