@@ -1,5 +1,5 @@
 import style from './Cardapio.module.scss';
-import { ReactComponent as Logo} from 'assets/img/logo-aluroni.svg';
+import { ReactComponent as Logo } from 'assets/img/logo-aluroni.svg';
 import Buscador from './Buscador';
 import { useState } from 'react';
 import Filtros from './Filtros';
@@ -7,9 +7,9 @@ import Ordenador from './Ordernador';
 import Itens from './Itens';
 
 const Cardapio = () => {
-    const [ busca, setBusca ] = useState("");
+    const [ busca, setBusca ] = useState('');
     const [ filtro, setFiltro ] = useState< number | null >(null);
-    const [ ordenador, setOrdenador ] = useState("");
+    const [ ordenador, setOrdenador ] = useState('');
     
 
     return (
@@ -34,7 +34,7 @@ const Cardapio = () => {
                 <Itens busca={busca} filtro={filtro} ordenador={ordenador}/>
             </section>
         </main>
-    )
-}
+    );
+};
 
 export default Cardapio;
