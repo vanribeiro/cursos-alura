@@ -9,8 +9,8 @@ const Menu = () => {
         label: 'Cardápio',
         to: '/cardapio'
     }, {
-        label: 'Inicio',
-        to: '/inicio'
+        label: 'Sobre',
+        to: '/sobre'
     }];
 
     return(
