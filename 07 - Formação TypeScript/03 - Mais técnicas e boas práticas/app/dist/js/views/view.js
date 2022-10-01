@@ -14,3 +14,4 @@ class View {
     }
 }
 export { View };
+//# sourceMappingURL=view.js.map

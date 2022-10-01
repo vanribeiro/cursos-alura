@@ -12,3 +12,4 @@ function domInjector(seletor) {
     };
 }
 export { domInjector };
+//# sourceMappingURL=dom-injector.js.map

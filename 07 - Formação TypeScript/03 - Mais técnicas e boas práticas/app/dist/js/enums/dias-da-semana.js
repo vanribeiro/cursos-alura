@@ -9,3 +9,4 @@ var DiasDaSemana;
     DiasDaSemana[DiasDaSemana["SABADO"] = 6] = "SABADO";
 })(DiasDaSemana || (DiasDaSemana = {}));
 export { DiasDaSemana };
+//# sourceMappingURL=dias-da-semana.js.map
