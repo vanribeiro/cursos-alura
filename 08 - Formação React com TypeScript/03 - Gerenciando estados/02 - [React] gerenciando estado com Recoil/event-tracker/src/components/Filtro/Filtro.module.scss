@@ -42,10 +42,18 @@
     font-size: 1rem;
     border: 1px solid #e4bbff8f;
     margin: 8px 0;
-    cursor: pointer;
   }
   .botao:hover {
     background: #e4bbff8f;
     border-color: #95bae8;
+  }
+  .botao,
+  .checkbox,
+  .checkbox > input{
+    cursor: pointer;
+  }
+  .checkboxesContainer{
+    display: flex;
+    justify-content: space-around;
   }
 }
