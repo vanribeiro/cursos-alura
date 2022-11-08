@@ -2,7 +2,7 @@ import styled from "styled-components";
 import logoDesktop from "./../../assets/logo-branco-vertical.png";
 import logoMobile from "./../../assets/logo-branco-horizontal.png";
 import hearderArt from "./../../assets/wavy-buddies-out-of-stock.png";
-import { Box, ResponsiveImage } from "./../UI";
+import { Box, ResponsiveImage } from "../UI";
 
 const RowFlex = styled.div`
 	margin-top: 8%;
