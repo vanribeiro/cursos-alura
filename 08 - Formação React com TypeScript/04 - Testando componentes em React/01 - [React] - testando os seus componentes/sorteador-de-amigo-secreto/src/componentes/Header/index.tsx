@@ -7,6 +7,7 @@ import { Box, ResponsiveImage } from "../UI";
 const RowFlex = styled.div`	
 	display: flex;
 	margin-top: 8%;
+	width: 100%;
 
 	@media screen and (max-width: 991px) {
 		flex-direction: column;

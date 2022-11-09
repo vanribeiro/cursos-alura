@@ -1,14 +1,15 @@
 import useListaParticipantes from "../../state/hooks/useListaParticipantes";
+import { Item, Lista } from "./style";
 
 const ListaParticipantes = () => {
     const participantes: Array<string> = useListaParticipantes();
 
     return (
-        <ul>
+        <Lista>
             {participantes.map(participante => {
-                return <li key={participante}>{participante}</li>
+                return <Item key={participante}>{participante}</Item>
             })}
-        </ul>
+        </Lista>
     )
 }
 

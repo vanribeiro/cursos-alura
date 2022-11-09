@@ -4,9 +4,10 @@ const Box = styled.div`
     margin: auto;
     display: flex;
     align-items: center;
+    flex-direction: column;
 
     @media screen and (max-width: 991px){
-        width: 90%;
+        width: 100%;
     }
 
     @media screen and (min-width: 992px){
@@ -15,7 +16,7 @@ const Box = styled.div`
 `;
 
 const Card = styled.div`
-    width: 100%;
+    width: calc(100% - 2px);
     height: 70vh;
     background-color: #FFF9EB;
     border: 1px #000000 solid;
@@ -25,8 +26,24 @@ const Card = styled.div`
 const ResponsiveImage = styled.img`
     max-width: 100%;
 `;
+
+const Button = styled.button`
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+    border-radius: 37.5px;
+`;
+
+const Input = styled.input`
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+    border-radius: 37.5px;
+`;
+
 export {
     Box,
+    Button,
+    Input,
     ResponsiveImage,
     Card
 }
