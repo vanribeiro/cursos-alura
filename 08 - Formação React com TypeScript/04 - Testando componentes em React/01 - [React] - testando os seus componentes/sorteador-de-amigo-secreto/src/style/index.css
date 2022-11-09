@@ -1,0 +1,7 @@
+@import url('~@csstools/normalize.css');
+
+body{
+    background-color: #4B69FD;
+    padding: 0;
+    margin: 0;
+}

@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import Formulario from './componentes/Formulario';
+import Header from './componentes/Header';
+import { Box, Card } from './componentes/UI';
+import './style/index.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <RecoilRoot>
+        <Card>
+          <Box>
+            <Routes>
+                <Route path='/' element={<Formulario />}/>
+            </Routes>
+          </Box>
+        </Card>
+      </RecoilRoot>
+    </BrowserRouter>
   );
 }
 
