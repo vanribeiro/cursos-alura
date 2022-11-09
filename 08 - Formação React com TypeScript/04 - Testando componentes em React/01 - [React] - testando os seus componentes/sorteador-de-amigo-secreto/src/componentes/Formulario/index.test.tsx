@@ -1,7 +1,7 @@
-// import React from "react";
+import React from "react";
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
-import Formulario from "./Formulario";
+import Formulario from ".";
 
 describe('o comportamento do Formulario.tsx', () => {
     test("quando o input está vazio, novos participantes não podem ser adicionados", () => {

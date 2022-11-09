@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import styled from "styled-components";
-import useAdicionarParticipante from "../state/hooks/useAdicionarParticipante";
-import useMensagemDeErro from "../state/hooks/useMensagemDeErro";
+import useAdicionarParticipante from "../../state/hooks/useAdicionarParticipante";
+import useMensagemDeErro from "../../state/hooks/useMensagemDeErro";
 
 const Form = styled.form`
     margin: 20% auto;
