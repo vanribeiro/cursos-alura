@@ -28,8 +28,7 @@ const Formulario = () => {
 				type="text"
 				placeholder="Insira os nomes dos participantes"
 			/>
-            <br />
-			<BotaoAdicionar disabled={!nome}>Adicionar</BotaoAdicionar>
+			<BotaoAdicionar type="submit" disabled={!nome}>Adicionar</BotaoAdicionar>
             {mensagemDeErro && <p role="alert">{mensagemDeErro}</p>}
 		</Form>
 	);

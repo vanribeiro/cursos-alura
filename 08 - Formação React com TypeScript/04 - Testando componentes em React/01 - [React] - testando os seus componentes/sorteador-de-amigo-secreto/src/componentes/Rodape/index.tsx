@@ -17,7 +17,8 @@ const Rodape = () => {
 			
 			<BotaoIniciarBrincadeira
 				disabled={participantes.length < 3}
-				onClick={iniciar}>
+				onClick={iniciar}
+				type="button">
 				<img src={playIcon} alt="Ícone Play" />
 				Iniciar brincandeira!
 			</BotaoIniciarBrincadeira>

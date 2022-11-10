@@ -2,33 +2,39 @@
 
 exports[`a página de configuração deve ser renderizada corretamente 1`] = `
 <div>
+  <h1
+    class="sc-jSUZER iJLPQf"
+  >
+    Vamos começar!
+  </h1>
   <form
-    class="sc-jSUZER bxDDSz"
+    class="sc-gKPRtg ljARLY"
   >
     <input
-      class="sc-eDvSVe sc-gKPRtg fraXeO eghZwS"
+      class="sc-eDvSVe sc-iBYQkv fPKbrJ kCOAXV"
       placeholder="Insira os nomes dos participantes"
       type="text"
       value=""
     />
-    <br />
     <button
-      class="sc-hLBbgP sc-iBYQkv dmFCNE crNtjl"
+      class="sc-hLBbgP sc-ftTHYK dmFCNE grefSd"
       disabled=""
+      type="submit"
     >
       Adicionar
     </button>
     
   </form>
   <ul
-    class="sc-ftTHYK ftCTgu"
+    class="sc-pyfCe jwzZCP"
   />
   <footer
-    class="sc-jrcTuL bqBtfz"
+    class="sc-kDvujY hRSmXp"
   >
     <button
-      class="sc-hLBbgP sc-kDvujY dmFCNE jWjObt"
+      class="sc-hLBbgP sc-ipEyDJ dmFCNE hDtDSt"
       disabled=""
+      type="button"
     >
       <img
         alt="Ícone Play"
@@ -38,7 +44,7 @@ exports[`a página de configuração deve ser renderizada corretamente 1`] = `
     </button>
     <img
       alt="Duas sacolas de compra"
-      class="sc-dkrFOg sc-ipEyDJ gNpQTD eFqijj"
+      class="sc-dkrFOg sc-csuSiG gNpQTD gdMmds"
       src="wavy-buddies-shopping-bags.png"
     />
   </footer>

@@ -12,7 +12,7 @@ const Footer = styled.footer`
 
     @media screen and (min-width: 992px){
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 `;
 
