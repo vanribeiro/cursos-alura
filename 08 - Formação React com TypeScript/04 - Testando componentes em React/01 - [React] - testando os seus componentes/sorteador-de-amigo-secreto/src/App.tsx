@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import Formulario from './componentes/Formulario';
 import Header from './componentes/Header';
 import { Box, Card } from './componentes/UI';
+import Configuracao from './paginas/Configuracao';
 import './style/index.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Card>
           <Box>
             <Routes>
-                <Route path='/' element={<Formulario />}/>
+                <Route path='/' element={<Configuracao />}/>
             </Routes>
           </Box>
         </Card>

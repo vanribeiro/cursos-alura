@@ -8,9 +8,15 @@ const listDeParticipanteState = atom<string[]>({
 const erroState = atom<string>({
     key: 'erroState',
     default: ''
-})
+});
+
+const resultadoDoAmigoSecreto = atom<Map<string, string>>({
+    key: 'resultadoDoAmigoSecreto',
+    default: new Map()
+});
 
 export {
     listDeParticipanteState,
-    erroState
+    erroState,
+    resultadoDoAmigoSecreto
 }
