@@ -46,7 +46,7 @@ describe('na pagina de sorteio', () => {
             </RecoilRoot>
         );
         
-        const select = screen.getByPlaceholderText('Selecione o seu nome');
+        const select = screen.getByTitle('Escolha seu amigo(a) secreto(a)');
         fireEvent.change(select, {
             target: {
                 value: participantes[0]

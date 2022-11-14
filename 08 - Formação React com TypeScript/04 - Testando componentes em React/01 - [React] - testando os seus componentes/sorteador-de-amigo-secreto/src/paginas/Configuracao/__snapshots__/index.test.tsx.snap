@@ -3,21 +3,21 @@
 exports[`a página de configuração deve ser renderizada corretamente 1`] = `
 <div>
   <h1
-    class="sc-jSUZER iJLPQf"
+    class="sc-jSUZER dnkFaq"
   >
     Vamos começar!
   </h1>
   <form
-    class="sc-gKPRtg ljARLY"
+    class="sc-iBYQkv guvXPH"
   >
     <input
-      class="sc-eDvSVe sc-iBYQkv fPKbrJ kCOAXV"
+      class="sc-eDvSVe sc-ftTHYK fPKbrJ ibZHSH"
       placeholder="Insira os nomes dos participantes"
       type="text"
       value=""
     />
     <button
-      class="sc-hLBbgP sc-ftTHYK dmFCNE grefSd"
+      class="sc-hLBbgP sc-pyfCe qOZQy bZXNmw"
       disabled=""
       type="submit"
     >
@@ -26,13 +26,13 @@ exports[`a página de configuração deve ser renderizada corretamente 1`] = `
     
   </form>
   <ul
-    class="sc-pyfCe jwzZCP"
+    class="sc-jrcTuL hhMSso"
   />
   <footer
-    class="sc-kDvujY hRSmXp"
+    class="sc-ipEyDJ hwjZtl"
   >
     <button
-      class="sc-hLBbgP sc-ipEyDJ dmFCNE hDtDSt"
+      class="sc-hLBbgP sc-gKPRtg qOZQy jIMgOL"
       disabled=""
       type="button"
     >

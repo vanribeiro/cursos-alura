@@ -32,6 +32,7 @@ const Button = styled.button`
     border: 1px solid #000000;
     box-shadow: 2px 2px 0px #000000;
     border-radius: 37.5px;
+    cursor: pointer;
 `;
 
 const Input = styled.input`
@@ -52,7 +53,36 @@ const Title = styled.h1`
     color: #4B69FDFC;
     font-weight: 600;
     font-size: 20px;
-    line-height: 30px;  
+    line-height: 30px;
+    text-align: center;
+`;
+
+const OrangeButton = styled(Button)`
+    background-color: rgba(254, 101, 43, 0.99);
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 10px 26px;
+    
+    @media screen and (max-width: 991px){
+        width: 155px;
+        font-size: 16px;
+        line-height: 24px;
+        
+        img{
+            display: none;
+        }
+    }
+    
+    @media screen and (min-width: 992px){
+        font-size: 20px;
+        line-height: 30px;
+        width: 351px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        letter-spacing: 0.0125em;
+    }
 `;
 
 export {
@@ -61,5 +91,6 @@ export {
     Input,
     ResponsiveImage,
     Card,
-    Title
+    Title,
+    OrangeButton
 }
