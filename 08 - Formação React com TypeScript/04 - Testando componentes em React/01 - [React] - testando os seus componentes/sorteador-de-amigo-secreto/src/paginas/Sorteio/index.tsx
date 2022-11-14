@@ -32,7 +32,7 @@ const Sorteio = () => {
 						id="participante-da-vez"
 						title="Escolha seu amigo(a) secreto(a)"
 						value={participanteDaVez}>
-						<option value="" disabled={true} hidden>
+						<option disabled={true} hidden>
 							Selecione o seu nome
 						</option>
 						{participantes.map((participante) => {

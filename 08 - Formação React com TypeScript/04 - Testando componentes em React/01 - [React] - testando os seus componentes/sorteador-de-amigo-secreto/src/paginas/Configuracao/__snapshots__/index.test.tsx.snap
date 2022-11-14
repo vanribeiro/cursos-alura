@@ -8,28 +8,32 @@ exports[`a página de configuração deve ser renderizada corretamente 1`] = `
     Vamos começar!
   </h1>
   <form
-    class="sc-iBYQkv guvXPH"
+    class="sc-iBYQkv iefkfq"
   >
-    <input
-      class="sc-eDvSVe sc-ftTHYK fPKbrJ ibZHSH"
-      placeholder="Insira os nomes dos participantes"
-      type="text"
-      value=""
-    />
-    <button
-      class="sc-hLBbgP sc-pyfCe qOZQy bZXNmw"
-      disabled=""
-      type="submit"
+    <div
+      class="form-group"
     >
-      Adicionar
-    </button>
+      <input
+        class="sc-eDvSVe sc-ftTHYK fPKbrJ ibZHSH"
+        placeholder="Insira os nomes dos participantes"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-hLBbgP sc-pyfCe qOZQy bZXNmw"
+        disabled=""
+        type="submit"
+      >
+        Adicionar
+      </button>
+    </div>
     
   </form>
   <ul
-    class="sc-jrcTuL hhMSso"
+    class="sc-kDvujY lnQKKV"
   />
   <footer
-    class="sc-ipEyDJ hwjZtl"
+    class="sc-csuSiG cyMAaK"
   >
     <button
       class="sc-hLBbgP sc-gKPRtg qOZQy jIMgOL"
@@ -44,7 +48,7 @@ exports[`a página de configuração deve ser renderizada corretamente 1`] = `
     </button>
     <img
       alt="Duas sacolas de compra"
-      class="sc-dkrFOg sc-csuSiG gNpQTD gdMmds"
+      class="sc-dkrFOg sc-eDWCr gNpQTD hmkXyH"
       src="wavy-buddies-shopping-bags.png"
     />
   </footer>
