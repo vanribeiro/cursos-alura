@@ -3,13 +3,20 @@ import { Button, Input } from "../UI";
 
 const Form = styled.form`
     margin: 16px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    .form-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
     @media screen and (max-width: 991px){
         width: 90%;
         flex-direction: column;
+
+        .form-group{
+            flex-direction: inherit;
+        }
     }
     
     @media screen and (min-width: 992px){
@@ -65,8 +72,19 @@ const BotaoAdicionar = styled(Button)`
     }
 `;
 
+const MensagemDeErro = styled.p`
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+`;
+
 export {
     Form,
     InputNome,
     BotaoAdicionar,
+    MensagemDeErro
 }
