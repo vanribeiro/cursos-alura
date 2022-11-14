@@ -3,6 +3,7 @@ import { RecoilRoot } from 'recoil';
 import Header from './componentes/Header';
 import { Box, Card } from './componentes/UI';
 import Configuracao from './paginas/Configuracao';
+import Sorteio from './paginas/Sorteio';
 import './style/index.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Box>
             <Routes>
                 <Route path='/' element={<Configuracao />}/>
+                <Route path='/sorteio' element={<Sorteio />}/>
             </Routes>
           </Box>
         </Card>
