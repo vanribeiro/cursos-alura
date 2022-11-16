@@ -1,3 +1,4 @@
+import Categoria from 'paginas/Categoria';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './paginas/Home';
 import PaginaPadrao from './paginas/PaginaPadrao';
@@ -8,6 +9,7 @@ const Router = () => {
             <Routes>
                 <Route path='/' element={<PaginaPadrao />}>
                     <Route index element={<Home />}/>
+                    <Route path='/categoria/:nomeCategoria' element={<Categoria />}/>
                 </Route>
             </Routes>
         </BrowserRouter>
