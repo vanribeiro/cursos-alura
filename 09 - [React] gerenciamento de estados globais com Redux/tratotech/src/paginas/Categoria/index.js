@@ -20,7 +20,7 @@ const Categoria = () => {
 			/>
 			<div className={styles.itens}>
 				{itens?.map(item => (
-					<Item key={item} {...item}/>
+					<Item key={item.id} {...item}/>
 				))}
 			</div>
 		</div>
