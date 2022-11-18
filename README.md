@@ -7,9 +7,10 @@ Este repositório contém código, anotações de exercícios e a parte prática
 03. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [React: gerenciamento de estados globais com Redux](/09%20-%20%5BReact%5D%20Gerenciamento%20de%20estados%20globais%20com%20Redux/)
+- React: otimizando a performance
 
 ## Finalizados:
+- [React: gerenciamento de estados globais com Redux](/09%20-%20%5BReact%5D%20Gerenciamento%20de%20estados%20globais%20com%20Redux/)
 - [Formação React com TypeScript](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/):
 - [Formação TypeScript](/07%20-%20Forma%C3%A7%C3%A3o%20TypeScript/)
 - [React: Gerenciamento de estados globais com ContextAPI](/06%20-%20%5BReact%5D%20Gerenciamento%20de%20estados%20globais%20com%20ContextAPI/)
