@@ -1,3 +1,4 @@
+import Carrinho from 'paginas/Carrinho';
 import Categoria from 'paginas/Categoria';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './paginas/Home';
@@ -10,6 +11,7 @@ const Router = () => {
                 <Route path='/' element={<PaginaPadrao />}>
                     <Route index element={<Home />}/>
                     <Route path='/categoria/:nomeDaCategoria' element={<Categoria />}/>
+                    <Route path='/carrinho' element={<Carrinho />}/>
                 </Route>
             </Routes>
         </BrowserRouter>
