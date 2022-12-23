@@ -2,7 +2,7 @@
   "development": {
     "username": "devenv",
     "password": "envdev123",
-    "database": "escola_ingles",
+    "database": "escola_de_ingles",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
