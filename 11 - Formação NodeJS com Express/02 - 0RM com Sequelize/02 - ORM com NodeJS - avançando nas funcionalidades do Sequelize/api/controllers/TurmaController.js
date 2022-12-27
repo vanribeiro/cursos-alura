@@ -1,10 +1,21 @@
 const database = require('./../models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 class TurmaController{
 
-    static async listarTodasAsTurmas(___, res) {
+    // /turmas?=data_inicial=2020-01-01&data_final=2020-03-01
+    static async listarTodasAsTurmas(req, res) {
+        const { data_inicial, data_final } = req.query;
+
+        const where = {};
+
+        data_inicial || data_final ?  where.data_inicio = {} : null;
+        data_inicial ?  where.data_inicio[Op.gte] = data_inicial : null;
+        data_final ? where.data_inicio[Op.lte] = data_final: null;
+
         try {            
-            const turmas = await database.Turmas.findAll();
+            const turmas = await database.Turmas.findAll({ where });
             return res.status(200).json(turmas);
         } catch (error) {
             return res.status(500).json(error.message);
