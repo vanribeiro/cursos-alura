@@ -5,12 +5,12 @@ class Services{
         this.nomeDoModelo = nomeDoModelo;
     }
 
-    async pegaTodosRegistros() {
-        return database[this.nomeDoModelo].findAll();
+    async pegaTodosRegistros(where = {}) {
+        return database[this.nomeDoModelo].findAll({ where: { ...where }});
 	}
 
-    async pegaUmRegistro(id) {
-        return database[this.nomeDoModelo].findOne({ where: { id: id } });
+    async pegaUmRegistro(where = {}) {
+        return database[this.nomeDoModelo].findOne({ where: {...where}});
     }
     
     async criaRegistro(dados) {
@@ -33,7 +33,9 @@ class Services{
         return database[this.nomeDoModelo].destroy({ where: { id: id } });
     }
 
-
+    async encontraEcontaRegistros(where = {}, agregadores){
+        return database[this.nomeDoModelo].findAndCountAll({ where: { ...where }, ...agregadores });
+    }
     
 }
 

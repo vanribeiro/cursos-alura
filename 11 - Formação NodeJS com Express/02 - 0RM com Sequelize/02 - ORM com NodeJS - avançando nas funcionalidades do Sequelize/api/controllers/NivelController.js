@@ -1,4 +1,3 @@
-// const database = require('./../models');
 const Services = require('../services/Services.js');
 const niveisServices = new Services('Niveis');
 
