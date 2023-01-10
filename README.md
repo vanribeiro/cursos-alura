@@ -8,6 +8,7 @@ Este repositório contém código, anotações de exercícios e a parte prática
 
 ## Em Andamento:
 - [Formação NodeJS com Express](/11%20-%20Forma%C3%A7%C3%A3o%20NodeJS%20com%20Express/)
+- [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
 
 ## Finalizados:
 - [Node.js: criando sua primeira biblioteca](/10%20-%20NodeJS%20-%20criando%20sua%20primeira%20biblioteca/)
