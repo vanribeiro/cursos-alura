@@ -7,10 +7,10 @@ Este repositório contém código, anotações de exercícios e a parte prática
 03. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [Formação NodeJS com Express](/11%20-%20Forma%C3%A7%C3%A3o%20NodeJS%20com%20Express/)
 - [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
 
 ## Finalizados:
+- [Formação NodeJS com Express](/11%20-%20Forma%C3%A7%C3%A3o%20NodeJS%20com%20Express/)
 - [Webpack: trabalhando com módulos na sua webapp](/13%20-%20Automa%C3%A7%C3%A3o%20e%20Perfomance/01%20-%20Webpack/)
 - [Node.js: criando sua primeira biblioteca](/10%20-%20NodeJS%20-%20criando%20sua%20primeira%20biblioteca/)
 - [React: otimizando a performance](/08%20-%20Forma%C3%A7%C3%A3o%20React%20com%20TypeScript/05%20-%20Cuide%20da%20performance%20em%20React/01%20-%20%5BReact%5D%20otimizando%20a%20performance/)
