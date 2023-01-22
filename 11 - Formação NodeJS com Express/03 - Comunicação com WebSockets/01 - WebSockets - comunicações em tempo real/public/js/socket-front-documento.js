@@ -1,16 +1,32 @@
-import { editorDeTexto } from "./documento.js";
+import { atulizarEditorDeTexto, alertarERedirecionar } from "./documento.js";
 
 const socket = io();
 
-
-function emitirTextoEditor(texto) {
-    socket.emit("texto_editor", texto);
+function selecionarDocumento(nome) {
+    socket.emit("selecionar_documento", nome, (texto) => {
+        atulizarEditorDeTexto(texto);
+    });
 }
 
+function emitirTextoEditor(dados) {
+    socket.emit("texto_editor", dados);
+}
+
+
 socket.on("texto_editor_clientes", (texto) => {
-    editorDeTexto.value = texto;
-})
+    atulizarEditorDeTexto(texto);
+});
+
+function emitirExcluirDocumento(nome) {
+    socket.emit("excluir_documento", nome);
+}
+
+socket.on("excluir_documento_sucesso", (nome) => {
+    alertarERedirecionar(nome);
+});
 
 export {
-    emitirTextoEditor
+    emitirTextoEditor,
+    selecionarDocumento,
+    emitirExcluirDocumento
 }
