@@ -1,0 +1,15 @@
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.exe
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.deps.json
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.runtimeconfig.json
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.pdb
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.csproj.AssemblyReference.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.AssemblyInfoInputs.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.AssemblyInfo.cs
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.csproj.CoreCompileInputs.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\refint\CriandoVariaveis.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.pdb
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.genruntimeconfig.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\CriandoVariaveis\obj\Debug\net6.0\ref\CriandoVariaveis.dll
