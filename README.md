@@ -8,6 +8,7 @@ Este repositório contém código, anotações de exercícios e a parte prática
 
 ## Em Andamento:
 - [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
+- [Formação C# e Orientação a Objetos](/14%20-%20Forma%C3%A7%C3%A3o%20C%23%20e%20POO/)
 
 ## Finalizados:
 - [Formação NodeJS com Express](/11%20-%20Forma%C3%A7%C3%A3o%20NodeJS%20com%20Express/)
