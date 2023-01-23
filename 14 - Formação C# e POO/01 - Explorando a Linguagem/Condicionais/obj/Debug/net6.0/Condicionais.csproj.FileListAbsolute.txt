@@ -1,0 +1,15 @@
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\bin\Debug\net6.0\Condicionais.exe
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\bin\Debug\net6.0\Condicionais.deps.json
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\bin\Debug\net6.0\Condicionais.runtimeconfig.json
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\bin\Debug\net6.0\Condicionais.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\bin\Debug\net6.0\Condicionais.pdb
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.csproj.AssemblyReference.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.AssemblyInfoInputs.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.AssemblyInfo.cs
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.csproj.CoreCompileInputs.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\refint\Condicionais.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.pdb
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\Condicionais.genruntimeconfig.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\14 - Formação C# e POO\01 - Explorando a Linguagem\Condicionais\obj\Debug\net6.0\ref\Condicionais.dll
