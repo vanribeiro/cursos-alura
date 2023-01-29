@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const isProductionMode = (filename, extension) => {
     return process.argv[2] === '--mode=production' ? `${filename}.min.${extension}`: `${filename}.${extension}`;
@@ -48,6 +52,40 @@ module.exports = {
         minimize: true,
         minimizer: [
             new CssMinimizerPlugin(),
+            new ImageMinimizerPlugin({
+                minimizer: {
+                  implementation: ImageMinimizerPlugin.imageminGenerate,
+                  options: {
+                    plugins: [
+                      ["gifsicle", { interlaced: true }],
+                      ["jpegtran", { progressive: true }],
+                      ["optipng", { optimizationLevel: 5 }],
+                      [
+                        "svgo",
+                        {
+                          plugins: [
+                            {
+                              name: "preset-default",
+                              params: {
+                                overrides: {
+                                  removeViewBox: false,
+                                  addAttributesToSVGElement: {
+                                    params: {
+                                      attributes: [
+                                        { xmlns: "http://www.w3.org/2000/svg" },
+                                      ],
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                          ],
+                        },
+                      ],
+                    ],
+                  },
+                },
+              }),
             '...'
         ]
     },
@@ -71,6 +109,7 @@ module.exports = {
         static: {
             directory: path.resolve(__dirname, 'dist'),
         },
+        compress: true,
         port: 3000
     }
 };
