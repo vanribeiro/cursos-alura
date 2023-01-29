@@ -4,7 +4,7 @@
 
 @media (min-width: 720px) {
 	.home-fundo {
-		background: url(../../assets/img/background-cidade-fundo.svg) no-repeat bottom center;
+		background: url('./img/background-cidade-fundo.svg') no-repeat bottom center;
 
 		/* fallback */
 		background-size: 100% 100%;

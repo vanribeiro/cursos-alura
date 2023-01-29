@@ -15,13 +15,12 @@ module.exports = {
         detect: { import: './src/site/assets/js/detect.js', filename: 'assets/js/[name].js' },
         footer: { import: './src/site/assets/js/footer.js', filename: 'assets/js/[name].js' },
         home: { import: './src/site/assets/js/home.js', filename: 'assets/js/[name].js' },
-        jquery: { import: './src/site/assets/js/jquery.js', filename: 'assets/js/[name].js' },
-        menu: { import: './src/site/assets/js/menu.js',filename: 'assets/js/[name].js' },
         svg4everybody: { import: './src/site/assets/js/svg4everybody.js', filename: 'assets/js/[name].js' },
         video: { import: './src/site/assets/js/video.js', filename: 'assets/js/[name].js' }
     },
     output: {
         path: path.resolve(__dirname, './src/dist'),
+        assetModuleFilename: 'assets/css/[hash][ext][query]',
         clean: true
     },
     module:{
@@ -38,6 +37,10 @@ module.exports = {
                         }
                     }
                 ] 
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+                type: "asset/resource",
             }
         ]
     },
@@ -60,8 +63,7 @@ module.exports = {
         new webpack.optimize.ModuleConcatenationPlugin(),
         new CopyPlugin({
             patterns: [
-                { from: './src/site/assets/img', to: 'assets/img' },
-                { from: './src/site/assets/font', to: 'assets/font' },
+                { from: './src/site/assets/img', to: 'assets/img' }
             ]
         })
     ],

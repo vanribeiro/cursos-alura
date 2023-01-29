@@ -17,10 +17,10 @@ import './../css/block-titulo-destaque.css';
 import './../css/block-titulos.css';
 import './../css/colors.css';
 import './../css/font.css';
-import './../css/ome-aprenda.css';
-import './../css/ome-diferenciais.css';
-import './../css/ome-fundo.css';
-import './../css/ome.css';
+import './../css/home-aprenda.css';
+import './../css/home-diferenciais.css';
+import './../css/home-fundo.css';
+import './../css/home.css';
 import './../css/reset.css';
 
 if (navigator.userAgent.indexOf('Safari') > 1 && navigator.userAgent.indexOf('Edge') < 0) {

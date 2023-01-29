@@ -1,2 +1,0 @@
-/*! For license information please see menu.js.LICENSE.txt */
-(()=>{var __webpack_modules__={"./src/site/assets/js/menu.js":()=>{eval("$(window).on('load', function() {\n\tvar menu = $('.header-menu');\n\n\t$('.header-menu-titulo').on('click', function() {\n\t\tif (menu.is('[data-ativo]')) {\n\t\t\tmenu.removeAttr('data-ativo');\n\t\t} else {\n\t\t\tmenu.attr('data-ativo', '');\n\t\t}\n\t});\n\n});\n\n\n//# sourceURL=webpack://curso-alura-site/./src/site/assets/js/menu.js?")}},__webpack_exports__={};__webpack_modules__["./src/site/assets/js/menu.js"]()})();
