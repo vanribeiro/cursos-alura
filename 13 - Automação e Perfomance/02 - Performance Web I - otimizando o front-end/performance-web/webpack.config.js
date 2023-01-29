@@ -5,9 +5,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const webpack = require('webpack');
-const dotenv = require('dotenv');
-
-dotenv.config();
 
 const isProductionMode = (filename, extension) => {
     return process.argv[2] === '--mode=production' ? `${filename}.min.${extension}`: `${filename}.${extension}`;
@@ -57,7 +54,6 @@ module.exports = {
                   implementation: ImageMinimizerPlugin.imageminGenerate,
                   options: {
                     plugins: [
-                      ["gifsicle", { interlaced: true }],
                       ["jpegtran", { progressive: true }],
                       ["optipng", { optimizationLevel: 5 }],
                       [
