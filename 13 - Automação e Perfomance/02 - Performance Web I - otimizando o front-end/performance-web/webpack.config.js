@@ -91,7 +91,8 @@ module.exports = {
             filename: 'index.html',
             hash: true,
             minify: {
-              collapseWhitespace: true
+              collapseWhitespace: true,
+              removeComments: true,
             }
         }),
         new MiniCssExtractPlugin({
