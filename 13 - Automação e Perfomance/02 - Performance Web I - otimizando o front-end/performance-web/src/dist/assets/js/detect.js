@@ -1,2 +1,0 @@
-/*! For license information please see detect.js.LICENSE.txt */
-(()=>{var __webpack_modules__={"./src/site/assets/js/detect.js":()=>{eval("function suportaTransform() {\n\tvar el = document.createElement('div');\n\treturn el.style['transform'] !== undefined || el.style['WebkitTransform'] !== undefined;\n}\n\nif (!suportaTransform()) {\n\tdocument.documentElement.className += ' no-transform';\n}\n\n\n//# sourceURL=webpack://curso-alura-site/./src/site/assets/js/detect.js?")}},__webpack_exports__={};__webpack_modules__["./src/site/assets/js/detect.js"]()})();

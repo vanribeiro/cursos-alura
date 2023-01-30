@@ -11,18 +11,18 @@ const isProductionMode = (filename, extension) => {
 };
 
 module.exports = {
-    entry: {
-        busca: { import: './src/site/assets/js/busca.js', filename: 'assets/js/[name].js' },
-        detect: { import: './src/site/assets/js/detect.js', filename: 'assets/js/[name].js' },
-        footer: { import: './src/site/assets/js/footer.js', filename: 'assets/js/[name].js' },
-        home: { import: './src/site/assets/js/home.js', filename: 'assets/js/[name].js' },
-        svg4everybody: { import: './src/site/assets/js/svg4everybody.js', filename: 'assets/js/[name].js' },
-        video: { import: './src/site/assets/js/video.js', filename: 'assets/js/[name].js' }
-    },
+    entry: [
+        './src/site/assets/js/busca.js',
+        './src/site/assets/js/detect.js',
+        './src/site/assets/js/footer.js',
+        './src/site/assets/js/home.js',
+        './src/site/assets/js/video.js',
+    ],
     output: {
-        path: path.resolve(__dirname, './src/dist'),
-        assetModuleFilename: 'assets/css/[hash][ext][query]',
-        clean: true
+      filename: `assets/js/${isProductionMode('bundle', 'js')}`,
+      path: path.resolve(__dirname, './src/dist'),
+      assetModuleFilename: 'assets/css/[hash][ext][query]',
+      clean: true
     },
     module:{
         rules: [
@@ -89,7 +89,10 @@ module.exports = {
         new HtmlWebpackPlugin({ 
             template: './src/site/index.html',
             filename: 'index.html',
-            hash: true
+            hash: true,
+            minify: {
+              collapseWhitespace: true
+            }
         }),
         new MiniCssExtractPlugin({
             filename: `assets/css/${isProductionMode('style', 'css')}`,

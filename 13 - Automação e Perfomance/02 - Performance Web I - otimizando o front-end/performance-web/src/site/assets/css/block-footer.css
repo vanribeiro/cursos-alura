@@ -92,6 +92,12 @@
 .footer-parceiros {
 	margin-top: 1em;
 }
+
+.footer svg{
+	display: inline-block;
+	width: inherit;
+}
+
 .footer-parceiros-titulo{
 	font-size: 0.75em;
 	margin-bottom: 8px;

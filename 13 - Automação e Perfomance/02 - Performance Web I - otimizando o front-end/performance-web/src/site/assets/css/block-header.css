@@ -4,9 +4,15 @@
 	flex-shrink: 0;
 	width: 75px;
 }
-	.header-logo img {
-		width: 100%;
-	}
+
+.header-logo svg{
+	display: inline-block;
+    width: inherit;
+}
+
+.header-logo img {
+	width: 100%;
+}
 
 .header-navegacao {
 	background: #444444;

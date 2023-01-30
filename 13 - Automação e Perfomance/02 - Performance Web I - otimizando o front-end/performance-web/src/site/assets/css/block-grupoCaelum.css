@@ -10,6 +10,12 @@
 	border-top: 1px solid #EBEBEE;
 }
 
+.grupoCaelum svg{
+	display: inline-block;
+    width: 80px;
+    height: 40px;
+}
+
 .grupoCaelum .container{
 	display: flex;
 	justify-content: space-between;
