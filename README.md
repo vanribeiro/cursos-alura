@@ -11,6 +11,7 @@ Este repositório contém código, anotações de exercícios e a parte prática
 - [Formação C# e Orientação a Objetos](/14%20-%20Forma%C3%A7%C3%A3o%20C%23%20e%20POO/)
 
 ## Finalizados:
+- [Performance ma Web I e II](/13%20-%20Automa%C3%A7%C3%A3o%20e%20Perfomance/02%20-%20Performance%20Web%20I%20e%20II/)
 - [Formação NodeJS com Express](/11%20-%20Forma%C3%A7%C3%A3o%20NodeJS%20com%20Express/)
 - [Webpack: trabalhando com módulos na sua webapp](/13%20-%20Automa%C3%A7%C3%A3o%20e%20Perfomance/01%20-%20Webpack/)
 - [Node.js: criando sua primeira biblioteca](/10%20-%20NodeJS%20-%20criando%20sua%20primeira%20biblioteca/)
