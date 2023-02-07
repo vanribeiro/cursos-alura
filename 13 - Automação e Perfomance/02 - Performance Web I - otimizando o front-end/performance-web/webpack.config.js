@@ -16,6 +16,7 @@ module.exports = {
         './src/site/assets/js/detect.js',
         './src/site/assets/js/footer.js',
         './src/site/assets/js/home.js',
+        './src/site/assets/js/lazyload.js',
         './src/site/assets/js/video.js',
     ],
     output: {

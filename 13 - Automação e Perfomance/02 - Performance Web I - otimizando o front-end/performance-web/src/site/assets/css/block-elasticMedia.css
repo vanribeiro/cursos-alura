@@ -1,11 +1,6 @@
 .elasticMedia-container {
 	position: relative;
 	height: 0;
-	padding-top: 56.25%; /* defaults to 16:9 */
-}
-
-.elasticMedia_16x9 {
-	padding-top: 56.25%;
 }
 
 .elasticMedia_4x3 {

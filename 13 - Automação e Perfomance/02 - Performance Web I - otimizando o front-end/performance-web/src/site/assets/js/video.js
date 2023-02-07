@@ -1,10 +1,10 @@
 // carrega videos assincronamente
 setTimeout(function(){
 
-	var containers = document.querySelectorAll('.elasticMedia-container[data-src]');
-	for (var i = 0; i < containers.length; i++) {
-		var src = containers[i].getAttribute('data-src');
-		containers[i].innerHTML = '<iframe class="elasticMedia" src="' + src + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+	const containers = document.querySelectorAll('.elasticMedia-container[data-src]');
+	for (let i = 0; i < containers.length; i++) {
+		const src = containers[i].getAttribute('data-src');
+		containers[i].innerHTML = `<iframe width="560" height="315" src="${src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 	}
 
-}, 500);
+}, 3 * 1000);

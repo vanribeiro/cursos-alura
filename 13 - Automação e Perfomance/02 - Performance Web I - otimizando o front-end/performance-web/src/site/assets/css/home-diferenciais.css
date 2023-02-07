@@ -103,6 +103,12 @@
 	}
 }
 
+@media (max-width: 999.99px){
+	.home-diferenciais-list{
+		padding-top: 50%;
+	}
+}
+
 @media (min-width: 1000px){
 	.home-diferenciais {
 		padding-top: 85px;
