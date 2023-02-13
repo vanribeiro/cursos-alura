@@ -1,25 +1,81 @@
 ﻿using bytebank_ADM.Funcionarios;
 using bytebank_ADM.Utilitario;
+using bytebank_ADM.SistemaIterno;
+using bytebank_ADM.Parceria;
 
-Funcionario funcionario = new Funcionario();
-funcionario.Nome = "Pedro";
-funcionario.Cpf = "12345678910";
-funcionario.Salario = 2000;
+#region 
+// Funcionario funcionario = new Funcionario("12345678910", 2000);
+// funcionario.Nome = "Pedro";
 
-Console.WriteLine(funcionario.Nome);
-Console.WriteLine(funcionario.GetBonificacao());
+// Console.WriteLine(funcionario.Nome);
+// Console.WriteLine(funcionario.GetBonificacao());
 
 
-Diretor diretora = new Diretor();
-diretora.Nome = "Roberta";
-diretora.Cpf = "99999999999";
-diretora.Salario = 5000;
+// Diretor diretora = new Diretor("99999999999");
+// diretora.Nome = "Roberta";
 
-Console.WriteLine(diretora.Nome);
-Console.WriteLine(diretora.GetBonificacao());
+// Console.WriteLine(diretora.Nome);
+// Console.WriteLine(diretora.GetBonificacao());
 
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-gerenciador.Registrar(funcionario);
-gerenciador.Registrar(diretora);
+// GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+// gerenciador.Registrar(funcionario);
+// gerenciador.Registrar(diretora);
 
-Console.WriteLine("Total de bonificações: " + gerenciador.TotalBonificacao);
+// Console.WriteLine("Total de bonificações: " + gerenciador.TotalBonificacao);
+// Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
+
+// funcionario.AumentarSalario();
+// diretora.AumentarSalario();
+
+// Console.WriteLine("Salário Aumentado: " + funcionario.Salario);
+// Console.WriteLine("Salário Aumentado: " + diretora.Salario);
+#endregion
+
+void CalcularBonificacao() {
+    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+
+    Designer ulisses = new Designer("12345678910");
+    ulisses.Nome = "Ulisses Souza";
+
+    Diretor paula = new Diretor("99999999999");
+    paula.Nome = "Paula Souza";
+
+    Auxiliar igor = new Auxiliar("88888888888");
+    igor.Nome = "Igor Silva";
+
+    GerenteDeContas camila = new GerenteDeContas("88888888888");
+    camila.Nome = "Camila Oliveira";
+
+    gerenciador.Registrar(camila);
+    gerenciador.Registrar(paula);
+    gerenciador.Registrar(igor);
+    gerenciador.Registrar(ulisses);
+
+    Console.WriteLine("Total de Bonificação = " + gerenciador.TotalBonificacao);
+
+}
+
+CalcularBonificacao();
+
+void UsarSistema() {
+    SistemaInterno sistema = new SistemaInterno();
+
+    Diretor ingrid = new Diretor("77777777777");
+    ingrid.Nome = "Ingrid Muniz";
+    ingrid.Senha = "Secreta123";
+
+    sistema.Logar(ingrid, "Secreta123");
+
+    GerenteDeContas ursula = new GerenteDeContas("66666666666");
+    ursula.Nome = "Ursula Ruiz";
+    ursula.Senha = "Secreta123";
+
+    sistema.Logar(ursula, "Secreta12");
+
+    ParceiroComercial caio = new ParceiroComercial();
+    ursula.Nome = "Caio Silva";
+    ursula.Senha = "Se123";
+
+}
+
+UsarSistema();
