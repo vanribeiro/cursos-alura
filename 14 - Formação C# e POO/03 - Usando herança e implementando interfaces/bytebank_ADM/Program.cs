@@ -4,31 +4,23 @@ using bytebank_ADM.SistemaIterno;
 using bytebank_ADM.Parceria;
 
 #region 
-// Funcionario funcionario = new Funcionario("12345678910", 2000);
-// funcionario.Nome = "Pedro";
-
-// Console.WriteLine(funcionario.Nome);
-// Console.WriteLine(funcionario.GetBonificacao());
 
 
-// Diretor diretora = new Diretor("99999999999");
-// diretora.Nome = "Roberta";
+Diretor diretora = new Diretor("99999999999");
+diretora.Nome = "Roberta";
 
-// Console.WriteLine(diretora.Nome);
-// Console.WriteLine(diretora.GetBonificacao());
+Console.WriteLine(diretora.Nome);
+Console.WriteLine(diretora.GetBonificacao());
 
-// GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-// gerenciador.Registrar(funcionario);
-// gerenciador.Registrar(diretora);
+GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+gerenciador.Registrar(diretora);
 
-// Console.WriteLine("Total de bonificações: " + gerenciador.TotalBonificacao);
-// Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
+Console.WriteLine("Total de bonificações: " + gerenciador.TotalBonificacao);
+Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
 
-// funcionario.AumentarSalario();
-// diretora.AumentarSalario();
+diretora.AumentarSalario();
 
-// Console.WriteLine("Salário Aumentado: " + funcionario.Salario);
-// Console.WriteLine("Salário Aumentado: " + diretora.Salario);
+Console.WriteLine("Salário Aumentado: " + diretora.Salario);
 #endregion
 
 void CalcularBonificacao() {

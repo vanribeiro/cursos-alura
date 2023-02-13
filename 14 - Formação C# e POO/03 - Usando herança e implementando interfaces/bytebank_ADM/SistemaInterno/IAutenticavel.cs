@@ -1,5 +1,3 @@
-using bytebank_ADM.Funcionarios;
-
 namespace bytebank_ADM.SistemaIterno{
     public interface IAutenticavel {
         public string Senha { get; set; }
