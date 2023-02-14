@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "gLQeLRdIzo2Mw4wL3lH3xIc8Pq5WA46i91KZ98Nk6gUHsaktidc6VgVWZTAhR5ahYAI190f/hfTq47NkxqXn7g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\v.cristiane.ribeiro\\Documents\\Studies\\cursos-alura\\15 - Formação ASP.Net Core\\01 - .Net 6 - Criando uma web API\\FilmesApi\\FilmesApi\\FilmesApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\v.cristiane.ribeiro\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\v.cristiane.ribeiro\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\v.cristiane.ribeiro\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\v.cristiane.ribeiro\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\v.cristiane.ribeiro\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\v.cristiane.ribeiro\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

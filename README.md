@@ -8,6 +8,7 @@ Este repositório contém código, anotações de exercícios e a parte prática
 
 ## Em Andamento:
 - [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
+- [Formação ASP.Net Core](/15%20-%20Forma%C3%A7%C3%A3o%20ASP.Net%20Core/)
 
 ## Finalizados:
 - [Formação C# e Orientação a Objetos](/14%20-%20Forma%C3%A7%C3%A3o%20C%23%20e%20POO/)
