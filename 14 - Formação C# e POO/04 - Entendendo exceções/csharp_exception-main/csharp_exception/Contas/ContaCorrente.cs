@@ -1,9 +1,5 @@
 ﻿using csharp_exception.Titular;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using csharp_exception.Exceptions;
 
 namespace csharp_exception.Contas
 {
@@ -31,34 +27,28 @@ namespace csharp_exception.Contas
 
         private double saldo = 100;
 
-        public Cliente Titular { get; set; }
+        public Cliente Titular { get; set; } = new Cliente();
 
-        public void Depositar(double valor)
-        {
+        public void Depositar(double valor){
             saldo += valor;
         }
 
         public bool Sacar(double valor)
         {
-            if (valor <= saldo)
-            {
+            if (valor <= saldo){
                 saldo -= valor;
                 return true;
-            }
-            else
-            {
-                return false;
+            } else {
+                throw new SaldoInsuficienteException("Saldo Insuficiente para a operação!");
             }
         }
 
         public bool Transferir(double valor, ContaCorrente destino)
         {
-            if (saldo < valor)
-            {
+            if (saldo < valor){
                 return false;
             }
-            else
-            {
+            else{
                 Sacar(valor);
                 destino.Depositar(valor);
                 return true;
@@ -67,18 +57,15 @@ namespace csharp_exception.Contas
 
         public void SetSaldo(double valor)
         {
-            if (valor < 0)
-            {
+            if (valor < 0){
                 return;
             }
-            else
-            {
+            else{
                 saldo = valor;
             }
         }
 
-        public double GetSaldo()
-        {
+        public double GetSaldo(){
             return saldo;
         }
 
@@ -87,8 +74,7 @@ namespace csharp_exception.Contas
             Numero_agencia = numero_agencia;
             Conta = numero_conta;
 
-            if (numero_agencia <= 0)
-            {
+            if (numero_agencia <= 0){
                 throw new ArgumentException("Número de agência menor ou igual a zero!", nameof(numero_agencia));
             }
 
