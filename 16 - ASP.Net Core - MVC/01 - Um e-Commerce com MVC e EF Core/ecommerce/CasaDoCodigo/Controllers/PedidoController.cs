@@ -8,23 +8,26 @@ using CasaDoCodigo.Models;
 
 namespace CasaDoCodigo.Controllers
 {
-    public class HomeController : Controller
+    public class PedidoController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Cadastro()
         {
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Carrinho()
         {
-            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Carrossel()
         {
-            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult Resumo()
+        {
 
             return View();
         }
