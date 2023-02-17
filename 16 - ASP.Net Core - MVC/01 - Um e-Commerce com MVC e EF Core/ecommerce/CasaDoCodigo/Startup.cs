@@ -22,8 +22,10 @@ namespace CasaDoCodigo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+            string connectionString = Configuration.GetConnectionString("Default");
             services.AddMvc();
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddDbContext<ApplicationContext>(options => options.UseMySql(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
