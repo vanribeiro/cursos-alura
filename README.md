@@ -30,3 +30,4 @@ Este repositório contém código, anotações de exercícios e a parte prática
 ## Descontinuados pela plataforma:
 Optei por parar o curso:
 - [Criando uma SPA com JS Puro](03%20-%20Criando%20uma%20SPA%20com%20JS%20Puro/)
+- [ASP.Net Core - MVC](16%20-%20ASP.Net%20Core%20-%20MVC/)
