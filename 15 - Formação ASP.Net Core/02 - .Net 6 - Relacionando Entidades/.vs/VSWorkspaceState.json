@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FilmesApi",
+    "\\FilmesApi\\FilmesApi"
   ],
+  "SelectedNode": "\\FilmesApi\\FilmesApi.sln",
   "PreviewInSolutionExplorer": false
 }
