@@ -12,10 +12,10 @@ namespace FilmesApi.Controllers;
 public class CinemaController : ControllerBase
 {
 
-    private readonly CinemaContext _context;
+    private readonly FilmeContext _context;
     private readonly IMapper _mapper;
 
-    public CinemaController(CinemaContext context, IMapper mapper)
+    public CinemaController(FilmeContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -48,12 +48,12 @@ public class CinemaController : ControllerBase
     {
         var cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
         if (cinema == null) return NotFound();
-        var cinemaDTO = _mapper.Map<ReadFilmeDTO>(cinema);
+        var cinemaDTO = _mapper.Map<ReadCinemaDTO>(cinema);
         return Ok(cinemaDTO);
     }
 
     [HttpPut("{id}")]
-    public IActionResult AtualizaCinema(int id, [FromBody] UpdateFilmeDTO cinemaDTO)
+    public IActionResult AtualizaCinema(int id, [FromBody] UpdateCinemaDTO cinemaDTO)
     {
         var cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
         if (cinema == null) return NotFound();
@@ -63,11 +63,11 @@ public class CinemaController : ControllerBase
     }
 
     [HttpPatch("{id}")]
-    public IActionResult AtualizaCinemaParcial(int id, JsonPatchDocument<UpdateFilmeDTO> patch)
+    public IActionResult AtualizaCinemaParcial(int id, JsonPatchDocument<UpdateCinemaDTO> patch)
     {
         var cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
         if (cinema == null) return NotFound();
-        var cinemaParaAtualizar = _mapper.Map<UpdateFilmeDTO>(cinema);
+        var cinemaParaAtualizar = _mapper.Map<UpdateCinemaDTO>(cinema);
         patch.ApplyTo(cinemaParaAtualizar, ModelState);
         if (!TryValidateModel(cinemaParaAtualizar))
         {

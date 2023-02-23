@@ -9,5 +9,10 @@ namespace FilmesApi.Models
 
         [Required(ErrorMessage = "O campo de nome é obrigatório")]
         public string Nome { get; set; } = "";
+
+        public int EnderecoId { get; set; } = 0;
+
+        /* Diz ao entity que essa entidade só tem somente 1 e apenas 01 endereço */
+        public virtual Endereco Endereco { get; set; }
     }
 }

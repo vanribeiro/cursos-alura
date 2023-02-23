@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "6f268f8b-4f50-4ef9-b409-cddee64066b8",
+		"name": "FilmesApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9825494"
+	},
+	"item": [
+		{
+			"name": "adicionarFilme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Titulo\": \"Avatals\",\r\n\t\"Genero\": \"Aventura\",\r\n\t\"Duracao\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/filme",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionarEndereco",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Logradouro\": \"Rua das Couves II\",\r\n    \"Numero\": 302\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/endereco",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionarCinema",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nome\": \"Alura Cinemas Outro\",\r\n    \"EnderecoId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/cinema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"cinema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarFilmes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/filme",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarEnderecos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/endereco",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarCinemas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/cinema",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"cinema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarFilmesPaginacao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/filme?skip=0&take=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"filme"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarCinemasPaginacao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/cinema?skip=0&take=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"cinema"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarEnderecosPaginacao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/endereco?skip=0&take=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"endereco"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obterFilmePorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/Filme/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Filme",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obterCinemaPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/Cinema/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Cinema",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obterEnderecoPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/Endereco/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Endereco",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarEnderecoPorId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"logradouro\": \"Rua das Couves III\",\r\n    \"numero\": 303\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/endereco/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"endereco",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarFilmePorId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Titulo\": \"Avatal\",\r\n\t\"Genero\": \"Aventura\",\r\n\t\"Duracao\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/filme/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"filme",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarCinemaPorId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nome\": \"Alura Movies\",\r\n    \"EnderecoId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/cinema/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"cinema",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletarFilme",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/Filme/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Filme",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletarEndereco",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/endereco/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"endereco",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletarCinema",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/cinema/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"cinema",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarFilmeParcialPorId",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/titulo\",\r\n        \"value\": \"Avatar\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/Filme/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"Filme",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarEnderecoParcialPorId",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/logradouro\",\r\n        \"value\": \"Avatar\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/endereco/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"endereco",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarCinemaParcialPorId",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/nome\",\r\n        \"value\": \"Avatar\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/cinema/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"cinema",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
