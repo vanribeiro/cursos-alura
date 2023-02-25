@@ -6,6 +6,8 @@
 
         public string Nome { get; set; } = "";
 
-        public ReadEnderecoDTO ReadEnderecoDTO { get; set; } = new ReadEnderecoDTO();
+        public ReadEnderecoDTO Enderecos { get; set; }
+
+        public ICollection<ReadSessaoDTO> Sessoes { get; set; }
     }
 }

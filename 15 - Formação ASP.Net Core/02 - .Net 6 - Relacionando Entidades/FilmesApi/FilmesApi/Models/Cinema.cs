@@ -14,5 +14,7 @@ namespace FilmesApi.Models
 
         /* Diz ao entity que essa entidade só tem somente 1 e apenas 01 endereço */
         public virtual Endereco Endereco { get; set; }
+
+        public virtual ICollection<Sessao> Sessoes { get; set; }
     }
 }

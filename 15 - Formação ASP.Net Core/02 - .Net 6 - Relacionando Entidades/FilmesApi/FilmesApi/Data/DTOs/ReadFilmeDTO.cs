@@ -8,5 +8,7 @@
         public int Duracao { get; set; } = 0;
 
         public DateTime HoraDaConsulta { get; set; } = DateTime.Now;
+
+        public ICollection<ReadSessaoDTO> Sessoes { get; set; }
     }
 }
