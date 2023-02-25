@@ -35,13 +35,41 @@
 			"response": []
 		},
 		{
+			"name": "adicionarSessao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FilmeId\": 2,\r\n    \"CinemaId\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/sessao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"sessao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "adicionarEndereco",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Logradouro\": \"Rua das Couves II\",\r\n    \"Numero\": 302\r\n}",
+					"raw": "{\r\n    \"logradouro\": \"Rua das Couves - IV\",\r\n    \"numero\": 500\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,7 +97,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Nome\": \"Alura Cinemas Outro\",\r\n    \"EnderecoId\": 2\r\n}",
+					"raw": "{\r\n    \"Nome\": \"Alura Cinemas IV\",\r\n    \"EnderecoId\": 4\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -184,6 +212,68 @@
 			"response": []
 		},
 		{
+			"name": "obterSessao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/sessao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"sessao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarSessoes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7233/sessao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7233",
+					"path": [
+						"sessao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "listarFilmesPaginacao",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -209,47 +299,6 @@
 					"port": "7233",
 					"path": [
 						"filme"
-					],
-					"query": [
-						{
-							"key": "skip",
-							"value": "0"
-						},
-						{
-							"key": "take",
-							"value": "5"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "listarCinemasPaginacao",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://localhost:7233/cinema?skip=0&take=5",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "7233",
-					"path": [
-						"cinema"
 					],
 					"query": [
 						{
