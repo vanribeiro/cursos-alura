@@ -26,22 +26,22 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 
         public IEnumerable<Leilao> ConsultaLeiloes()
         {
-            return _leilaoDao.BuscaLeiloes();
+            return _leilaoDao.BuscarTodos();
         }
 
         public IEnumerable<Categoria> ConsultarCategorias()
         {
-            return _categoriaDao.BuscarCategorias();
+            return _categoriaDao.BuscarTodos();
         }
 
         public IEnumerable<Categoria> ConsultaCategorias()
         {
-            return _categoriaDao.BuscarCategorias();
+            return _categoriaDao.BuscarTodos();
         }
 
         public IEnumerable<Leilao> ConsultaPorTermo(string termo)
         {
-           return _leilaoDao.BuscaLeiloes()
+           return _leilaoDao.BuscarTodos()
                 .Where(leilao => string.IsNullOrWhiteSpace(termo) ||
                     leilao.Titulo.ToUpper().Contains(termo.ToUpper()) ||
                     leilao.Descricao.ToUpper().Contains(termo.ToUpper()) ||
@@ -70,12 +70,12 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 
         public Leilao ConsultaLeilaoPorId(int id)
         {
-            return _leilaoDao.BuscarLeilaoPorId(id);
+            return _leilaoDao.BuscarPorId(id);
         }
         
         public void IniciaPregaoDoLeilaoComId(int id)
         {
-            var leilao = _leilaoDao.BuscarLeilaoPorId(id);
+            var leilao = _leilaoDao.BuscarPorId(id);
             leilao.Situacao = SituacaoLeilao.Pregao;
             leilao.Inicio = dataAtual;
             _leilaoDao.Alterar(leilao);
@@ -83,7 +83,7 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 
         public void FinalizaPregaoDoLeilaoComId(int id)
         {
-            var leilao = _leilaoDao.BuscarLeilaoPorId(id);
+            var leilao = _leilaoDao.BuscarPorId(id);
             leilao.Situacao = SituacaoLeilao.Finalizado;
             leilao.Termino = dataAtual;
             _leilaoDao.Alterar(leilao);

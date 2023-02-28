@@ -2,16 +2,17 @@
 using Alura.LeilaoOnline.WebApp.Dados;
 using System.Collections.Generic;
 using System.Linq;
+using Alura.LeilaoOnline.WebApp.Dados.EfCore;
 
 namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 {
     public class ArquivoAdminService : IAdminService
     {
-        IAdminService _defaultService;
+        readonly IAdminService _defaultService;
 
-        public ArquivoAdminService(ILeilaoDao dao)
+        public ArquivoAdminService(ILeilaoDao dao, ICategoriaDao categoriaDao)
         {
-            _defaultService = new DefaultAdminService(dao);
+            _defaultService = new DefaultAdminService(dao, categoriaDao);
         }
 
         public void CadastraLeilao(Leilao leilao)

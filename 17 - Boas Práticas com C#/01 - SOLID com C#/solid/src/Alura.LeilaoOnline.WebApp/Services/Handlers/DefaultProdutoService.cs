@@ -20,7 +20,7 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
         public IEnumerable<Leilao> PesquisaLeiloesEmPregaoPorTermo(string termo)
         {
             var termoNormalized = termo.ToUpper();
-            var leiloes = _leilaoDao.BuscaLeiloes()
+            var leiloes = _leilaoDao.BuscarTodos()
             .Where(leilao => string.IsNullOrWhiteSpace(termo) ||
                 leilao.Titulo.ToUpper().Contains(termoNormalized) ||
                 leilao.Descricao.ToUpper().Contains(termoNormalized) ||
@@ -31,7 +31,7 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 
         public IEnumerable<CategoriaComInfoLeilao> ConsultaCategoriaComTotalDeLeiloesEmPregao()
         {
-            var todasAsCategorias = _categoriaDao.BuscarCategorias()
+            var todasAsCategorias = _categoriaDao.BuscarTodos()
                 .Select(categoria => new CategoriaComInfoLeilao
                 {
                     Id = categoria.Id,
@@ -46,7 +46,7 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 
         public Categoria ConsultaCategoriaPorIdComLeiloesEmPregao(int id)
         {
-            return _categoriaDao.BuscarCategoriaPorId(id);
+            return _categoriaDao.BuscarPorId(id);
         }
     }
 }
