@@ -5,6 +5,8 @@ public class Conservador : IPerfilDeInvestidor{
 
     public double CalculaChanceDeRetorno(Investimento investimento)
     {
-        return investimento.Valor * 0.8;
+        double PERCENTUAL_0_8 = 0.8/100;
+
+        return investimento.Valor * PERCENTUAL_0_8;
     }
 }

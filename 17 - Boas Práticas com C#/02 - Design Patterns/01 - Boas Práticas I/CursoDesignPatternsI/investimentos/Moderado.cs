@@ -5,6 +5,14 @@ public class Moderado : IPerfilDeInvestidor{
 
     public double CalculaChanceDeRetorno(Investimento investimento)
     {
-        return investimento.Valor * 0.8;
+        bool escolhido = new Random().Next(2) == 0;
+        double PERCENTUAL_2_5 = 2.5/100;
+        double PERCENTUAL_0_7 = 0.7/100;
+
+        if(escolhido) {
+            return investimento.Valor * PERCENTUAL_2_5;
+        } else {
+            return investimento.Valor * PERCENTUAL_0_7;
+        }
     }
 }
