@@ -26,15 +26,16 @@ using CursoDesignPatternsI.investimentos;
 // simulador.RealizaCalculo("Moderado", moderado, investimento);
 // simulador.RealizaCalculo("Arrojado", arrojado, investimento);
 #endregion
+#region 
+// CalculadorDeDescontos calculador = new CalculadorDeDescontos();
+// Orcamento orcamento = new Orcamento(1500.0);
+// orcamento.AdicionarItem(new Item("Caneta", 250.0));
+// orcamento.AdicionarItem(new Item("Lápis", 250.0));
+// orcamento.AdicionarItem(new Item("Borracha", 250.0));
+// orcamento.AdicionarItem(new Item("Papel", 250.0));
+// orcamento.AdicionarItem(new Item("Caderno", 250.0));
+// orcamento.AdicionarItem(new Item("Apontador", 250.0));
 
-CalculadorDeDescontos calculador = new CalculadorDeDescontos();
-Orcamento orcamento = new Orcamento(1500.0);
-orcamento.AdicionarItem(new Item("Caneta", 250.0));
-orcamento.AdicionarItem(new Item("Lápis", 250.0));
-orcamento.AdicionarItem(new Item("Borracha", 250.0));
-orcamento.AdicionarItem(new Item("Papel", 250.0));
-orcamento.AdicionarItem(new Item("Caderno", 250.0));
-orcamento.AdicionarItem(new Item("Apontador", 250.0));
-
-double desconto = calculador.Calcula(orcamento);
-Console.WriteLine(desconto);
+// double desconto = calculador.Calcula(orcamento);
+// Console.WriteLine(desconto);
+#endregion
