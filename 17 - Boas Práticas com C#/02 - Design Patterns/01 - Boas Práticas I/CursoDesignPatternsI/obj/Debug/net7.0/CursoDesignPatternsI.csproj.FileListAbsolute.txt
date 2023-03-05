@@ -1,0 +1,15 @@
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.csproj.AssemblyReference.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.AssemblyInfoInputs.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.AssemblyInfo.cs
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.csproj.CoreCompileInputs.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\bin\Debug\net7.0\CursoDesignPatternsI.exe
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\bin\Debug\net7.0\CursoDesignPatternsI.deps.json
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\bin\Debug\net7.0\CursoDesignPatternsI.runtimeconfig.json
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\bin\Debug\net7.0\CursoDesignPatternsI.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\bin\Debug\net7.0\CursoDesignPatternsI.pdb
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\refint\CursoDesignPatternsI.dll
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.pdb
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\CursoDesignPatternsI.genruntimeconfig.cache
+C:\Users\v.cristiane.ribeiro\Documents\Studies\cursos-alura\17 - Boas Práticas com C#\02 - Design Patterns\01 - Boas Práticas I\CursoDesignPatternsI\obj\Debug\net7.0\ref\CursoDesignPatternsI.dll
