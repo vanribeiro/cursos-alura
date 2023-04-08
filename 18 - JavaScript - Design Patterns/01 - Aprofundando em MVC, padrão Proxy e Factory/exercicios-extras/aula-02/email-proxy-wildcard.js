@@ -2,22 +2,10 @@ let funcionario = {
     email: 'abc@abc.com'
 };
 
-
-// console.log(funcionario.email);
-
-const proxyHandler = {
-    get (target, props, receiver) {
-        if(target[props]) {
-            console.log("Armadilha aqui!");
-            return function () {
-
-                return Reflect.apply(target[props], props, arguments);
-            }
-        }
-
-        return Reflect.apply(target, props, receiver);
+const proxy = new Proxy(funcionario, {
+    get (target) {
+        return `Armadilha aqui!\n**${target.email}**`
     }
-}
+});
 
-const proxy = new Proxy(funcionario, proxyHandler);
-console.log(funcionario.email);
+console.log(proxy.email);
