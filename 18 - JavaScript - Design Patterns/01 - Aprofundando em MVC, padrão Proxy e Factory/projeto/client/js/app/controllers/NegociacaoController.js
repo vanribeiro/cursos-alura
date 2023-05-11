@@ -35,19 +35,32 @@ class NegociacaoController {
 
     importaNegociacoes() {
         let service = new NegociacaoService();
-        service.obterNegociacoesDaSemana((erro, negociacoes) => {
-            if(erro){
+        let promise = service.obterNegociacoesDaSemana();
+        promise
+            .then(negociacoes => negociacoes.forEach(negociacao => {
+                this._mensagem.texto = 'Negociações importadas com sucesso!';
+                this._mensagem.bootstrapColorName = 'success';
+                this._messageTimer = setTimeout(() => { this._mensagem.resetaMensagem() }, this.TIMEOUT);
+                this._listaNegociacoes.adiciona(negociacao);
+            })).catch(erro => {
                 this._mensagem.texto = erro;
                 this._mensagem.bootstrapColorName = 'danger';
                 this._messageTimer = setTimeout(() => { this._mensagem.resetaMensagem() }, 5 * 1000);
-                return;
-            } 
+            });
             
-            negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
-            this._mensagem.texto = 'Negociações importadas com sucesso!';
-            this._mensagem.bootstrapColorName = 'success';
-            this._messageTimer = setTimeout(() => { this._mensagem.resetaMensagem() }, this.TIMEOUT);
-        });
+        // service.obterNegociacoesDaSemana((erro, negociacoes) => {
+        //     if(erro){
+        //         this._mensagem.texto = erro;
+        //         this._mensagem.bootstrapColorName = 'danger';
+        //         this._messageTimer = setTimeout(() => { this._mensagem.resetaMensagem() }, 5 * 1000);
+        //         return;
+        //     } 
+            
+        //     negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
+        //     this._mensagem.texto = 'Negociações importadas com sucesso!';
+        //     this._mensagem.bootstrapColorName = 'success';
+        //     this._messageTimer = setTimeout(() => { this._mensagem.resetaMensagem() }, this.TIMEOUT);
+        // });
 
     }
 
