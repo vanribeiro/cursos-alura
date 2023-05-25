@@ -5,10 +5,11 @@ const AUTOR_ID_NOT_FOUND = 'Id do autor não localizado';
 
 class AutorController {
 
-	static listarAutores = async (__, res, next) => {
+	static listarAutores = (req, __, next) => {
 		try {
-			const resultado = await autores.find();
-			res.status(200).json(resultado);
+			const resultado = autores.find();
+			req.resultado = resultado;
+			next();
 		} catch (error) {
 			next(error);
 		}

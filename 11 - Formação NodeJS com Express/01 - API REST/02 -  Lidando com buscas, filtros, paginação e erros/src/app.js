@@ -3,6 +3,7 @@ import db from './config/dbConnect.js';
 import routes from './routes/index.js';
 import manipuladorDeErros from './middlewares/manipuladorDeErros.js';
 import manipulador404 from './middlewares/manipulador404.js';
+import paginar from './middlewares/paginar.js';
 
 db.on('error', console.log.bind(console, 'Erro de conexão'));
 db.once('open', () => {
@@ -17,5 +18,7 @@ app.use(manipulador404);
 
 // eslint-disable-next-line no-unused-vars
 app.use(manipuladorDeErros);
+
+app.use(paginar);
 
 export default app;

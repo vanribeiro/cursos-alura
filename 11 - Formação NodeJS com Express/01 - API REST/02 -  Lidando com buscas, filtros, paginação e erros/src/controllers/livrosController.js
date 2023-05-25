@@ -26,11 +26,12 @@ async function processaBusca(parametros) {
 
 class LivroController {
 
-	static listarLivros = async (__, res, next) => {
+	static listarLivros = async (req, __, next) => {
 
 		try {
-			const resultado = await livros.find().populate('autor').exec();
-			res.status(200).json(resultado);
+			const resultado = livros.find();
+			req.resultado = resultado;
+			next();
 		} catch (error) {
 			next(error);
 		}
@@ -101,8 +102,11 @@ class LivroController {
 
 			const busca = await processaBusca(req.query); 
 			if(busca !== null) {
-				const result = await livros.find(busca, {}).populate('autor');
-				res.status(200).send(result);
+
+				const resultado = livros.find(busca, {}).populate('autor');
+				req.resultado = resultado;
+
+				next();
 			} else {
 				res.status(200).send([]);
 			}
