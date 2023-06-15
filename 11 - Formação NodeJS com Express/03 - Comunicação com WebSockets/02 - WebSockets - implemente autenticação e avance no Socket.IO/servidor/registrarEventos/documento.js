@@ -6,11 +6,11 @@ import {
 
 function registrarEventosDocumento(socket, io) {
     
-  socket.on("selecionar_documento", async (nomeDocumento, devolverTexto) => {
+  socket.on("selecionar_documento", async ({nomeDocumento, nomeUsuario}, devolverTexto) => {
     socket.join(nomeDocumento);
 
+    console.log(nomeUsuario)
     const documento = await encontrarDocumento(nomeDocumento);
-
     if (documento) {
       devolverTexto(documento.texto);
     }
