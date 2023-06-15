@@ -2,6 +2,7 @@ import { obterCookie } from "../utils/cookies.js";
 import { 
   alertarERedirecionar,
   atualizaTextoEditor,
+  atualizarInterface,
   tratarAutorizacaoSucesso 
 } from "./documento.js";
 
@@ -21,6 +22,8 @@ function selecionarDocumento(dadosEntrada) {
     atualizaTextoEditor(texto);
   });
 }
+
+socket.on("usuarios_no_documento", atualizarInterface);
 
 function emitirTextoEditor(dados) {
   socket.emit("texto_editor", dados);
