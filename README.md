@@ -8,7 +8,7 @@ Este repositório contém código, anotações de exercícios e a parte prática
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [Formação Desenvolva aplicações Web e Mobile com React e React Native](/19%20-%20React%20Native%20e%20React/)
+- [Formação Desenvolva seu primeiro app com React Native](/19%20-%20React%20Native/)
 - [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
 
 ## Pausados:
