@@ -2,6 +2,7 @@ import { obterCookie } from "../utils/cookies.js";
 import { 
   alertarERedirecionar,
   atualizaTextoEditor,
+  atualizarInterface,
   tratarAutorizacaoSucesso 
 } from "./documento.js";
 
@@ -21,6 +22,13 @@ function selecionarDocumento(dadosEntrada) {
     atualizaTextoEditor(texto);
   });
 }
+
+socket.on("usuario_ja_no_documento", () => {
+  alert('Documento já aberto em outra página.');
+  window.location.href = '/';
+});
+
+socket.on("usuarios_no_documento", atualizarInterface);
 
 function emitirTextoEditor(dados) {
   socket.emit("texto_editor", dados);
