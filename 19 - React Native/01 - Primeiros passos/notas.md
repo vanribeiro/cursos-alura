@@ -20,3 +20,12 @@ expo start --tunnel
 
 - `app.json` contem as configurações do Expo.
 - [Limitações do Expo](https://docs.expo.dev/faq/#limitations?redirected)
+
+
+## React Native
+
+- Textos devem ser colocados do componente padrão `<Text>`:
+
+```javascript
+<Text>Cesta</Text>
+```
