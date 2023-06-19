@@ -1,17 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import logo from './../../../assets/logo.png';
 import {carregarTopo} from '../../../servicos/carregarDados';
 
 function Topo() {
-  const {boasVindas, legenda} = carregarTopo();
+  const [texto, setTexto] = useState<any>({});
+
+  useEffect(() => {
+    const textoDoTopo = carregarTopo();
+    setTexto(textoDoTopo);
+  }, []);
 
   return (
     <>
       <View style={estilos.topo}>
         <Image style={estilos.logo} source={logo} />
-        <Text style={estilos.boasVindas}>{boasVindas}</Text>
-        <Text style={estilos.legenda}>{legenda}</Text>
+        <Text style={estilos.boasVindas}>{texto.boasVindas}</Text>
+        <Text style={estilos.legenda}>{texto.legenda}</Text>
       </View>
     </>
   );
@@ -31,10 +36,12 @@ const estilos = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     fontWeight: 'bold',
+    color: '#464646',
   },
   legenda: {
     fontSize: 16,
     lineHeight: 26,
+    color: '#a3a3a3',
   },
 });
 
