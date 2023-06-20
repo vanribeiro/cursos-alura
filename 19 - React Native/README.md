@@ -1,6 +1,7 @@
 # Cursos da Formação React Native
 
 **Nome da Formação**: [Desenvolva seu primeiro app com React Native](https://cursos.alura.com.br/formacao-react-native)
+
 **Descrição**: Aprenda os primeiros passos do React Native e crie aplicativos para Android e iOS simultaneamente
 
 ## 🤓 Em Andamento
