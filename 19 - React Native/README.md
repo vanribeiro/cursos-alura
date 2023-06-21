@@ -6,12 +6,12 @@
 
 ## 🤓 Em Andamento
 - React Native: utilizando e criando Hooks
-
-## ✅ Finalizados
 - React Native: criando um app
 
-## ⏹ Não Iniciados:
+## ✅ Finalizados
 - React Native: criando menu e navegando entre telas
+
+## ⏹ Não Iniciados:
 - React Native: utilizando Web API
 - React Native: guardando informações localmente
 - React Native: utilizando o Context API nas suas aplicações

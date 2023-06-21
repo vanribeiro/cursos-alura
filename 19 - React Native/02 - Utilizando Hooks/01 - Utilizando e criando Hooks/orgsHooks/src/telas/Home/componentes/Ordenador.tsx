@@ -1,38 +1,8 @@
-import React, {useState} from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import TagDeOrdenacao from './TagDeOrdenacao';
-import {
-  ordernarPelaDistancia,
-  ordernarPelaMelhorClassificacao,
-  ordernarPelaPiorClassificacao,
-  ordernarPeloNomeAZ,
-  ordernarPeloNomeZA,
-} from '../../../utils/ordernar';
 
-function Ordenador({lista, setListaOrdenada}: any) {
-  const [ordernador, setOrdenador] = useState('padrao');
-
-  switch (ordernador) {
-    case 'distancia':
-      setListaOrdenada(lista.sort(ordernarPelaDistancia));
-      break;
-    case 'nome-a-z':
-      setListaOrdenada(lista.sort(ordernarPeloNomeAZ));
-      break;
-    case 'nome-z-a':
-      setListaOrdenada(lista.sort(ordernarPeloNomeZA));
-      break;
-    case 'pior':
-      setListaOrdenada(lista.sort(ordernarPelaPiorClassificacao));
-      break;
-    case 'melhor':
-      setListaOrdenada(lista.sort(ordernarPelaMelhorClassificacao));
-      break;
-    default:
-      lista;
-      break;
-  }
-
+function Ordenador({setOrdenador}: any) {
   return (
     <View style={estilos.ordenador}>
       <View style={estilos.titulo}>
@@ -40,23 +10,33 @@ function Ordenador({lista, setListaOrdenada}: any) {
       </View>
       <View style={estilos.tags}>
         <TagDeOrdenacao
-          onPress={() => setOrdenador('nome-a-z')}
+          setOrdenador={setOrdenador}
+          ordenador="nome-a-z"
           label="Nome A-Z"
         />
         <TagDeOrdenacao
-          onPress={() => setOrdenador('nome-z-a')}
+          setOrdenador={setOrdenador}
+          ordenador="nome-z-a"
           label="Nome Z-A"
         />
         <TagDeOrdenacao
-          onPress={() => setOrdenador('distancia')}
-          label="Distância"
+          setOrdenador={setOrdenador}
+          ordenador="menor-distancia"
+          label="Menor Distância"
         />
         <TagDeOrdenacao
-          onPress={() => setOrdenador('melhor')}
+          setOrdenador={setOrdenador}
+          ordenador="maior-distancia"
+          label="Maior Distância"
+        />
+        <TagDeOrdenacao
+          setOrdenador={setOrdenador}
+          ordenador="melhor-classificacao"
           label="Melhor Classificação"
         />
         <TagDeOrdenacao
-          onPress={() => setOrdenador('pior')}
+          setOrdenador={setOrdenador}
+          ordenador="pior-classificacao"
           label="Pior Classificação"
         />
       </View>
@@ -81,9 +61,6 @@ const estilos = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'flex-start',
   },
-  tagSelecionada: {
-    backgroundColor: '#464646',
-  },
 });
 
-export default Ordenador;
+export default memo(Ordenador);
