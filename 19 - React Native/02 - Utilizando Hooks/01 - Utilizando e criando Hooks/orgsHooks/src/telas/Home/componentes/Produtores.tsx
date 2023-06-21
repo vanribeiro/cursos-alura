@@ -1,22 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
-import {carregarProdutores} from '../../../servicos/carregarDados';
 import Produtor from './Produtor';
+import Ordenador from './Ordenador';
+import useProdutores from '../../../hooks/useProdutores';
 
 function Produtores({topo: Topo}: any) {
-  const [titulo, setTitulo] = useState<string>('');
-  const [listaDeProdutores, setListaDeProdutores] = useState<Array<object>>([]);
-
-  useEffect(() => {
-    const produtores = carregarProdutores();
-    setTitulo(produtores.titulo);
-    setListaDeProdutores(produtores.lista);
-  }, []);
+  const [listaOrdenada, setListaOrdenada] = useState(null);
+  const [titulo, listaDeProdutores] = useProdutores();
 
   const topoLista = () => {
     return (
       <>
         <Topo />
+        <Ordenador
+          lista={listaDeProdutores}
+          setListaOrdenada={setListaOrdenada}
+        />
         <Text style={estilos.titulo}>{titulo}</Text>
       </>
     );

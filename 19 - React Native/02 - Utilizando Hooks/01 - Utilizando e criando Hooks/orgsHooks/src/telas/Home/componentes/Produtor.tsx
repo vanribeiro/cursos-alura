@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Estrelas from '../../../componentes/Estrelas';
 
 function Produtor({nome, imagem, distancia, estrelas}: any) {
   const [selecionado, setSelecionado] = useState(false);
+
+  const distanciaTexto = useMemo(() => `${distancia}m`, [distancia]);
 
   return (
     <>
@@ -24,7 +26,7 @@ function Produtor({nome, imagem, distancia, estrelas}: any) {
               grande={selecionado}
             />
           </View>
-          <Text>{distancia}</Text>
+          <Text>{distanciaTexto}</Text>
         </View>
       </TouchableOpacity>
     </>
