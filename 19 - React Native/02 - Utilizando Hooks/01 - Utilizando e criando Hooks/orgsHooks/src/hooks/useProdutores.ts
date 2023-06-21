@@ -1,17 +1,54 @@
 import {useState, useEffect} from 'react';
 import {carregarProdutores} from '../servicos/carregarDados';
+import {
+  ordernarPelaMaiorDistancia,
+  ordernarPelaMelhorClassificacao,
+  ordernarPelaMenorDistancia,
+  ordernarPelaPiorClassificacao,
+  ordernarPeloNomeAZ,
+  ordernarPeloNomeZA,
+} from '../utils/ordernar';
 
 function useProdutores() {
   const [titulo, setTitulo] = useState<string>('');
-  const [listaDeProdutores, setListaDeProdutores] = useState<Array<any>>([]);
+  const [lista, setLista] = useState<Array<any>>([]);
+  const [ordernador, setOrdenador] = useState<string>('padrao');
 
   useEffect(() => {
     const produtores = carregarProdutores();
     setTitulo(produtores.titulo);
-    setListaDeProdutores(produtores.lista);
-  }, []);
+    const novaLista = [...produtores.lista];
 
-  return [titulo, listaDeProdutores];
+    if (ordernador === 'padrao') {
+      setLista(novaLista);
+    }
+
+    if (ordernador === 'nome-a-z') {
+      setLista(novaLista.sort(ordernarPeloNomeAZ));
+    }
+
+    if (ordernador === 'nome-z-a') {
+      setLista(novaLista.sort(ordernarPeloNomeZA));
+    }
+
+    if (ordernador === 'menor-distancia') {
+      setLista(novaLista.sort(ordernarPelaMenorDistancia));
+    }
+
+    if (ordernador === 'maior-distancia') {
+      setLista(novaLista.sort(ordernarPelaMaiorDistancia));
+    }
+
+    if (ordernador === 'pior-classificacao') {
+      setLista(novaLista.sort(ordernarPelaPiorClassificacao));
+    }
+
+    if (ordernador === 'melhor-classificacao') {
+      setLista(novaLista.sort(ordernarPelaMelhorClassificacao));
+    }
+  }, [ordernador]);
+
+  return {titulo, lista, setOrdenador};
 }
 
 export default useProdutores;
