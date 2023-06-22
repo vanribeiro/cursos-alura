@@ -1,17 +1,18 @@
 import React from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import Produtor from './Produtor';
-import Ordenador from './Ordenador';
 import useProdutores from '../../../hooks/useProdutores';
+import useTextos from '../../../hooks/useTextos';
 
-function Produtores({topo: Topo}: any) {
-  const {titulo, lista, setOrdenador} = useProdutores();
+function Produtores({topo: Topo, melhoresProdutores}: any) {
+  const lista = useProdutores(melhoresProdutores);
+  const {tituloProdutores} = useTextos();
+
   const topoLista = () => {
     return (
       <>
         <Topo />
-        <Ordenador setOrdenador={setOrdenador} />
-        <Text style={estilos.titulo}>{titulo}</Text>
+        <Text style={estilos.titulo}>{tituloProdutores}</Text>
       </>
     );
   };
@@ -19,7 +20,7 @@ function Produtores({topo: Topo}: any) {
   return (
     <FlatList
       data={lista}
-      renderItem={({item}) => <Produtor {...item} />}
+      renderItem={({item}) => <Produtor {...item} aoPressionar={() => {}} />}
       keyExtractor={({nome}: any) => nome}
       ListHeaderComponent={topoLista}
     />

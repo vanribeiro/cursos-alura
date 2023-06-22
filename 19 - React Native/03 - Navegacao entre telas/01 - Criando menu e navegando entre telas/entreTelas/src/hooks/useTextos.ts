@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {carregarTopo} from '../servicos/carregarDados';
 
-function useTextoTopo() {
+function useTextos() {
   const [texto, setTexto] = useState<any>({});
 
   useEffect(() => {
@@ -12,4 +12,4 @@ function useTextoTopo() {
   return {...texto};
 }
 
-export default useTextoTopo;
+export default useTextos;
