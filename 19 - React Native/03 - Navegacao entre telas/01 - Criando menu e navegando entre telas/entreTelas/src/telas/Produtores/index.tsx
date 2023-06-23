@@ -1,20 +1,43 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import Produtor from './componentes/Produtor';
 import useProdutores from '../../hooks/useProdutores';
 import useTextos from '../../hooks/useTextos';
 import Topo from './componentes/Topo';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 
 function Produtores({melhoresProdutores}: any) {
+  const [exibeMensagem, setExibeMensagem] = useState<boolean>(false);
   const navigation = useNavigation();
+  const route = useRoute();
   const lista = useProdutores(melhoresProdutores);
-  const {tituloProdutores} = useTextos();
+  const {tituloProdutores, mensagemCompra} = useTextos();
+  // @ts-ignore
+  const nomeCompra: any = route.params?.compra.nome;
+  // @ts-ignore
+  const timestampCompra: any = route.params?.compra.timestamp;
+  const mensagemCompleta: string = mensagemCompra?.replace('$NOME', nomeCompra);
+
+  useEffect(() => {
+    setExibeMensagem(!!timestampCompra);
+    let timeout: number;
+
+    if (timestampCompra) {
+      timeout = setTimeout(() => {
+        setExibeMensagem(false);
+      }, 3 * 1000);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [timestampCompra]);
 
   const topoLista = () => {
     return (
       <>
-        <Topo />
+        <Topo melhoresProdutores={melhoresProdutores} />
+        {exibeMensagem && (
+          <Text style={estilos.compra}>{mensagemCompleta}</Text>
+        )}
         <Text style={estilos.titulo}>{tituloProdutores}</Text>
       </>
     );
@@ -23,6 +46,7 @@ function Produtores({melhoresProdutores}: any) {
   return (
     <FlatList
       data={lista}
+      style={estilos.lista}
       renderItem={({item}) => (
         <Produtor
           {...item}
@@ -39,6 +63,9 @@ function Produtores({melhoresProdutores}: any) {
 }
 
 const estilos = StyleSheet.create({
+  lista: {
+    backgroundColor: '#fff',
+  },
   titulo: {
     fontSize: 20,
     lineHeight: 32,
@@ -46,6 +73,13 @@ const estilos = StyleSheet.create({
     marginTop: 16,
     fontWeight: 'bold',
     color: '#464646',
+  },
+  compra: {
+    color: '#464646',
+    backgroundColor: '#eaf5f3',
+    padding: 16,
+    fontSize: 16,
+    lineHeight: 26,
   },
 });
 
