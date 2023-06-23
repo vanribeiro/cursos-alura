@@ -1,11 +1,11 @@
 import {useEffect, useState} from 'react';
-import {carregarTopo} from '../servicos/carregarDados';
+import {carregarTextos} from '../servicos/carregarDados';
 
 function useTextos() {
   const [texto, setTexto] = useState<any>({});
 
   useEffect(() => {
-    const textoDoTopo = carregarTopo();
+    const textoDoTopo = carregarTextos();
     setTexto(textoDoTopo);
   }, []);
 

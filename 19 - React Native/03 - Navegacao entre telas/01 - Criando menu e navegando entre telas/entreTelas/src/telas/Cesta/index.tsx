@@ -7,9 +7,12 @@ import Topo from '../../componentes/Topo';
 import useTextos from '../../hooks/useTextos';
 import Detalhes from './componentes/Detalhes';
 import Item from './componentes/Item';
+import {useRoute} from '@react-navigation/native';
 
-function Cesta({detalhes, itens, produtor}: any) {
+function Cesta() {
+  const route = useRoute();
   const {topoCesta, tituloItens} = useTextos();
+  const {detalhes, itens, produtor}: any = route.params;
 
   // eslint-disable-next-line react/no-unstable-nested-components
   const Cabecalho = () => {

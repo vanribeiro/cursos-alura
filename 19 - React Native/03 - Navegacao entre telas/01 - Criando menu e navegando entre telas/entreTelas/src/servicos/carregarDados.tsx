@@ -1,7 +1,7 @@
 import produtores from './../mocks/produtores';
-import topo from '../mocks/topo';
+import textos from '../mocks/textos';
 
 const carregarProdutores = () => produtores;
-const carregarTopo = () => topo;
+const carregarTextos = () => textos;
 
-export {carregarProdutores, carregarTopo};
+export {carregarProdutores, carregarTextos};

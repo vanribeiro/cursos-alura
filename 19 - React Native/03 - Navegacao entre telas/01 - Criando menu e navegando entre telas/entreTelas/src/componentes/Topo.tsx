@@ -7,8 +7,9 @@ import voltar from '../assets/voltar.png';
 import {useNavigation} from '@react-navigation/native';
 
 const width = Dimensions.get('screen').width;
+let alturaCalculada = (578 / 768) * width;
 
-function Topo({titulo, imagem = topo, altura}: any) {
+function Topo({titulo, imagem = topo, altura = alturaCalculada}: any) {
   const navigation = useNavigation();
   return (
     <>
@@ -35,11 +36,11 @@ function Topo({titulo, imagem = topo, altura}: any) {
 const estilos = StyleSheet.create({
   topo: {
     width: '100%',
-    height: (578 / 768) * width,
+    height: 0,
   },
   gradiente: {
     width: '100%',
-    height: (578 / 768) * width,
+    height: 0,
     position: 'absolute',
     zIndex: 0,
   },
