@@ -7,11 +7,17 @@ import voltar from '../assets/voltar.png';
 
 const width = Dimensions.get('screen').width;
 
-function Topo({titulo}: any) {
+function Topo({titulo, imagem = topo, altura}: any) {
   return (
     <>
-      <Image style={estilos.topo} source={topo} />
-      <Image style={estilos.gradiente} source={gradiente} />
+      <Image
+        style={[estilos.topo, (estilos.topo.height = altura)]}
+        source={imagem}
+      />
+      <Image
+        style={[estilos.gradiente, (estilos.gradiente.height = altura)]}
+        source={gradiente}
+      />
       <Texto style={estilos.titulo}>{titulo}</Texto>
       <TouchableOpacity onPress={() => {}} style={estilos.botaoVoltar}>
         <Image source={voltar} style={estilos.voltar} />
