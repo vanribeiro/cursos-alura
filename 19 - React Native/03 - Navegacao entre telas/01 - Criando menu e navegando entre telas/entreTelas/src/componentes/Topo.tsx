@@ -4,10 +4,12 @@ import Texto from './Texto';
 import topo from '../assets/topo.png';
 import gradiente from '../assets/gradiente.png';
 import voltar from '../assets/voltar.png';
+import {useNavigation} from '@react-navigation/native';
 
 const width = Dimensions.get('screen').width;
 
 function Topo({titulo, imagem = topo, altura}: any) {
+  const navigation = useNavigation();
   return (
     <>
       <Image
@@ -19,7 +21,11 @@ function Topo({titulo, imagem = topo, altura}: any) {
         source={gradiente}
       />
       <Texto style={estilos.titulo}>{titulo}</Texto>
-      <TouchableOpacity onPress={() => {}} style={estilos.botaoVoltar}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.goBack();
+        }}
+        style={estilos.botaoVoltar}>
         <Image source={voltar} style={estilos.voltar} />
       </TouchableOpacity>
     </>
