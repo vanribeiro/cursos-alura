@@ -13,7 +13,6 @@ function Cesta() {
   const route = useRoute();
   const {topoCesta, tituloItens} = useTextos();
   const {detalhes, itens, produtor}: any = route.params;
-
   // eslint-disable-next-line react/no-unstable-nested-components
   const Cabecalho = () => {
     return (

@@ -1,10 +1,10 @@
 import React, {useMemo} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Estrelas from '../../../componentes/Estrelas';
+import Texto from '../../../componentes/Texto';
 
 function Produtor({nome, imagem, distancia, estrelas, aoPressionar}: any) {
   // const [selecionado, setSelecionado] = useState(false);
-
   const distanciaTexto = useMemo(() => `${distancia}m`, [distancia]);
 
   return (
@@ -20,14 +20,14 @@ function Produtor({nome, imagem, distancia, estrelas, aoPressionar}: any) {
         />
         <View style={estilos.informacoes}>
           <View>
-            <Text style={estilos.nome}>{nome}</Text>
+            <Texto style={estilos.nome}>{nome}</Texto>
             <Estrelas
               quantidade={estrelas}
               // editavel={selecionado}
               // grande={selecionado}
             />
           </View>
-          <Text>{distanciaTexto}</Text>
+          <Texto>{distanciaTexto}</Texto>
         </View>
       </TouchableOpacity>
     </>

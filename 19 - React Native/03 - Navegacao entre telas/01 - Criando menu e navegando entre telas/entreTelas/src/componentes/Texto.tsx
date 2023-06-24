@@ -5,6 +5,7 @@ function Texto({children, style}: any) {
   let estilo = estilos.texto;
 
   if (style?.fontWeight === 'bold') {
+    //@ts-ignore
     estilo = estilos.textoNegrito;
   }
 
@@ -13,11 +14,11 @@ function Texto({children, style}: any) {
 
 const estilos = StyleSheet.create({
   texto: {
-    // fontFamily: 'MontserratRegular',
+    fontFamily: 'Montserrat-Regular',
     fontWeight: 'normal',
   },
   textoNegrito: {
-    // fontFamily: 'MontserratBold',
+    fontFamily: 'Montserrat-Bold',
     fontWeight: 'bold',
   },
 });

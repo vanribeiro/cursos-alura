@@ -23,8 +23,8 @@ function Detalhes({nome, produtor, descricao, preco}: any) {
         style={estilos.botao}
         onPress={() =>
           // @ts-ignore
-          navigation.navigate('HomeScreen', {
-            compra: {nome, timestamp: +new Date()},
+          navigation.navigate('Resumo', {
+            compra: {nome, timestamp: +new Date(), produtor},
           })
         }>
         <Texto style={estilos.textoBotao}>{botaoComprar}</Texto>

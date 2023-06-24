@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, StyleSheet, Text} from 'react-native';
+import {FlatList, StyleSheet} from 'react-native';
 import Produtor from './componentes/Produtor';
 import useProdutores from '../../hooks/useProdutores';
 import useTextos from '../../hooks/useTextos';
 import Topo from './componentes/Topo';
 import {useNavigation, useRoute} from '@react-navigation/native';
+import Texto from '../../componentes/Texto';
 
 function Produtores({melhoresProdutores}: any) {
   const [exibeMensagem, setExibeMensagem] = useState<boolean>(false);
@@ -36,9 +37,9 @@ function Produtores({melhoresProdutores}: any) {
       <>
         <Topo melhoresProdutores={melhoresProdutores} />
         {exibeMensagem && (
-          <Text style={estilos.compra}>{mensagemCompleta}</Text>
+          <Texto style={estilos.compra}>{mensagemCompleta}</Texto>
         )}
-        <Text style={estilos.titulo}>{tituloProdutores}</Text>
+        <Texto style={estilos.titulo}>{tituloProdutores}</Texto>
       </>
     );
   };

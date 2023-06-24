@@ -1,21 +1,27 @@
 import React, {memo} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import logo from './../../../assets/logo.png';
 import useTextos from '../../../hooks/useTextos';
+import Texto from '../../../componentes/Texto';
 
 function Topo({melhoresProdutores}: any) {
-  const {boasVindas, legenda, legendaMelhoresProdutores} = useTextos();
+  const {
+    boasVindas,
+    legenda,
+    legendaMelhoresProdutores,
+    tituloMelhoresProdutores,
+  } = useTextos();
 
   return (
     <>
       <View style={estilos.topo}>
         <Image style={estilos.logo} source={logo} />
-        <Text style={estilos.boasVindas}>
-          {melhoresProdutores ? '' : boasVindas}
-        </Text>
-        <Text style={estilos.legenda}>
+        <Texto style={estilos.boasVindas}>
+          {melhoresProdutores ? tituloMelhoresProdutores : boasVindas}
+        </Texto>
+        <Texto style={estilos.legenda}>
           {melhoresProdutores ? legendaMelhoresProdutores : legenda}
-        </Text>
+        </Texto>
       </View>
     </>
   );

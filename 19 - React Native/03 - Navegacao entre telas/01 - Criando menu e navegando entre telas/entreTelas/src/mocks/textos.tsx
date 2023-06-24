@@ -9,7 +9,12 @@ const textos: any = {
   botaoComprar: 'Comprar',
   tituloItens: 'Itens da cesta',
   mensagemCompra:
-    'Agradecemos pela compra da cesta $NOME, seu pedido chegará em breve',
+    'Agradecemos pela compra da cesta $NOME, seu pedido chegará em breve!',
+  tituloParabens: 'Parabéns!',
+  tituloPedidoSucesso: 'Pedido feito com sucesso!',
+  botaoVoltaParaHome: 'Voltar a Home',
+  voltarAoProdutor: 'Voltar ao Produtor',
+  tituloMelhoresProdutores: 'Melhores Produtores',
 };
 
 export default textos;

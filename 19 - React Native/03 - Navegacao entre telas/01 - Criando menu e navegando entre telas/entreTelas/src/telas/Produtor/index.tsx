@@ -1,10 +1,11 @@
 import {useRoute} from '@react-navigation/native';
 import React from 'react';
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Image, StyleSheet, View} from 'react-native';
 import Cesta from './componentes/Cesta';
 import Topo from '../../componentes/Topo';
 import useTextos from '../../hooks/useTextos';
 import topoPng from '../../assets/produtores/topo.png';
+import Texto from '../../componentes/Texto';
 
 function Produtor() {
   const route = useRoute();
@@ -19,9 +20,9 @@ function Produtor() {
         <View style={estilos.conteudo}>
           <View style={estilos.logo}>
             <Image source={imagem} style={estilos.produtorImage} />
-            <Text style={estilos.produtor}>{nome}</Text>
+            <Texto style={estilos.produtor}>{nome}</Texto>
           </View>
-          <Text style={estilos.cestas}>{tituloCestas}</Text>
+          <Texto style={estilos.cestas}>{tituloCestas}</Texto>
         </View>
       </>
     );
