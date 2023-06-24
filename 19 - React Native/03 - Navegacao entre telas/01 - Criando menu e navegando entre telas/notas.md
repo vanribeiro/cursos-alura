@@ -36,3 +36,7 @@ e o no topo:
 ```java
 import android.os.Bundle;
 ```
+
+## Fontes
+
+- [Implement custom fonts on React Native](https://blog.devgenius.io/implement-custom-fonts-on-react-native-0-70-649c16f7609f)

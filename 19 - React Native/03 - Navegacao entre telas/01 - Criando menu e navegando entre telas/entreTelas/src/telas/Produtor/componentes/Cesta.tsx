@@ -11,8 +11,10 @@ export default function Cesta({detalhes, itens, produtor}: any) {
   return (
     <TouchableOpacity
       style={estilos.cesta}
-      // @ts-ignore
-      onPress={() => navigation.navigate('Cesta', {detalhes, itens, produtor})}>
+      onPress={() =>
+        // @ts-ignore
+        navigation.navigate('Cesta', {nome, detalhes, itens, produtor})
+      }>
       <View style={estilos.conteudo}>
         <Image source={imagem} style={estilos.imagem} />
 

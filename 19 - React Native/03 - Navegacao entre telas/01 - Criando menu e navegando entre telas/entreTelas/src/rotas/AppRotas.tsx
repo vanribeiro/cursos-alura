@@ -13,9 +13,9 @@ function AppRotas() {
     // eslint-disable-next-line react/no-unstable-nested-components
     ({color}: any) => {
       return route.name === 'Melhores Produtores' ? (
-        <Icon name="heart" size={24} color={color} />
+        <Icon name="heart" size={22} color={color} />
       ) : (
-        <Icon name="home" size={24} color={color} />
+        <Icon name="home" size={22} color={color} />
       );
     };
 
@@ -26,7 +26,11 @@ function AppRotas() {
           screenOptions={({route}) => ({
             headerShown: false,
             tabBarStyle: {height: 60},
-            tabBarLabelStyle: {fontSize: 16},
+            tabBarLabelStyle: {
+              fontSize: 12,
+              paddingBottom: 4,
+              fontFamily: 'Montserrat-Regular',
+            },
             tabBarIcon: definirIcones(route),
             tabBarActiveTintColor: '#2a9f95',
             tabBarInactiveTintColor: '#c7c7c7',

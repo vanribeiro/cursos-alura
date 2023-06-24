@@ -1,5 +1,6 @@
 import React, {useState, memo} from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
+import Texto from '../../../componentes/Texto';
 
 function TagDeOrdenacao({setOrdenador, ordenador, label}: any) {
   const [selecionado, setSelecionado] = useState<boolean>(false);
@@ -19,7 +20,7 @@ function TagDeOrdenacao({setOrdenador, ordenador, label}: any) {
       onPressIn={handlePressIn}
       onPress={handlePress}
       style={estilos.tag}>
-      <Text style={estilos.tagTexto}>{label}</Text>
+      <Texto style={estilos.tagTexto}>{label}</Texto>
     </TouchableOpacity>
   );
 }
