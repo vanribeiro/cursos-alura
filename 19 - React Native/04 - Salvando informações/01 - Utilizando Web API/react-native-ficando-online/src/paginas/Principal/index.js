@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, Image, TouchableOpacity, TextInput, Alert, ScrollView } from 'react-native';
 import estilos from './estilos';
 import { buscarUsuario } from '../../servicos/requisicoes/usuarios';
+import Buscador from '../../componentes/Buscador';
 
 export default function Principal({ navigation }) {
     const [nomeUsuario, setNomeUsuario] = useState('');
@@ -47,20 +48,12 @@ export default function Principal({ navigation }) {
                     </TouchableOpacity>
                 </>
                 }
-
-                <TextInput
+                <Buscador 
                     placeholder="Busque por um usuário"
-                    autoCapitalize="none"
-                    style={estilos.entrada}
                     value={nomeUsuario}
                     onChangeText={(texto) => setNomeUsuario(texto)}
+                    onPress={() => buscar()}
                 />
-
-                <TouchableOpacity style={estilos.botao} onPress={() => buscar()}>
-                    <Text style={estilos.textoBotao}>
-                        Buscar
-                    </Text>
-                </TouchableOpacity>
             </View>
         </ScrollView>
     );
