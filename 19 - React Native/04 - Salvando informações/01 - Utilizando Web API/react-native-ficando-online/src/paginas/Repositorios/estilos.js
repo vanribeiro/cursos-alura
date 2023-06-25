@@ -7,6 +7,11 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    flatlist: {
+        width: '100%',
+        position: 'relative',
+        zIndex: 0,
+    },
     repositoriosTexto: {
         fontSize: 21,
         fontWeight: '600',
@@ -52,6 +57,14 @@ const estilos = StyleSheet.create({
         fontSize: 16,
         color: '#FFF',
     },
+    buscadorNoRodape: {
+        width: '100%',
+        elevation: 1,
+        position: 'absolute',
+        zIndex: 1,
+        bottom: 0,
+        backgroundColor: '#f1f1f1',
+    }
 });
 
 

@@ -10,6 +10,16 @@ async function pegarRepositorios(id) {
     }
 }
 
+async function buscarPorRepositorio(postId, nomeRepo) {
+    try {
+        const resultado = await api.get(`/repos?postId=${postId}&q=${nomeRepo}`);
+        return resultado.data;
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
+
 async function atualizarRepositorio(postId, name, data, id) {
     try {
         await api.put(`/repos/${id}`, {
@@ -28,5 +38,6 @@ async function atualizarRepositorio(postId, name, data, id) {
 
 export {
     pegarRepositorios,
-    atualizarRepositorio
+    atualizarRepositorio,
+    buscarPorRepositorio
 }
