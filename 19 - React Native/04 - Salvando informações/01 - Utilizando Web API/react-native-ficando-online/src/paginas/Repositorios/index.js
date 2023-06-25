@@ -33,8 +33,8 @@ export default function Repositorios({ navigation, route }) {
             } repositórios criados</Text>
             <TouchableOpacity 
                 style={estilos.botao}
-                onPress={() => navigation.navigate('CriarRepositorio')}
-            >
+                onPress={() => navigation.navigate('CriarRepositorio', { id: route.params.id })}
+                >
                 <Text style={estilos.textoBotao}>Adicionar novo repositório</Text>
             </TouchableOpacity>
             <FlatList 

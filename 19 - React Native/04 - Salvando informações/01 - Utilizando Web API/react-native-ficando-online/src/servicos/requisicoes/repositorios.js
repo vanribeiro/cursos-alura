@@ -20,6 +20,21 @@ async function buscarPorRepositorio(postId, nomeRepo) {
     }
 }
 
+async function criarRepositorio(name, data, postId) {
+    try {
+        await api.post(`/repos`, {
+            name: name,
+            data: data, 
+            postId: postId,
+        });
+
+        return 'sucesso';
+    } catch (error) {
+        console.error(error);
+        return 'erro';
+    }
+}
+
 async function atualizarRepositorio(postId, name, data, id) {
     try {
         await api.put(`/repos/${id}`, {
@@ -36,8 +51,21 @@ async function atualizarRepositorio(postId, name, data, id) {
     }
 }
 
+async function deletarRepositorio(id) {
+    try {
+        await api.delete(`/repos/${id}`);
+
+        return 'sucesso';
+    } catch (error) {
+        console.error(error);
+        return 'erro';
+    }
+}
+
 export {
     pegarRepositorios,
     atualizarRepositorio,
-    buscarPorRepositorio
+    buscarPorRepositorio,
+    criarRepositorio,
+    deletarRepositorio
 }
