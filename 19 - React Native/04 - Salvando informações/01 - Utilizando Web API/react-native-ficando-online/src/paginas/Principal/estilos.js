@@ -47,7 +47,7 @@ const estilos = StyleSheet.create({
         borderRadius: 60,
     },
     fundo: {
-        backgroundColor: '#C4C4C4',
+        backgroundColor: '#464646',
         width: '100%',
         height: 156,
     },
