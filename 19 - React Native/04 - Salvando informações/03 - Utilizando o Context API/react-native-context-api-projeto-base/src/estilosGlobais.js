@@ -1,37 +1,40 @@
 const tema = {
-  fundo: '#051933',
-  titulo: '#FFFFFF',
-  texto: '#FFFFFF',
-  branco: '#FFFFFF',
+  fundo: '#203045',
+  titulo: '#EBEBEB',
+  texto: '#EBEBEB',
+  branco: '#EBEBEB',
   preto: '#000000',
-  cinza: '#093245',
-  ultimosVistos: '#093245',
+  cinza: '#336982',
+  ultimosVistos: '#336982',
   botao: '#A3FEBF',
-  input: '#FFFFFF',
+  input: '#EBEBEB',
+  border: '#203045',
 }
 
 const escuro = {
-  fundo: '#051933',
-  titulo: '#FFFFFF',
-  texto: '#FFFFFF',
-  branco: '#FFFFFF',
+  fundo: '#203045',
+  titulo: '#EBEBEB',
+  texto: '#EBEBEB',
+  branco: '#EBEBEB',
   preto: '#000000',
-  cinza: '#093245',
-  ultimosVistos: '#093245',
+  cinza: '#336982',
+  ultimosVistos: '#336982',
   botao: '#A3FEBF',
-  input: '#FFFFFF',
+  input: '#EBEBEB',
+  border: '#EBEBEB',
 }
 
 const claro = {
   fundo: '#FFFFFF',
-  titulo: '#051933',
+  titulo: '#203045',
   texto: '#000000',
   branco: '#000000',
   preto: '#FFFFFF',
-  cinza: '#EBEBEB',
+  cinza: '#FFFFFF',
   ultimosVistos: '#CCEFFF',
   botao: '#2A663C',
-  input: '#0B2A52',
+  input: '#203045',
+  border: '#203045',
 }
 
 export { escuro, claro, tema };

@@ -48,7 +48,7 @@ export const estilos = (tema) => StyleSheet.create({
     color: tema.titulo,
   },
   carrinhoQuantidadeArea: {
-    backgroundColor: 'red',
+    backgroundColor: '#cf4b4b',
     borderRadius: 10,
     width: 20,
     height: 20,
@@ -59,6 +59,19 @@ export const estilos = (tema) => StyleSheet.create({
     fontSize: 12,
     fontWeight: 'bold',
     color: "#fff",
+  },
+  carrinhoQuantidadeAreaEscondido: {
+    backgroundColor: 'transparent',
+    borderRadius: 10,
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  carrinhoQuantidadeEscondido: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: 'transparent',
   },
   iconArea: {
     marginLeft: 16,
