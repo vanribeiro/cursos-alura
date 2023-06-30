@@ -10,7 +10,7 @@ export default function Lance({ id, valor, cor }) {
   return <Cartao style={estilos.cartao}>
     <View style={estilos.inicio}>
       <FontAwesome5 name="hand-paper" size={24} color={cor} />
-      <Text style={estilos.identificador}>#{id}</Text>
+      <Text style={estilos.identificador} accessibilityHint="Ordem do Lance">#{id}</Text>
     </View>
     <Text style={estilos.lance}>{formataDecimalParaReal(valor)}</Text>
   </Cartao>

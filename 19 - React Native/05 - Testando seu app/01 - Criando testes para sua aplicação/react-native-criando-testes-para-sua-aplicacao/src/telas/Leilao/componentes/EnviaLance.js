@@ -39,8 +39,9 @@ export default function EnviaLance({ enviaLance, cor }) {
       editable={!enviando}
       style={estilos.entrada}
       keyboardType="decimal-pad"
-    />
+      />
     <TouchableOpacity 
+      accessibilityHint="Enviar lance"
       onPress={validaEnvio}
       disabled={enviando}
       style={estilos.botao}>
