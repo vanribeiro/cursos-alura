@@ -3,18 +3,18 @@
 Este repositório contém código, anotações de exercícios e a parte prática dos cursos que fiz ou estou fazendo na Alura:
 
 01. [Cursos em andamento](#em-andamento)
-02. [Cursos Pausados](#pausado)
+02. [Cursos pausados](#pausado)
 03. [Cursos finalizados](#finalizados)
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [Formação Desenvolva seu primeiro app com React Native](/19%20-%20React%20Native/)
 - [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
 
 ## Pausados:
 - [Formação Boas Práticas em C#](/17%20-%20Boas%20Pr%C3%A1ticas%20com%20C%23/)
 
 ## Finalizados:
+- [Formação Desenvolva seu primeiro app com React Native](/19%20-%20React%20Native/)
 - [Formação ASP.Net Core](/15%20-%20Forma%C3%A7%C3%A3o%20ASP.Net%20Core/)
 - [Formação C# e Orientação a Objetos](/14%20-%20Forma%C3%A7%C3%A3o%20C%23%20e%20POO/)
 - [Performance ma Web I e II](/13%20-%20Automa%C3%A7%C3%A3o%20e%20Perfomance/02%20-%20Performance%20Web%20I%20e%20II/)
