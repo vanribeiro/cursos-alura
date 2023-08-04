@@ -8,9 +8,10 @@ Este repositório contém código, anotações de exercícios e a parte prática
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
+- [SQL com MySQL Server da Oracle]()
 
 ## Pausados:
+- [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
 - [Formação Boas Práticas em C#](/17%20-%20Boas%20Pr%C3%A1ticas%20com%20C%23/)
 
 ## Finalizados:
