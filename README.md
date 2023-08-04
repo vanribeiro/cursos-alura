@@ -8,7 +8,7 @@ Este repositório contém código, anotações de exercícios e a parte prática
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [SQL com MySQL Server da Oracle]()
+- [SQL com MySQL Server da Oracle](/21%20-%20SQL%20com%20MySQL/)
 
 ## Pausados:
 - [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
