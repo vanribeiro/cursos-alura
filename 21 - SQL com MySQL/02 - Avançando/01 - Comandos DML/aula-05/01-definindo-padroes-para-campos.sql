@@ -1,0 +1,25 @@
+-- Active: 1691456479247@@127.0.0.1@3306@vendas_sucos
+CREATE TABLE tab_padrao(
+    ID INT NOT NULL AUTO_INCREMENT,
+    DESCRITOR VARCHAR(20),
+    ENDERECO VARCHAR(100) NULL,
+    CIDADE VARCHAR(50) DEFAULT 'Rio de Janeiro',
+    DATA_CRIACAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY(ID)
+);
+
+INSERT INTO tab_padrao (
+    DESCRITOR,
+    ENDERECO,
+    CIDADE,
+    DATA_CRIACAO
+) VALUES (
+    'Cliente 01',
+    'Rua A',
+    'São Paulo',
+    '2019-01-01'
+);
+
+INSERT INTO tab_padrao (DESCRITOR) VALUES ('Cliente 02');
+
+SELECT * FROM tab_padrao;
