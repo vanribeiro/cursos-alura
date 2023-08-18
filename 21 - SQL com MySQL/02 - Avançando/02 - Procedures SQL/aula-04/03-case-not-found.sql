@@ -1,10 +1,13 @@
 -- Active: 1691456479247@@127.0.0.1@3306@sucos_vendas
-DROP PROCEDURE IF EXISTS acha_tipo_de_sabor;
+DROP PROCEDURE IF EXISTS acha_tipo_de_sabor_erro;
 DELIMITER $$
-CREATE PROCEDURE acha_tipo_de_sabor(vProduto VARCHAR(50))
+CREATE PROCEDURE acha_tipo_de_sabor_erro(vProduto VARCHAR(50))
 BEGIN
 
     DECLARE vSabor VARCHAR(50);
+    DECLARE mensagemErro VARCHAR(30);
+    DECLARE CONTINUE HANDLER FOR 1339 
+        SET mensagemErro = 'O CASE não está completo';
 
     SELECT SABOR INTO vSabor 
     FROM tabela_de_produtos
@@ -21,15 +24,16 @@ BEGIN
             SELECT 'Neutro';
         WHEN 'Uva' THEN 
             SELECT 'Neutro';
-        ELSE 
-            SELECT 'Ácidos';
     END CASE;
+
+    SELECT mensagemErro;
+
 END$$
 DELIMITER;
 
-CALL acha_tipo_de_sabor('1000889'); -- Uva
-CALL acha_tipo_de_sabor('1037797'); -- Laranja
-CALL acha_tipo_de_sabor('231776'); -- Açaí
+CALL acha_tipo_de_sabor_erro('1000889'); -- Uva
+CALL acha_tipo_de_sabor_erro('1037797'); -- Laranja
+CALL acha_tipo_de_sabor_erro('231776'); -- Sabor que não está no case: Açaí
 
 
 SELECT CODIGO_DO_PRODUTO, SABOR 
