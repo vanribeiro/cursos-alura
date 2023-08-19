@@ -45,3 +45,48 @@ CALL Acha_Status_Preco_Case('1004327');
 -- Exercício:
 -- Implemente a Stored Procedure do exercício do vídeo 2, agora usando CASE CONDICIONAL. 
 -- Chame de Comparativo_Vendas_Case_Cond.
+
+-- Minha Resposta:
+DROP PROCEDURE IF EXISTS Comparativo_Vendas_Case_Cond;
+
+DELIMITER $$
+CREATE PROCEDURE Comparativo_Vendas_Case_Cond(dia01 DATE, dia02 DATE)
+    BEGIN  
+        DECLARE TOTAL_VENDA_DIA_01 FLOAT;
+        DECLARE TOTAL_VENDA_DIA_02 FLOAT;
+        DECLARE CALCULO_VARIACAO FLOAT;
+        DECLARE MENSAGEM VARCHAR(20);
+
+        SELECT SUM(B.QUANTIDADE * B.PRECO) INTO TOTAL_VENDA_DIA_01 
+            FROM NOTAS_FISCAIS A 
+            INNER JOIN ITENS_NOTAS_FISCAIS B
+            ON A.NUMERO = B.NUMERO
+            WHERE A.DATA_VENDA = dia01;
+
+        SELECT SUM(B.QUANTIDADE * B.PRECO) INTO TOTAL_VENDA_DIA_02 
+            FROM NOTAS_FISCAIS A 
+            INNER JOIN ITENS_NOTAS_FISCAIS B
+            ON A.NUMERO = B.NUMERO
+            WHERE A.DATA_VENDA = dia02;
+        
+        SET CALCULO_VARIACAO = ROUND(((TOTAL_VENDA_DIA_01/TOTAL_VENDA_DIA_02) - 1) * 100, 2);
+
+        CASE 
+            WHEN CALCULO_VARIACAO > 10 THEN 
+                SET MENSAGEM = 'VERDE';
+            WHEN CALCULO_VARIACAO >= -10 AND CALCULO_VARIACAO < 10 THEN
+                SET MENSAGEM = 'AMARELO';
+            WHEN CALCULO_VARIACAO < -10 THEN
+                SET MENSAGEM = 'VERMELHO'; 
+        END CASE;
+
+        SELECT MENSAGEM;
+
+    END$$
+DELIMITER ;
+
+SELECT * FROM notas_fiscais;
+
+CALL Comparativo_Vendas_Case_Cond('2015-01-01', '2015-01-31'); -- VERDE
+CALL Comparativo_Vendas_Case_Cond('2015-01-01', '2015-01-02'); -- AMARELO
+CALL Comparativo_Vendas_Case_Cond('2015-01-01', '2015-01-05'); -- VERMELHO
