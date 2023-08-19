@@ -31,9 +31,14 @@ BEGIN
 END$$
 DELIMITER;
 
-CALL acha_tipo_de_sabor_erro('1000889'); -- Uva
-CALL acha_tipo_de_sabor_erro('1037797'); -- Laranja
-CALL acha_tipo_de_sabor_erro('231776'); -- Sabor que não está no case: Açaí
+-- Uva
+CALL acha_tipo_de_sabor_erro('1000889'); 
+
+-- Laranja
+CALL acha_tipo_de_sabor_erro('1037797'); 
+
+-- Sabor que não está no case: Açaí
+CALL acha_tipo_de_sabor_erro('231776'); 
 
 
 SELECT CODIGO_DO_PRODUTO, SABOR 

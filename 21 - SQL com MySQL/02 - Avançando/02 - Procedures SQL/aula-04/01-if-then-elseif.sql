@@ -30,8 +30,13 @@ DELIMITER $$
         END$$
 DELIMITER ;
 
-CALL Acha_Status_Preco('1000889');
+-- Produto Barato
+CALL Acha_Status_Preco('1000889'); 
+
+-- Produto Em Conta
 CALL Acha_Status_Preco('1002334');
+
+-- Produto Caro
 CALL Acha_Status_Preco('1004327');
 
 ------------------------------------------

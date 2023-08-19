@@ -27,9 +27,14 @@ BEGIN
 END$$
 DELIMITER;
 
-CALL acha_tipo_de_sabor('1000889'); -- Uva
-CALL acha_tipo_de_sabor('1037797'); -- Laranja
-CALL acha_tipo_de_sabor('231776'); -- Açaí
+-- Uva
+CALL acha_tipo_de_sabor('1000889'); 
+
+-- Laranja
+CALL acha_tipo_de_sabor('1037797'); 
+
+-- Açaí
+CALL acha_tipo_de_sabor('231776'); 
 
 
 SELECT CODIGO_DO_PRODUTO, SABOR 
