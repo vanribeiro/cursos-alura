@@ -17,9 +17,10 @@
 
 3. Administrando o MySQL Server
 
-    a. [Administração do MySQL: segurança e otimização do banco](/21%20-%20SQL%20com%20MySQL//03%20-%20Administrando%20o%20MySQL/01%20-%20Admin%20do%20MySQL/)
+    a. [Administração do MySQL: segurança e otimização do banco](/21%20-%20SQL%20com%20MySQL//03%20-%20Administrando%20o%20MySQL/01%20-%20Admin%20do%20MySQL/) [<sup>2</sup>]
 
 
 ##### Notas de Rodapé
 
 <span id="nota-sql-basico"><sup>1</sup></span> Optei por não fazer esse curso, pois como o próprio instrutor fala, é conteúdo introdutório ao SQL e MySQL Server. Esse conteúdo esse que já foi absorvido por mim, de outras formas.
+<span id="nota-sql-basico"><sup>2</sup></span> Optei por não fazer esse curso, pois o curso é voltado para quem deseja atuar como DBA.
