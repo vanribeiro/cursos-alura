@@ -8,15 +8,11 @@ Este repositório contém código, anotações de exercícios e a parte prática
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [SQL com MySQL Server da Oracle](/21%20-%20SQL%20com%20MySQL/)
-
-## Pausados:
-- [Formação Power BI](/12%20-%20Forma%C3%A7%C3%A3o%20Power%20BI/)
-- [Formação Boas Práticas em C#](/17%20-%20Boas%20Pr%C3%A1ticas%20com%20C%23/)
+- [Formação ASP.Net Core](/15%20-%20Forma%C3%A7%C3%A3o%20ASP.Net%20Core/)
 
 ## Finalizados:
+- [SQL com MySQL Server da Oracle](/21%20-%20SQL%20com%20MySQL/)
 - [Formação Desenvolva seu primeiro app com React Native](/19%20-%20React%20Native/)
-- [Formação ASP.Net Core](/15%20-%20Forma%C3%A7%C3%A3o%20ASP.Net%20Core/)
 - [Formação C# e Orientação a Objetos](/14%20-%20Forma%C3%A7%C3%A3o%20C%23%20e%20POO/)
 - [Performance ma Web I e II](/13%20-%20Automa%C3%A7%C3%A3o%20e%20Perfomance/02%20-%20Performance%20Web%20I%20e%20II/)
 - [Formação NodeJS com Express](/11%20-%20Forma%C3%A7%C3%A3o%20NodeJS%20com%20Express/)
