@@ -1,0 +1,21 @@
+ALTER TABLE TB_PRODUTOS
+    ADD CONSTRAINT PK_TB_PRODUTOS 
+    PRIMARY KEY (PRODUTO);
+
+DESC TB_PRODUTOS;
+
+-- Atividade: Criação de chave primária para vendedores
+-- Minha resposta:
+ALTER TABLE TB_VENDEDORES
+    ADD CONSTRAINT PK_TB_VENDEDORES
+    PRIMARY KEY (MATRICULA);
+
+DESC TB_VENDEDORES;
+
+-- Atividade: Criação de chave primária para clientes
+
+ALTER TABLE TB_CLIENTE
+    ADD CONSTRAINT PK_TB_CLIENTE
+    PRIMARY KEY (CPF);
+
+DESC TB_CLIENTE;
