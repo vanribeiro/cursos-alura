@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM itens_notas_fiscais;
