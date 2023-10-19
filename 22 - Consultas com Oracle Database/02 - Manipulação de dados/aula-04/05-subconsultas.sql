@@ -1,0 +1,74 @@
+-- ATIVIDADE:
+
+-- 01. Buscando os sabores dos produtos mais vendidos
+
+-- Veja a consulta abaixo, que foi resposta de uma atividade anterior:
+
+SELECT INF.CODIGO_DO_PRODUTO, TP.NOME_DO_PRODUTO, SUM(INF.QUANTIDADE) FROM ITENS_NOTAS_FISCAIS INF
+INNER JOIN TABELA_DE_PRODUTOS TP 
+ON INF.CODIGO_DO_PRODUTO = TP.CODIGO_DO_PRODUTO
+GROUP BY INF.CODIGO_DO_PRODUTO, TP.NOME_DO_PRODUTO HAVING SUM(INF.QUANTIDADE) > 394000 
+ORDER BY SUM(INF.QUANTIDADE) DESC;
+
+-- Ela nos dá os produtos cuja soma das vendas são maiores que 394000.
+
+-- Liste os sabores dos produtos que são selecionados nesta consulta.
+
+-- Minha resposta:
+
+SELECT 
+    INF.CODIGO_DO_PRODUTO, 
+    TP.NOME_DO_PRODUTO,
+    TP.SABOR,
+    SUM(INF.QUANTIDADE) AS QUANTIDADE_VENDIDA
+    FROM ITENS_NOTAS_FISCAIS INF
+    INNER JOIN TABELA_DE_PRODUTOS TP 
+    ON INF.CODIGO_DO_PRODUTO = TP.CODIGO_DO_PRODUTO
+    WHERE TP.SABOR IN(
+        SELECT DISTINCT SABOR FROM TABELA_DE_PRODUTOS
+    )
+    GROUP BY 
+        INF.CODIGO_DO_PRODUTO, 
+        TP.NOME_DO_PRODUTO,
+        TP.SABOR
+    HAVING SUM(INF.QUANTIDADE) > 394000 
+    ORDER BY SUM(INF.QUANTIDADE) DESC;
+
+
+------------------------------------------------------------------------------------------------------
+
+-- 02. Transformando o HAVING em subconsultas
+
+-- Veja a consulta abaixo, que foi resposta de uma atividade anterior:
+
+SELECT INF.CODIGO_DO_PRODUTO, TP.NOME_DO_PRODUTO, SUM(INF.QUANTIDADE) FROM ITENS_NOTAS_FISCAIS INF
+INNER JOIN TABELA_DE_PRODUTOS TP 
+ON INF.CODIGO_DO_PRODUTO = TP.CODIGO_DO_PRODUTO
+GROUP BY INF.CODIGO_DO_PRODUTO, TP.NOME_DO_PRODUTO HAVING SUM(INF.QUANTIDADE) > 394000 
+ORDER BY SUM(INF.QUANTIDADE) DESC;
+-- Consulta retornou 05 linhas
+
+-- Redesenhe esta consulta usando subconsultas.
+
+-- Minha resposta:
+
+SELECT
+        PRODUTOS_MAIS_VENDIDOS.CODIGO, 
+        PRODUTOS_MAIS_VENDIDOS.NOME_PRODUTO,
+        PRODUTOS_MAIS_VENDIDOS.QUANTIDADE_VENDIDA
+    FROM
+    (
+        SELECT 
+            INF.CODIGO_DO_PRODUTO AS CODIGO, 
+            TP.NOME_DO_PRODUTO AS NOME_PRODUTO, 
+            SUM(INF.QUANTIDADE) AS QUANTIDADE_VENDIDA
+            FROM ITENS_NOTAS_FISCAIS INF
+            INNER JOIN TABELA_DE_PRODUTOS TP
+            ON INF.CODIGO_DO_PRODUTO = TP.CODIGO_DO_PRODUTO
+            GROUP BY 
+                INF.CODIGO_DO_PRODUTO, 
+                TP.NOME_DO_PRODUTO
+            ORDER BY SUM(INF.QUANTIDADE) DESC
+    ) PRODUTOS_MAIS_VENDIDOS 
+        WHERE PRODUTOS_MAIS_VENDIDOS.QUANTIDADE_VENDIDA > 394000;
+-- Consulta retornou 05 linhas
