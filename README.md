@@ -8,8 +8,9 @@ Este repositório contém código, anotações de exercícios e a parte prática
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
+- [Impulsione sua aplicação React e consuma APIs](/23%20-%20React%20e%20APIs/)
 
-## Pausado
+## Pausado:
 - [Consultas com Oracle Database](/22%20-%20Consultas%20com%20Oracle%20Database/)
 - [Formação ASP.Net Core](/15%20-%20Forma%C3%A7%C3%A3o%20ASP.Net%20Core/)
 
