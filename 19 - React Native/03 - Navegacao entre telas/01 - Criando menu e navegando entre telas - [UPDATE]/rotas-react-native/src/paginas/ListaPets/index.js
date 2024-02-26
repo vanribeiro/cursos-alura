@@ -12,7 +12,7 @@ export default function ListaPets({ navigation }) {
                     <FlatList
                         data={pets}
                         renderItem={({ item }) => <Card {...item}
-                            navigation={navigation} />}
+                            navigation={ navigation } />}
                     >
                     </FlatList>
                 </View>

@@ -2,43 +2,59 @@ import { Link } from "@react-navigation/native";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Card({ nome, idade, porte, imagem, caracteristicas, localidade, descricao, navigation }) {
-    return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Sobre', {
-                nome: nome,
-                imagem: imagem,
-                localidade: localidade,
-                descricao: descricao,
-            })}>
-                <Image source={imagem} />
-            </TouchableOpacity>
-            <View style={styles.containerInformacoes}>
-                <Text style={styles.title}>{nome}</Text>
+export default function Card({
+	nome,
+	idade,
+	porte,
+	imagem,
+	caracteristicas,
+	localidade,
+	descricao,
+	navigation,
+}) {
+	return (
+		<View style={styles.container}>
+			<TouchableOpacity
+				onPress={() =>
+					navigation.navigate("Sobre", {
+						nome: nome,
+						imagem: imagem,
+						localidade: localidade,
+						descricao: descricao,
+					})
+				}>
+				<Image source={imagem} />
+			</TouchableOpacity>
+			<View style={styles.containerInformacoes}>
+				<Text style={styles.title}>{nome}</Text>
 
-                <View style={styles.informacoes}>
-                    <Text style={styles.informacoesTexto}>{idade}</Text>
-                    <Text style={styles.informacoesTexto}>{porte}</Text>
-                    <Text style={styles.informacoesTexto}>{caracteristicas}</Text>
-                </View>
+				<View style={styles.informacoes}>
+					<Text style={styles.informacoesTexto}>{idade}</Text>
+					<Text style={styles.informacoesTexto}>{porte}</Text>
+					<Text style={styles.informacoesTexto}>
+						{caracteristicas}
+					</Text>
+				</View>
 
-                <View style={styles.informacoes}>
-                    <Text style={styles.local}>
-                        {localidade}</Text>
-                    <View style={styles.containerChat}>
-                        <Image source={require('../../../assets/chat.png')} />
-                        <Link to={{
-                            screen: 'Mensagem', params: {
-                                nomePet: nome
-                            },
-                        }} style={styles.local}>
-                            Falar com responsável
-                        </Link>
-                    </View>
-                </View>
-            </View>
-        </View>
-    )
+				<View style={styles.informacoes}>
+					<Text style={styles.local}>{localidade}</Text>
+					<View style={styles.containerChat}>
+						<Image source={require("../../../assets/chat.png")} />
+						<Link
+							to={{
+								screen: "Mensagem",
+								params: {
+									nomePet: nome,
+								},
+							}}
+							style={styles.local}>
+							Falar com responsável
+						</Link>
+					</View>
+				</View>
+			</View>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
