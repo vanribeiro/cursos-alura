@@ -1,0 +1,48 @@
+:root{
+  --font-family: "Prompt", sans-serif;
+  --font-regular: 400;
+  --font-medium: 500;
+  --verde-destaque: #81FE88;
+  --verde-pastel: #BFFFC3;
+  --verde-petroleo: #132E35;
+  --grafite: #01080E;
+  --cinza-escuro: #171D1F;
+  --cinza: #3E3E3F;
+  --cinza-medio: #888888;
+  --cinza-claro: #BCBCBC;
+  --offwhite: #E1E1E1;
+  --branco: #FFFFFF;
+  
+  --heading: 44px;
+  --heading-small: 37px;
+  --subtitle: 31px;
+  --subtitle-small: 26px;
+  --paragraph-large: 22px;
+  --paragraph-medium: 18px;
+  --paragraph-small: 15px;
+  --label: 12.5px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  font-style: normal;
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  background-color: var(--grafite);
+}
+
+.button{
+  padding: 12px 24px 12px 24px;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: var(--paragraph-large);
+}

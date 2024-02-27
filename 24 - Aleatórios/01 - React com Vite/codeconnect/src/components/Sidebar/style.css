@@ -1,0 +1,30 @@
+.sidebar{
+    background-color: var(--cinza-escuro);
+    padding: 2.5em 1em;
+    width: 177px;
+    border-radius: 8px;
+}
+
+.sidebar__nav{
+    margin-top: 40px;
+}
+
+.sidebar__nav__ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.sidebar__nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--cinza-medio);
+    font-size: var(--paragraph-large);
+    line-height: 33px;
+}
