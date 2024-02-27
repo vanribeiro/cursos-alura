@@ -1,10 +1,10 @@
-import Sidebar from './components/Sidebar';
+import PageContainer from './components/PageContainer';
 
 function App() {
 
   return (
     <>
-      <Sidebar />
+      <PageContainer />
     </>
   );
 
