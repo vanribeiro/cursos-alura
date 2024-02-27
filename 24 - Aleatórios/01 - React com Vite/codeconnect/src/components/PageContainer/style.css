@@ -1,0 +1,7 @@
+.container{
+    width: 62vw;
+    display: grid;
+    grid-template-columns: 177px auto;
+    gap: 40px;
+    margin: 3.5em auto;
+}
