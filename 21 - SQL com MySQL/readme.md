@@ -23,4 +23,6 @@
 ##### Notas de Rodapé
 
 <span id="nota-sql-basico"><sup>1</sup></span> Optei por não fazer esse curso, pois como o próprio instrutor fala, é conteúdo introdutório ao SQL e MySQL Server. Esse conteúdo esse que já foi absorvido por mim, de outras formas.
+
+
 <span id="nota-sql-basico"><sup>2</sup></span> Optei por não fazer esse curso, pois o curso é voltado para quem deseja atuar como DBA.
