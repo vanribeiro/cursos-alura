@@ -11,7 +11,7 @@ function SearchBar() {
 				type="search"
 				placeholder="Digite o que você procura"
 				value={termoPesquisa}
-				onChange={(event) => setTermoPesquisa(event?.target.value)}
+				onChange={(event) => setTermoPesquisa(event.target?.value)}
 			/>
 		</>
 	);
