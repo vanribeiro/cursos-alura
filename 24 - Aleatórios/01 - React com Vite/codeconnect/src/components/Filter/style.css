@@ -6,7 +6,7 @@
 }
 
 .filter__list{
-    margin-top: 24px;
+    margin-top: 16px;
     display: inline-flex;
 }
 
@@ -40,4 +40,8 @@
     letter-spacing: 0px;
     text-align: center;
     cursor: pointer;
+}
+
+.filter__reset:hover{
+    text-decoration: underline;
 }
