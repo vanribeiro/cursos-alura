@@ -1,7 +1,8 @@
 :root{
-  --font-family: "Prompt", sans-serif;
+  --font-family: "Poppins", sans-serif;
   --font-regular: 400;
   --font-medium: 500;
+  --font-semibold: 600;
   --verde-destaque: #81FE88;
   --verde-pastel: #BFFFC3;
   --verde-petroleo: #132E35;
@@ -29,14 +30,17 @@
   box-sizing: border-box;
 }
 
+body, button, input{
+  font-style: normal;
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+}
+
 a{
   text-decoration: none;
 }
 
 body {
-  font-style: normal;
-  font-family: var(--font-family);
-  font-weight: var(--font-regular);
   background-color: var(--grafite);
 }
 
