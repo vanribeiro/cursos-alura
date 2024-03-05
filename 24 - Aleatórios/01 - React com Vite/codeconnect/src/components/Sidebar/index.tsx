@@ -1,8 +1,8 @@
-import LogoSidebar from '../../assets/sidebar-logo.svg';
-import InfoIcon from '../../assets/info-icon.svg';
-import FeedIcon from '../../assets/feed-icon.svg';
-import LogoutIcon from '../../assets/logout-icon.svg';
-import ProfileIcon from '../../assets/profile-icon.svg';
+import LogoSidebar from './assets/sidebar-logo.svg';
+import InfoIcon from './assets/info-icon.svg';
+import FeedIcon from './assets/feed-icon.svg';
+import LogoutIcon from './assets/logout-icon.svg';
+import ProfileIcon from './assets/profile-icon.svg';
 import LinkButton from './PublishButton';
 import './style.css';
 
