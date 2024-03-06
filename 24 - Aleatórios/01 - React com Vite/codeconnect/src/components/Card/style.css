@@ -1,0 +1,97 @@
+.card{
+    background-color: var(--cinza-escuro);
+    border-radius: 8px;
+}
+
+.card__container {
+    width: 93%;
+    margin: auto;
+}
+
+.card__header{
+    background-color: var(--cinza-medio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+    border-radius: 8px 8px 0px 0px;
+    max-width: 486px;
+    max-height: 240px;
+    width: 100%;
+}
+
+.card__cover-image{
+    max-width: 438px;
+    max-height: 192px;
+    width: 438px;
+    height: 192px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.card__body{
+    margin-top: 16px;
+    margin-bottom: 56px;
+}
+
+.card__title,
+.card__text {
+    color: var(--cinza-claro);
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.card__title{
+    font-size: var(--paragraph-medium);
+    font-weight: var(--font-medium);
+    line-height: 27px;
+}
+
+.card__text{
+    font-size: var(--paragraph-small);
+    line-height: 23px;
+    margin-top: 8px;
+}
+
+.card__footer{
+    margin-bottom: 16px;
+}
+
+.card__footer--container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card__footer__actions{
+    display: flex;
+    gap: 24px;
+}
+
+.card__footer__link {
+    color: var(--cinza-medio);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.card__footer__icon{
+    width: 24px;
+    height: 24px;
+}
+
+.card__footer__link--author{
+    flex-direction: row;
+    gap: 8px;
+}
+
+.card__footer__author-username{
+    font-weight: var(--font-medium);
+}
+
+.card__footer__avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
