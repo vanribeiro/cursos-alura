@@ -1,6 +1,7 @@
 .card{
     background-color: var(--cinza-escuro);
     border-radius: 8px;
+    width: 49%;
 }
 
 .card__container {
@@ -14,6 +15,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 16px;
+    padding-bottom: 16px;
     border-radius: 8px 8px 0px 0px;
     max-width: 486px;
     max-height: 240px;
@@ -25,8 +27,9 @@
     max-height: 192px;
     width: 438px;
     height: 192px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .card__body{

@@ -2,19 +2,8 @@ import "./style.css";
 import CodeIcon from "./assets/code-icon.svg";
 import CommentsIcon from "./assets/comments-icon.svg";
 import ShareIcon from "./assets/share-icon.svg";
+import { ICard } from "../../interfaces";
 
-interface ICard {
-	imagem_capa: string;
-	titulo: string;
-	resumo: string;
-	compartilhamentos: number;
-	linhas_de_codigo: number;
-	comentarios: number;
-	usuario: {
-		nome: string;
-		imagem: string;
-	};
-}
 
 function Card({
 	imagem_capa,
@@ -23,8 +12,9 @@ function Card({
 	compartilhamentos,
 	linhas_de_codigo,
 	comentarios,
-	usuario,
+	usuario
 }: ICard) {
+
 	return (
 		<>
 			<article className="card">
