@@ -1,30 +1,65 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import Card from "../Card";
 import './style.css';
+import { ICard } from "../../interfaces";
+import Loader from "../Loader";
+import { useFetchAPI } from "../hooks/useFetchAPI";
 
-const BASE_API = 'https://my-json-server.typicode.com/MonicaHillman/codeconnect-api/publicacoes';
+
 
 function ListCards() {
-    const [cardsData, setCardsData] = useState<unknown>([{}]);
+    const [data, setData] = useState<ICard[]>([]);
+    // const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [ response, isLoading ] = useFetchAPI();
+    let content;
 
     useEffect(() => {
-        fetch(BASE_API)
-            .then(response => response.json())
-            .then(data => setCardsData(data))
-            .catch(error => error);
-    }, [])
+        response()
+			.then((data: SetStateAction<ICard[]>) => setData(data))
+			.catch((error: unknown) => {
+				throw error;
+			});
+    }, [response]);
 
-    return (
-		<section className="cards__container">
-			{
-                // @ts-expect-error
-                cardsData.map((cardData: object, index: number) => (
-                // @ts-ignore
-				<Card {...cardData} key={index} />
-			))}
-		</section>
-	);
+
+    if(isLoading) {
+        content = <Loader />
+    } else{
+        content = data.map((cardData) => {
+            const {
+                id,
+                imagem_capa,
+                titulo,
+                resumo,
+                compartilhamentos,
+                linhas_de_codigo,
+                comentarios,
+                usuario,
+            } : ICard = cardData;
+            return (
+            
+                <Card
+                    id={id}
+                    imagem_capa={imagem_capa}
+                    titulo={titulo}
+                    resumo={resumo}
+                    compartilhamentos={compartilhamentos}
+                    linhas_de_codigo={linhas_de_codigo}
+                    comentarios={comentarios}
+                    usuario={usuario}
+                    key={id}
+                />
+            )
+        });
+    }
+        return (
+            <section className="cards__container">
+                { content }
+            </section>
+        );
 }
+
+
 
 export default ListCards;
