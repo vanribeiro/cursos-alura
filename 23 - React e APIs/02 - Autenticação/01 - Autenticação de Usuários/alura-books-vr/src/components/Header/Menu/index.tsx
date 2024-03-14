@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Submenu from './Submenu';
 
 const Nav = styled.nav`
     background-color: #ffffff;
@@ -37,20 +38,7 @@ const HeadLink = styled(Link)`
     display: inline-flex;
 `;
 
-const Submenu = styled.div`
-    position: absolute;
-    z-index: 1000;
 
-    a{
-        padding: 16px 16px 16px 40px;
-        justify-content: start;
-    }
-`;
-
-
-const SubmenuItem = styled(Link)`
-    display: flex;
-`;
 
 const ListLinks = styled.ul`
     display: flex;
@@ -74,6 +62,10 @@ const ListLinks = styled.ul`
         text-decoration: none;
     }
 
+    @media screen and (max-width: 1023.99px) {
+        display: none;
+    }
+
 `;
 
 
@@ -84,13 +76,7 @@ function Menu() {
 				<ListLinks>
 					<li>
 						<HeadLink className='link-head' href="#">Categorias</HeadLink>
-						<Submenu className='submenu'>
-                            <SubmenuItem href="#">Programação</SubmenuItem>
-                            <SubmenuItem href="#">Front-End</SubmenuItem>
-                            <SubmenuItem href="#">Infraestrutura</SubmenuItem>
-                            <SubmenuItem href="#">Business</SubmenuItem>
-                            <SubmenuItem href="#">Design & UX</SubmenuItem>
-						</Submenu>
+						<Submenu />
 					</li>
 					<li>
 						<HeadLink href="#">Favoritos</HeadLink>
