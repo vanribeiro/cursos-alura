@@ -4,13 +4,30 @@ import IconePerfil from './../assets/perfil.svg';
 import IconeFavoritos from './../assets/favoritos.svg';
 
 const Section = styled.section`
-  height: 44px;
-  width: 30%;
-  padding-top: 24px;
-  display: flex;
-  align-items: center;
-  flex: 1;
-  gap: 48px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	gap: 16px;
+
+	span {
+		display: none;
+	}
+    
+	@media screen and (max-width: 429px) {
+        padding-right: 16px;
+    }
+
+	@media screen and (min-width: 1728px) {
+        gap: 48px;
+        padding-top: 24px;
+        width: 30%;
+		padding-right: 80px;
+
+		span {
+			display: block;
+		}
+	}
 `;
 
 
@@ -32,7 +49,7 @@ const Img = styled.img`
     width: 24px;
 `;
 
-const Favorites = styled.div`
+const Favorites = styled(ActionItem)`
 
     @media screen and (min-width: 428px) {
         display: none;
