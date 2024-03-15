@@ -1,6 +1,8 @@
+import Intro from "../Intro";
+
 function Main() {
     return (
-        <p>Main</p>
+        <Intro />
     );
 }
 
