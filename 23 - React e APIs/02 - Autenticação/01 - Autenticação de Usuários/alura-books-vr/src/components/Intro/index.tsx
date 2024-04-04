@@ -1,21 +1,46 @@
 import styled from "styled-components";
+import ImgLeft from './assets/ilustracao-esquerda.png';
+import ImgRight from './assets/ilustracao-direita.png';
 
 const Banner = styled.section`
     position: relative;
+    z-index: 0;
     margin: 0;
     padding: 0;
     background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
-    
-    .text{
-        color: #FFFFFF;
-        letter-spacing: 0em;
-        text-align: center;
+`;
+
+const ImageBackground = styled.div`
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+`;
+
+const ImagesContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    img{
+        opacity: 0.1;
+        max-width: 100%;
+        max-height: 315px;
 
         @media screen and (max-width: 428px){
-            padding: 0 24px;
-        }   
+            width: 50%;
+        }
+
+        @media screen and (min-width: 429px){
+            height: 315px;
+        }
+
+        @media screen and (min-width: 1728px){
+            width: 25%;
+        }
     }
-   
+
+
 `;
 
 const Bg = styled.div`
@@ -35,6 +60,19 @@ const Bg = styled.div`
     @media screen and (min-width: 1728px){
         height: 375px;
     }
+
+`;
+
+const BannerText = styled.div`
+    position: relative;
+    z-index: 2;
+    color: #FFFFFF;
+    letter-spacing: 0em;
+    text-align: center;
+
+    @media screen and (max-width: 428px){
+        padding: 0 24px;
+    }   
 
 `;
 
@@ -72,10 +110,17 @@ function Intro() {
     return (
         <Banner>
             <Bg>
-                <div className="text">
+                <ImageBackground>
+                    <ImagesContainer>
+
+                        <img src={ImgLeft} alt="Ilustração" />
+                        <img src={ImgRight} alt="Ilustração" />
+                    </ImagesContainer>
+                </ImageBackground>
+                <BannerText>
                     <H1>Já sabe por onde começar?</H1>
                     <H2>Encontre em nossa estante o que precisa para seu desenvolvimento!</H2>
-                </div>
+                </BannerText>
             </Bg>
         </Banner>
 	);
