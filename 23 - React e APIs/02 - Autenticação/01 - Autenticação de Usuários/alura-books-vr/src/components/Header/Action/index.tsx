@@ -14,15 +14,19 @@ const Section = styled.section`
 		display: none;
 	}
     
-	@media screen and (max-width: 429px) {
+	@media screen and (max-width: 428px) {
         padding-right: 16px;
     }
 
+    @media screen and (min-width: 429px) {
+        justify-content: flex-end;
+        padding-right: 80px;
+    }
+
 	@media screen and (min-width: 1728px) {
-        gap: 48px;
         padding-top: 24px;
+        gap: 48px;
         width: 30%;
-		padding-right: 80px;
 
 		span {
 			display: block;
@@ -51,7 +55,7 @@ const Img = styled.img`
 
 const Favorites = styled(ActionItem)`
 
-    @media screen and (min-width: 428px) {
+    @media screen and (min-width: 767.99px) {
         display: none;
     }
 `;

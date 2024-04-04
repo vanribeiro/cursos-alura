@@ -5,7 +5,7 @@ const Nav = styled.nav`
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     width: 50%;
     height: 44px;
 `;
@@ -62,7 +62,7 @@ const ListLinks = styled.ul`
         text-decoration: none;
     }
 
-    @media screen and (max-width: 1023.99px) {
+    @media screen and (max-width: 767.99px) {
         display: none;
     }
 
