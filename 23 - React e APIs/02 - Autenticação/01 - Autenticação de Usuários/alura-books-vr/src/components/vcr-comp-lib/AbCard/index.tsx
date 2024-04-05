@@ -16,7 +16,11 @@ const Card = styled.div`
     max-width: 350px;
   }
 
-  @media screen and (min-width: 1028px) {
+  @media screen and (min-width: 600px) {
+    max-width: unset;
+  }
+
+  @media screen and (min-width: 1024px) {
     max-width: 715px;
   }
 
@@ -38,6 +42,10 @@ const Container = styled.div`
     width: 300px;
   }
 
+  @media screen and (min-width: 600px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: 1028px) {
     width: 700px;
   }
@@ -49,16 +57,18 @@ const Container = styled.div`
 
 interface AbCardProps {
   children: ReactNode;
+  styleCard?: object;
+  styleContainer?: object;
 }
 
-const AbCard = ({ children }: AbCardProps) => {
-  return (
-    <>
-      <Card>
-        <Container>{children}</Container>
-      </Card>
-    </>
-  );
+const AbCard = ({ children, styleCard, styleContainer }: AbCardProps) => {
+	return (
+		<>
+			<Card style={styleCard}>
+				<Container style={styleContainer}>{children}</Container>
+			</Card>
+		</>
+	);
 };
 
 export { AbCard };

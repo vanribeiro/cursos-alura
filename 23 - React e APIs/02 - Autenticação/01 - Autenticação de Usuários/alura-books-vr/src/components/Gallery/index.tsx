@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const Section = styled.section`
     margin-top: 60px;
+
+    @media screen and (max-width: 428px) {
+        margin-top: 40px;
+    }
 `;
 
 const Header = styled.h2`
