@@ -32,6 +32,7 @@ const ImagesContainer = styled.div`
         }
 
         @media screen and (min-width: 429px){
+            width: 50%;
             height: 315px;
         }
 
@@ -112,7 +113,6 @@ function Intro() {
             <Bg>
                 <ImageBackground>
                     <ImagesContainer>
-
                         <img src={ImgLeft} alt="Ilustração" />
                         <img src={ImgRight} alt="Ilustração" />
                     </ImagesContainer>

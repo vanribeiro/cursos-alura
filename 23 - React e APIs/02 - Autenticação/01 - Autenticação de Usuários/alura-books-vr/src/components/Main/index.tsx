@@ -2,6 +2,7 @@ import Gallery from "../Gallery";
 import BookCard from "../Gallery/BookCard";
 import Carousel from "../Gallery/Carousel";
 import Intro from "../Intro";
+import Tags from "../Tags";
 import Image01 from './../Gallery/assets/capa-01.png';
 import Image02 from './../Gallery/assets/capa-02.png';
 import Image03 from './../Gallery/assets/capa-03.png';
@@ -41,6 +42,7 @@ function Main() {
                 bookCard={<BookCard {...bookElement} /> }
                 carousel={<Carousel {...imagesBook02} />}
             />
+            <Tags />
         </>
     );
 }

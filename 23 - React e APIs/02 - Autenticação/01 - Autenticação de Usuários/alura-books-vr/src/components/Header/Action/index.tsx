@@ -24,7 +24,6 @@ const Section = styled.section`
     }
 
 	@media screen and (min-width: 1728px) {
-        padding-top: 24px;
         gap: 48px;
         width: 30%;
 
@@ -40,11 +39,24 @@ const ActionItem = styled.div`
 
     display: inline-flex;
     align-items: center;
-    a{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+
+    button, a{
+
         display: inline-flex;
         align-items: center;
         gap: 8px;
+        background-color: white;
+        color: #000000;
+        border: none;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
     }
+
 `;
 
 
@@ -75,10 +87,10 @@ function Action() {
                 </a>
             </ActionItem>
             <ActionItem>
-                <a href="#">
+                <button>
                     <Img src={IconePerfil} alt="Ícone Perfil" />
                     <span>Meu Perfil</span>
-                </a>
+                </button>
             </ActionItem>
         </Section>
     );
