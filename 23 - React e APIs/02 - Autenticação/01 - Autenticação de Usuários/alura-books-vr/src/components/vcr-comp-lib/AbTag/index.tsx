@@ -1,9 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 
 interface AbTagProps {
   texto?: string;
   onClick?: () => void;
+  style: object;
 }
 
 const TagEstilizada = styled.button<AbTagProps>`
@@ -20,8 +20,8 @@ const TagEstilizada = styled.button<AbTagProps>`
   }
 `;
 
-const AbTag = ({ texto, onClick }: AbTagProps) => {
-  return <TagEstilizada onClick={onClick}>{texto}</TagEstilizada>;
+const AbTag = ({ texto, style, onClick }: AbTagProps) => {
+  return <TagEstilizada style={style} onClick={onClick}>{texto}</TagEstilizada>;
 };
 
-export { AbTag, AbTagProps };
+export { AbTag };

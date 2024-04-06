@@ -106,4 +106,4 @@ const AbGrupoOpcoes = ({
   );
 };
 
-export { AbGrupoOpcoes, AbGrupoOpcaoProps, AbGrupoOpcoesProps };
+export { AbGrupoOpcoes };

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const LabelEstilizado = styled.label`
@@ -32,15 +31,31 @@ const InputEstilizado = styled.input`
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
-    color: rgba(164, 164, 164, 1);
+    color: #002F52;
+  }
+
+  @media screen and (max-width: 599.99px){
+    width: 76%;
+  }
+    
+  @media screen and (min-width: 600px){
+    width: 90%;
   }
 `;
 
+const Envelope = styled.img`
+    position: absolute;
+    padding: 24px;
+`;
+
 interface AbCampoTextoProps {
-  rotulo: string;
+  rotulo?: string;
   placeholder?: string;
   texto: string;
   tipo?: 'text' | 'email' | 'password' | 'date';
+  styleInput?: object;
+  styleLabel?: object;
+  icon?: string;
   onChange: (value: string) => void;
 }
 
@@ -49,19 +64,26 @@ const AbCampoTexto = ({
   rotulo,
   tipo,
   texto,
+  styleInput,
+  styleLabel,
+  icon,
   onChange,
 }: AbCampoTextoProps) => {
   return (
-    <LabelEstilizado>
+    <LabelEstilizado style={styleLabel}>
       <span>{rotulo}</span>
+      
+      {icon && <Envelope src={icon} alt='Ícone de envelope' />}
       <InputEstilizado
+        style={styleInput}
         placeholder={placeholder}
         type={tipo}
         value={texto}
         onChange={(evento: any) => onChange(evento.target.value)}
+        
       />
     </LabelEstilizado>
   );
 };
 
-export { AbCampoTexto, AbCampoTextoProps };
+export { AbCampoTexto };

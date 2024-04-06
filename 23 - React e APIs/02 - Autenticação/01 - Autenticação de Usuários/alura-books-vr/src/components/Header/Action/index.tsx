@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import IconeSacola from './../assets/sacola.svg';
 import IconePerfil from './../assets/perfil.svg';
 import IconeFavoritos from './../assets/favoritos.svg';
+import { useEffect, useState } from 'react';
+import Modal from '../../Modal';
 
 const Section = styled.section`
 	height: 44px;
@@ -57,8 +59,12 @@ const ActionItem = styled.div`
         line-height: 30px;
     }
 
-`;
+    button:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
 
+`;
 
 const Img = styled.img`
     height: 24px;
@@ -73,6 +79,22 @@ const Favorites = styled(ActionItem)`
 `;
 
 function Action() {
+    const [openModal, setOpenModal] = useState<boolean>(false);
+
+    const handleClick = () => {
+        !openModal ? setOpenModal(true) : setOpenModal(false);
+    }
+
+    useEffect(() => {
+        if(openModal) {
+            const body: HTMLBodyElement | null = document.querySelector('body');
+
+            if(body){
+                body.style.overflowY = 'hidden';
+            }
+        }
+    }, [openModal]);
+
     return (
         <Section>
             <Favorites>
@@ -87,10 +109,14 @@ function Action() {
                 </a>
             </ActionItem>
             <ActionItem>
-                <button>
+                <button onClick={() => handleClick()}>
                     <Img src={IconePerfil} alt="Ícone Perfil" />
                     <span>Meu Perfil</span>
                 </button>
+                {
+                    openModal && 
+                    <Modal />
+                }
             </ActionItem>
         </Section>
     );
