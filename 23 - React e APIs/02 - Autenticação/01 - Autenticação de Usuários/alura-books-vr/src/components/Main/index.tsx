@@ -1,21 +1,20 @@
+import { bookElement, tagList } from "../../mock/data";
 import Gallery from "../Gallery";
 import BookCard from "../Gallery/BookCard";
 import Carousel from "../Gallery/Carousel";
 import Intro from "../Intro";
+import Newsletter from "../Newsletter";
 import Tags from "../Tags";
 import Image01 from './../Gallery/assets/capa-01.png';
 import Image02 from './../Gallery/assets/capa-02.png';
 import Image03 from './../Gallery/assets/capa-03.png';
+import styled from "styled-components";
+
+const MainContainer = styled.main`
+    position: relative;
+`;
 
 function Main() {
-    const bookElement = {
-        about: "Sobre o livro:",
-        title: "Liderança em Design",
-        description: "Habilidades de gestão para alavancar sua carreira",
-        author: "Vitor Zanini",
-        price: 29.9,
-        buttonLabel: "Comprar"
-    }
 
     const imagesBook01 = {
         src01: Image01,
@@ -31,18 +30,21 @@ function Main() {
 
     return (
         <>
-            <Intro />
-            <Gallery 
-                title="Últimos Lançamentos" 
-                bookCard={<BookCard {...bookElement} /> }
-                carousel={<Carousel {...imagesBook01} />}
-            />
-            <Gallery 
-                title="Mais Vendidos" 
-                bookCard={<BookCard {...bookElement} /> }
-                carousel={<Carousel {...imagesBook02} />}
-            />
-            <Tags />
+            <MainContainer>
+                <Intro />
+                <Gallery 
+                    title="Últimos Lançamentos" 
+                    bookCard={<BookCard {...bookElement} /> }
+                    carousel={<Carousel {...imagesBook01} />}
+                />
+                <Gallery 
+                    title="Mais Vendidos" 
+                    bookCard={<BookCard {...bookElement} /> }
+                    carousel={<Carousel {...imagesBook02} />}
+                />
+                <Tags listOfTags={tagList} />
+                <Newsletter />
+            </MainContainer>
         </>
     );
 }

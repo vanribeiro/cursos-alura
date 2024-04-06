@@ -1,12 +1,16 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 const ModalBg = styled.div<{ $fechaModal?: boolean }>`
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.25);
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: ${props => (props.$fechaModal ? 'none' : 'flex')};
+  display: ${props => props.$fechaModal ? 'none': 'flex'};
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -48,6 +52,7 @@ const ModalContent = styled.section<{ $padding?: string }>`
 
 interface AbModal {
   fechaModal: boolean;
+  controlaModal?: boolean;
   padding?: string;
   children: ReactNode;
 }

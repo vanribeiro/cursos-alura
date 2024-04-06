@@ -1,0 +1,119 @@
+import styled from "styled-components";
+import { AbCampoTexto } from "../vcr-comp-lib";
+import EnvelopeIcon from './assets/envelope.png';
+
+const Section = styled.div`
+    background: #F9F9F9;
+    padding: 32px 0;
+`;
+
+const NewsletterContainer = styled.div`
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+    @media screen and (max-width: 767.99px){
+        width: 90%;
+    }
+    
+    @media screen and (min-width: 1024px){
+        width: 725px;
+    }
+
+    @media screen and (min-width: 1728px){
+        width: 774px;
+    }
+`;
+
+const Form = styled.form`
+    width: 48%;
+    label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+`;
+
+const CallToAction = styled.div`
+    width: 48%;
+
+    h3, p{
+        color: #002F52;
+    }
+    
+    h3{
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767.99px){
+        h3{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            margin-bottom: 0;
+        }
+
+        p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+    }
+    
+    @media screen and (min-width: 768px){
+        h3{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+        }
+    
+        p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+
+    }
+
+`;
+
+
+function Newsletter() {
+
+    const styleLabel: object = {
+        width: '100%',
+        alignItems: 'flex-start'
+    }
+
+    const styleInput: object = {
+        backgroundColor: '#FFFFFF',
+        paddingLeft: '60px'
+    }
+
+    
+    return (
+		<Section>
+			<NewsletterContainer>
+				<CallToAction>
+					<h3>Fique por dentro das novidades!</h3>
+                    <p>Atualizações de e-books, novos livros, promoções e outros.</p>
+				</CallToAction>
+				<Form>
+					<AbCampoTexto
+                        styleLabel={styleLabel}
+                        styleInput={styleInput}
+						placeholder="Cadastre seu e-mail"
+						tipo="email"
+						onChange={() => {}}
+						rotulo=""
+						texto=""
+                        icon={EnvelopeIcon}
+					/>
+				</Form>
+			</NewsletterContainer>
+		</Section>
+	);
+}
+
+export default Newsletter;
