@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { AbCampoTexto } from "../vcr-comp-lib";
 import EnvelopeIcon from './assets/envelope.png';
+import { useState } from "react";
 
 const Section = styled.div`
     background: #F9F9F9;
@@ -78,19 +79,19 @@ const CallToAction = styled.div`
 
 `;
 
+const styleLabel: object = {
+    width: '100%',
+    alignItems: 'flex-start'
+}
+
+const styleInput: object = {
+    backgroundColor: '#FFFFFF',
+    paddingLeft: '60px'
+}
 
 function Newsletter() {
 
-    const styleLabel: object = {
-        width: '100%',
-        alignItems: 'flex-start'
-    }
-
-    const styleInput: object = {
-        backgroundColor: '#FFFFFF',
-        paddingLeft: '60px'
-    }
-
+    const [email, setEmail] = useState<string>('');
     
     return (
 		<Section>
@@ -105,9 +106,8 @@ function Newsletter() {
                         styleInput={styleInput}
 						placeholder="Cadastre seu e-mail"
 						tipo="email"
-						onChange={() => {}}
-						rotulo=""
-						texto=""
+						onChange={setEmail}
+						texto={email}
                         icon={EnvelopeIcon}
 					/>
 				</Form>

@@ -35,18 +35,35 @@ const Section = styled.section`
 	}
 `;
 
+const Button = styled.button`
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #000000;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    cursor: pointer;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+
+`;
+
 
 const ActionItem = styled.div`
     height: 44px;
-
     display: inline-flex;
     align-items: center;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
 
-
-    button, a{
+    a{
 
         display: inline-flex;
         align-items: center;
@@ -57,11 +74,6 @@ const ActionItem = styled.div`
         font-size: 20px;
         font-weight: 400;
         line-height: 30px;
-    }
-
-    button:hover{
-        cursor: pointer;
-        text-decoration: underline;
     }
 
 `;
@@ -86,13 +98,14 @@ function Action() {
     }
 
     useEffect(() => {
-        if(openModal) {
-            const body: HTMLBodyElement | null = document.querySelector('body');
+        const body: HTMLBodyElement | null = document.querySelector('body');
 
-            if(body){
-                body.style.overflowY = 'hidden';
-            }
+        if(body){
+            openModal 
+                ? body.style.overflowY = 'hidden'
+                : body.style.overflowY = 'auto';
         }
+
     }, [openModal]);
 
     return (
@@ -109,13 +122,13 @@ function Action() {
                 </a>
             </ActionItem>
             <ActionItem>
-                <button onClick={() => handleClick()}>
+                <Button onClick={() => handleClick()}>
                     <Img src={IconePerfil} alt="Ícone Perfil" />
                     <span>Meu Perfil</span>
-                </button>
+                </Button>
                 {
                     openModal && 
-                    <Modal />
+                    <Modal setOpenModal={setOpenModal} />
                 }
             </ActionItem>
         </Section>
