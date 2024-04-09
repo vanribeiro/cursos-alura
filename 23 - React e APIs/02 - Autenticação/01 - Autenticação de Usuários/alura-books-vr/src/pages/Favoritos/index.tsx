@@ -1,11 +1,9 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-
 function Favoritos() {
     return (
         <>
-            <Header />
-            <Footer />
+            <p>
+                favoritos
+            </p>
         </>
     );
 }

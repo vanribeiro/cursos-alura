@@ -1,11 +1,7 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-
 function Pedidos() {
     return (
         <>
-            <Header />
-            <Footer />
+            <p>pedidos</p>
         </>
     );
 }
