@@ -4,6 +4,7 @@ import IconePerfil from './../assets/perfil.svg';
 import IconeFavoritos from './../assets/favoritos.svg';
 import { useEffect, useState } from 'react';
 import Modal from '../../Modal';
+import { Link } from 'react-router-dom';
 
 const Section = styled.section`
 	height: 44px;
@@ -91,7 +92,7 @@ const Favorites = styled(ActionItem)`
 `;
 
 function Action() {
-    const [openModal, setOpenModal] = useState<boolean>(true);
+    const [openModal, setOpenModal] = useState<boolean>(false);
 
     const handleClick = () => {
         !openModal ? setOpenModal(true) : setOpenModal(false);
@@ -111,15 +112,15 @@ function Action() {
     return (
         <Section>
             <Favorites>
-                <a href="#">
+                <a href="/favoritos">
                     <Img src={IconeFavoritos} alt="Ícone Favoritos" />
                 </a>
             </Favorites>
             <ActionItem>
-                <a href="#">
+                <Link to="/sacola">
                     <Img src={IconeSacola} alt="Ícone Sacola" />
                     <span>Minha Sacola</span>
-                </a>
+                </Link>
             </ActionItem>
             <ActionItem>
                 <Button onClick={() => handleClick()}>

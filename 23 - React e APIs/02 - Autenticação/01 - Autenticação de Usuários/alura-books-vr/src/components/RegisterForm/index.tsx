@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { AbBotao, AbCampoTexto } from '../vcr-comp-lib';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import OpenedEyeIcon from './assets/olhos-abertos.png';
+import { viaCepBaseURL } from '../../service/api';
 
 const Form = styled.form`
     width: 100%;
@@ -68,6 +69,24 @@ function RegisterForm() {
     const [password, setPassword] = useState<string>('');
     const [passwordConfirmation, setPasswordConfirmation] = useState<string>('');
 
+    useEffect(() => {
+        if(cep.length === 8 ) {
+            fetch(`${viaCepBaseURL}/${cep}/json`)
+            .then(response => response.json())
+            .then(data => {
+                const address: string = `${data.logradouro}, ${data.bairro}, ` 
+                                        + `${data.localidade}-${data.uf}`;
+                const addressComplement: string = data.complemento;
+
+                setAddress01(address);
+                setAddress02(addressComplement);
+
+            })
+            .catch(err => { throw err; })
+        }
+
+    }, [cep]);
+
     return (
 		<>
 			<Form>
@@ -98,7 +117,6 @@ function RegisterForm() {
 						texto={address01}
 						placeholder="Sua rua e número"
 						onChange={setAddress01}
-                        
 					/>
 				<AbCampoTexto
                     styleInput={styleInput}
