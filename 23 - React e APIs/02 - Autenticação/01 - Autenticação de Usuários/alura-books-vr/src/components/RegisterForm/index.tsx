@@ -3,6 +3,7 @@ import { AbBotao, AbCampoTexto } from '../vcr-comp-lib';
 import { useEffect, useState } from 'react';
 import OpenedEyeIcon from './assets/olhos-abertos.png';
 import { viaCepBaseURL } from '../../service/api';
+import { ErrorMessage } from '../Message';
 
 const Form = styled.form`
     width: 100%;
@@ -40,6 +41,8 @@ const Form = styled.form`
     }
 
 `;
+
+
 
 
 const ButtonContainer = styled.div`
@@ -91,74 +94,83 @@ function RegisterForm() {
 		<>
 			<Form>
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="text"
-						rotulo="Nome"
-						texto={nome}
-						placeholder="Seu nome completo"
-						onChange={setNome}
-                        
-					/>
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="text"
+					rotulo="Nome"
+					texto={nome}
+					placeholder="Seu nome completo"
+					onChange={setNome}
+				/>
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="email"
-						rotulo="E-mail"
-						texto={email}
-						placeholder="seuemail@maneiro.com.br"
-						onChange={setEmail}
-					/>
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="email"
+					rotulo="E-mail"
+					texto={email}
+					placeholder="seuemail@maneiro.com.br"
+					onChange={setEmail}
+				/>
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="text"
-						rotulo="Endereço"
-						texto={address01}
-						placeholder="Sua rua e número"
-						onChange={setAddress01}
-					/>
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="text"
+					rotulo="Endereço"
+					texto={address01}
+					placeholder="Sua rua e número"
+					onChange={setAddress01}
+				/>
+                <div
+                    style={{
+                        display: 'flex',
+                        gap: '40px'
+                    }}
+                >
+                    <AbCampoTexto
+                        styleInput={styleInput}
+                        styleLabel={styleLabel}
+                        tipo="text"
+                        rotulo="Endereço"
+                        texto={address02}
+                        placeholder="Apto/casa, bloco"
+                        onChange={setAddress02}
+                    />
+                    <AbCampoTexto
+                        styleInput={styleInput}
+                        styleLabel={styleLabel}
+                        tipo="text"
+                        rotulo="Cep"
+                        texto={cep}
+                        placeholder="Insira seu CEP"
+                        onChange={setCep}
+                    />
+                </div>
+				{cep.length === 8 && address01.includes("undefined") && (
+					<ErrorMessage color="red" message="CEP inválido!" />
+				)}
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="text"
-						rotulo="Endereço"
-						texto={address02}
-						placeholder="Apto/casa, bloco"
-						onChange={setAddress02}
-					/>
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="password"
+					rotulo="Senha"
+					texto={password}
+					placeholder="*********************"
+					onChange={setPassword}
+					icon={OpenedEyeIcon}
+				/>
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="text"
-						rotulo="Cep"
-						texto={cep}
-						placeholder="Insira seu CEP"
-						onChange={setCep}
-					/>
-				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="password"
-						rotulo="Senha"
-						texto={password}
-						placeholder="*********************"
-						onChange={setPassword}
-                        icon={OpenedEyeIcon}
-					/>
-				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="password"
-						rotulo="Confirmar Senha"
-						texto={passwordConfirmation}
-						placeholder="*********************"
-						onChange={setPasswordConfirmation}
-                        icon={OpenedEyeIcon}
-					/>
-                <ButtonContainer>
-                    <AbBotao texto='Cadastrar' type='button' />
-                </ButtonContainer>
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="password"
+					rotulo="Confirmar Senha"
+					texto={passwordConfirmation}
+					placeholder="*********************"
+					onChange={setPasswordConfirmation}
+					icon={OpenedEyeIcon}
+				/>
+				<ButtonContainer>
+					<AbBotao texto="Cadastrar" type="button" />
+				</ButtonContainer>
 			</Form>
 		</>
 	);

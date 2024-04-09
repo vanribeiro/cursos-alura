@@ -1,11 +1,15 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import TitlePage from "../../components/TitlePage";
+
 
 function Favoritos() {
+    const pageName: string = "Favoritos";
+
     return (
         <>
-            <Header />
-            <Footer />
+            <TitlePage titlePage={pageName} />
+            <p>
+                favoritos
+            </p>
         </>
     );
 }

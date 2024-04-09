@@ -1,12 +1,12 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import TitlePage from "../../components/TitlePage";
 
 function Sacola() {
+    const pageName: string = "Minha sacola";
+
     return (
         <>
-            <Header />
+            <TitlePage titlePage={pageName} />
             <p>sacola</p>
-            <Footer />
         </>
     );
 }

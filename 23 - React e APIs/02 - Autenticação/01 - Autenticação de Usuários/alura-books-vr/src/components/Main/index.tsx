@@ -3,7 +3,6 @@ import Gallery from "../Gallery";
 import BookCard from "../Gallery/BookCard";
 import Carousel from "../Gallery/Carousel";
 import Intro from "../Intro";
-import Newsletter from "../Newsletter";
 import Tags from "../Tags";
 import Image01 from './../Gallery/assets/capa-01.png';
 import Image02 from './../Gallery/assets/capa-02.png';
@@ -43,7 +42,6 @@ function Main() {
                     carousel={<Carousel {...imagesBook02} />}
                 />
                 <Tags listOfTags={tagList} />
-                <Newsletter />
             </MainContainer>
         </>
     );

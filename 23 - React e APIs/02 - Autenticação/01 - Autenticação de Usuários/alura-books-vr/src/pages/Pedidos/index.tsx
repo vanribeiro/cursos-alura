@@ -1,11 +1,12 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import TitlePage from "../../components/TitlePage";
 
 function Pedidos() {
+    const pageName: string = "Meus Pedidos";
+
     return (
         <>
-            <Header />
-            <Footer />
+            <TitlePage titlePage={pageName} />
+            <p>pedidos</p>
         </>
     );
 }

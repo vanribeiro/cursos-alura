@@ -1,13 +1,17 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import { useEffect } from "react";
 import Main from "../../components/Main";
 
+const pageName = "Home";
+
 function Home() {
+
+    useEffect(() => {
+        document.title = `AluraBooks - ${pageName}`
+    }, []);
+
     return (
         <>
-            <Header />
             <Main />
-            <Footer />
         </>
     );
 }

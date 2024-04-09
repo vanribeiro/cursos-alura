@@ -23,6 +23,10 @@ const Section = styled.section`
 
     @media screen and (min-width: 429px) {
         justify-content: flex-end;
+        padding-right: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
         padding-right: 80px;
     }
 
