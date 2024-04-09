@@ -27,6 +27,8 @@ const InputEstilizado = styled.input`
   border-radius: 24px;
   border: 1px solid rgba(0, 47, 82, 1);
   color: #002f52;
+  box-sizing: border-box;
+  width: 100%;
 
   &::placeholder {
     font-family: sans-serif;
@@ -37,13 +39,6 @@ const InputEstilizado = styled.input`
     color: #002F52;
   }
 
-  @media screen and (max-width: 599.99px){
-    width: 76%;
-  }
-    
-  @media screen and (min-width: 600px){
-    width: 90%;
-  }
 `;
 
 const Envelope = styled.img`
