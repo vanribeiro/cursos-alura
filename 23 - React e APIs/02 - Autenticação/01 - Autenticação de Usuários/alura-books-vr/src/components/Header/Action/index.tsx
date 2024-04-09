@@ -91,7 +91,7 @@ const Favorites = styled(ActionItem)`
 `;
 
 function Action() {
-    const [openModal, setOpenModal] = useState<boolean>(false);
+    const [openModal, setOpenModal] = useState<boolean>(true);
 
     const handleClick = () => {
         !openModal ? setOpenModal(true) : setOpenModal(false);

@@ -3,6 +3,7 @@ import { AbModal } from "../vcr-comp-lib";
 import styled from 'styled-components';
 import ModalImage from "./ModalImage";
 import LoginForm from "../LoginForm";
+import RegisterForm from "../RegisterForm";
 
 const Header = styled.header`
     width: 100%;
@@ -27,6 +28,8 @@ const ModalContainer = styled.div`
 `;
 
 const ModalContent = styled.div`
+    width: 100%;
+
     @media screen and (min-width: 768px){
         width: 50%;
     }
@@ -34,6 +37,7 @@ const ModalContent = styled.div`
     @media screen and (min-width: 1024px){
         width: 60%;
     }
+
 `;
 
 const ButtonContainer = styled.div`
@@ -58,6 +62,7 @@ interface IModal{
 
 function Modal({setOpenModal}: IModal) {
     const [closeModal, setCloseModal] = useState<boolean>(false);
+    const [showRegistryForm, setShowRegistryForm] = useState<boolean>(false);
 
     const handleClick = () => {
         setCloseModal(true);
@@ -65,25 +70,28 @@ function Modal({setOpenModal}: IModal) {
     }
 
     return (
-        <>
-            <AbModal fechaModal={closeModal}>
-                <ModalContainer>
-                    <ModalImage />
-                    <ModalContent>
-                        <Header>
-                            <H2>Login</H2>
-                            <ButtonContainer>
-                                <CloseButton onClick={() => handleClick()}>
-                                    &#10006;
-                                </CloseButton>
-                            </ButtonContainer>
-                        </Header>
-                        <LoginForm />
-                    </ModalContent>
-                </ModalContainer>
-            </AbModal>
-        </>
-    );
+		<>
+			<AbModal fechaModal={closeModal}>
+				<ModalContainer>
+					<ModalImage />
+					<ModalContent>
+						<Header>
+							<H2>Login</H2>
+							<ButtonContainer>
+								<CloseButton onClick={() => handleClick()}>
+									&#10006;
+								</CloseButton>
+							</ButtonContainer>
+						</Header>
+						{showRegistryForm 
+                            ? <RegisterForm />
+                            : <LoginForm setShowRegistryForm={setShowRegistryForm}/>
+                        }
+					</ModalContent>
+				</ModalContainer>
+			</AbModal>
+		</>
+	);
 }
 
 export default Modal;

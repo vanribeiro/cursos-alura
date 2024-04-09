@@ -87,48 +87,62 @@ const styleInput: object = {
     backgroundColor: '#FFFFFF'
 }
 
+interface ILoginForm{
+    setShowRegistryForm(value: boolean): void;
+} 
 
-function LoginForm() {
+function LoginForm({ setShowRegistryForm }: ILoginForm) {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+
+    const handleCriarConta = (event: React.MouseEvent<HTMLInputElement>) => {
+        event.preventDefault();
+        setShowRegistryForm(true);
+    }
 
     return (
 		<>
 			<Form>
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="email"
-						rotulo="E-mail"
-						texto={email}
-						placeholder="seuemail@maneiro.com.br"
-						onChange={setEmail}
-                        
-					/>
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="email"
+					rotulo="E-mail"
+					texto={email}
+					placeholder="seuemail@maneiro.com.br"
+					onChange={setEmail}
+				/>
 				<AbCampoTexto
-                    styleInput={styleInput}
-                    styleLabel={styleLabel}
-						tipo="password"
-						rotulo="Senha"
-						texto={password}
-						placeholder="*********************"
-						onChange={setPassword}
-                        icon={OpenedEyeIcon}
+					styleInput={styleInput}
+					styleLabel={styleLabel}
+					tipo="password"
+					rotulo="Senha"
+					texto={password}
+					placeholder="*********************"
+					onChange={setPassword}
+					icon={OpenedEyeIcon}
+				/>
+				<ButtonContainer>
+					<LinkForgotPassword href="#">
+						Esqueci minha senha
+					</LinkForgotPassword>
+					<AbBotao
+						texto="Fazer login"
+						tipo="primario"
+						type="button"
 					/>
-                <ButtonContainer>
-                    <LinkForgotPassword href='#'>
-                            Esqueci minha senha
-                    </LinkForgotPassword>
-                    <AbBotao texto='Fazer login' />
-                </ButtonContainer>
-                <Hr />
-                <FormFooter>
-                    <p>
-                        Ainda não tem uma conta?
-                    </p>
-                    <AbBotao texto='Criar conta' />
-                </FormFooter>
+				</ButtonContainer>
+				<Hr />
+				<FormFooter>
+					<p>Ainda não tem uma conta?</p>
+					<AbBotao
+						texto="Criar conta"
+						type="button"
+						tipo="primario"
+						onClick={handleCriarConta}
+					/>
+				</FormFooter>
 			</Form>
 		</>
 	);
