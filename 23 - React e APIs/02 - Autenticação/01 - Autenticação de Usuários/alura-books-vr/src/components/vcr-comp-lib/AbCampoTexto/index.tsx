@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const LabelEstilizado = styled.label`
   color: #002f52;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   span {
     padding-left: 24px;
@@ -48,6 +51,15 @@ const Envelope = styled.img`
     padding: 24px;
 `;
 
+const OpenEye = styled.img<{$isText: string}>`
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding-right:16px;
+    cursor: pointer;
+    opacity: ${props => props.$isText === 'text' ? 0.4 : 1};
+`;
+
 interface AbCampoTextoProps {
   rotulo?: string;
   placeholder?: string;
@@ -57,6 +69,7 @@ interface AbCampoTextoProps {
   styleLabel?: object;
   icon?: string;
   onChange: (value: string) => void;
+  onClick?: (value: string) => void;
 }
 
 const AbCampoTexto = ({
@@ -69,20 +82,35 @@ const AbCampoTexto = ({
   icon,
   onChange,
 }: AbCampoTextoProps) => {
+
+  const [inputType, setInputType] = useState(tipo);
+
+  const handleClick = () => {
+      inputType === 'password'
+      ? setInputType('text')
+      : setInputType('password');
+  }
+
   return (
-    <LabelEstilizado style={styleLabel}>
-      <span>{rotulo}</span>
-      
-      {icon && <Envelope src={icon} alt='Ícone de envelope' />}
-      <InputEstilizado
-        style={styleInput}
-        placeholder={placeholder}
-        type={tipo}
-        value={texto}
-        onChange={(evento: any) => onChange(evento.target.value)}
-        
-      />
-    </LabelEstilizado>
+		<LabelEstilizado style={styleLabel}>
+			<span>{rotulo}</span>
+
+			{icon && tipo === "email" && (
+				<Envelope src={icon} alt="Ícone de envelope" />
+			)}
+
+			<InputEstilizado
+				style={styleInput}
+				placeholder={placeholder}
+				type={inputType}
+				value={texto}
+				onChange={(evento: any) => onChange(evento.target.value)}
+			/>
+
+			{icon && (tipo === "password" || tipo === "text") && (
+				<OpenEye $isText={inputType} src={icon} alt="Ícone de olhos" onClick={() => handleClick()}/>
+			)}
+		</LabelEstilizado>
   );
 };
 
