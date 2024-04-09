@@ -1,10 +1,10 @@
+import TitlePage from "../../components/TitlePage";
+import Sidebar from "../../components/Sidebar";
 import Container from "../../components/Container";
 import OrdersList from "../../components/OrdersList";
-import Sidebar from "../../components/Sidebar";
-import TitlePage from "../../components/TitlePage";
 
-function Pedidos() {
-    const pageName: string = "Meus Pedidos";
+function MinhaConta() {
+    const pageName: string = "Minha conta";
 
     return (
         <>
@@ -17,4 +17,4 @@ function Pedidos() {
     );
 }
 
-export default Pedidos;
+export default MinhaConta;

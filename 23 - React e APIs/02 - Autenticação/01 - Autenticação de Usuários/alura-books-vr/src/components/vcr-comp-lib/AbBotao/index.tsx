@@ -2,23 +2,23 @@ import styled, { css } from 'styled-components';
 
 interface AbBotaoProps {
   texto?: string;
-  tipo?: 'primario' | 'secundario';
-  type: string;
+  variante?: 'primario' | 'secundario';
+  type: 'button' | 'submit' | 'reset';
   onClick?: (e: React.MouseEvent<HTMLInputElement>) => void;
 }
 
 const BotaoEstilizado = styled.button<AbBotaoProps>`
   background-color: ${(props: AbBotaoProps) =>
-    props.tipo === 'primario' ? '#eb9b00' : '#ffffff'};
+    props.variante === 'primario' ? '#eb9b00' : '#ffffff'};
   padding: 16px 32px;
   border: #eb9b00 2px solid;
   color: ${(props: AbBotaoProps) =>
-    props.tipo === 'primario' ? '#ffffff' : '#eb9b00'};
+    props.variante === 'primario' ? '#ffffff' : '#eb9b00'};
   font-size: 20px;
   font-weight: 900;
   cursor: pointer;
   ${(props: AbBotaoProps) =>
-    props.tipo === 'primario'
+    props.variante === 'primario'
       ? css`
           &:hover {
             background-color: #b87900;
@@ -34,9 +34,9 @@ const BotaoEstilizado = styled.button<AbBotaoProps>`
         `};
 `;
 
-const AbBotao = ({ texto, type, tipo = 'primario', onClick }: AbBotaoProps) => {
+const AbBotao = ({ texto, type, variante = 'primario', onClick }: AbBotaoProps) => {
   return (
-    <BotaoEstilizado onClick={onClick} tipo={tipo} type={type}>
+    <BotaoEstilizado onClick={onClick} variante={variante} type={type}>
       {texto}
     </BotaoEstilizado>
   );

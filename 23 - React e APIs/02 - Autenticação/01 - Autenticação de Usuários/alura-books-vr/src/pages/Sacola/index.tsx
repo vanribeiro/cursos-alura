@@ -1,4 +1,6 @@
 import TitlePage from "../../components/TitlePage";
+import Sidebar from "../../components/Sidebar";
+import Container from "../../components/Container";
 
 function Sacola() {
     const pageName: string = "Minha sacola";
@@ -6,7 +8,9 @@ function Sacola() {
     return (
         <>
             <TitlePage titlePage={pageName} />
-            <p>sacola</p>
+            <Container>
+                <Sidebar />
+            </Container>
         </>
     );
 }

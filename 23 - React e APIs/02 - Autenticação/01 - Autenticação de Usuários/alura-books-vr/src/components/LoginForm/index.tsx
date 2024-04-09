@@ -129,7 +129,7 @@ function LoginForm({ setShowRegistryForm }: ILoginForm) {
 					</LinkForgotPassword>
 					<AbBotao
 						texto="Fazer login"
-						tipo="primario"
+						variante="primario"
 						type="button"
 					/>
 				</ButtonContainer>
@@ -139,7 +139,7 @@ function LoginForm({ setShowRegistryForm }: ILoginForm) {
 					<AbBotao
 						texto="Criar conta"
 						type="button"
-						tipo="primario"
+						variante="primario"
 						onClick={handleCriarConta}
 					/>
 				</FormFooter>

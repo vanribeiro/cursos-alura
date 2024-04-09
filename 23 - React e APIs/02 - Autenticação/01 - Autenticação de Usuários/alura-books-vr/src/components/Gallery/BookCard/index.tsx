@@ -142,7 +142,7 @@ function BookCard({
                                     />
                                 </a>
 							</IconsContainer>
-							<AbBotao texto={buttonLabel} />
+							<AbBotao type="button" texto={buttonLabel} />
 						</Footer>
 					</BookCardContainer>
 				</>
