@@ -1,10 +1,10 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 
 interface AbBotaoProps {
   texto?: string;
   tipo?: 'primario' | 'secundario';
-  onClick?: () => void;
+  type: string;
+  onClick?: (e: React.MouseEvent<HTMLInputElement>) => void;
 }
 
 const BotaoEstilizado = styled.button<AbBotaoProps>`
@@ -34,12 +34,12 @@ const BotaoEstilizado = styled.button<AbBotaoProps>`
         `};
 `;
 
-const AbBotao = ({ texto, tipo = 'primario', onClick }: AbBotaoProps) => {
+const AbBotao = ({ texto, type, tipo = 'primario', onClick }: AbBotaoProps) => {
   return (
-    <BotaoEstilizado onClick={onClick} tipo={tipo}>
+    <BotaoEstilizado onClick={onClick} tipo={tipo} type={type}>
       {texto}
     </BotaoEstilizado>
   );
 };
 
-export { AbBotao, AbBotaoProps };
+export { AbBotao };

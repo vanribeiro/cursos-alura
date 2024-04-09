@@ -9,7 +9,7 @@ const ModalBg = styled.div<{ $fechaModal?: boolean }>`
   background-color: rgba(0, 0, 0, 0.25);
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   display: ${props => props.$fechaModal ? 'none': 'flex'};
   justify-content: center;
   align-items: center;
@@ -22,12 +22,12 @@ const ModalContent = styled.section<{ $padding?: string }>`
 
   @media screen and (max-width: 428px) {
     max-width: 378px;
-    width: 89%;
+    width: 80%;
     padding: ${props => (props.$padding ? props.$padding : '24px')};
   }
 
   @media screen and (min-width: 429px) {
-    width: 89%;
+    width: 82%;
     padding: ${props => (props.$padding ? props.$padding : '24px')};
   }
 
