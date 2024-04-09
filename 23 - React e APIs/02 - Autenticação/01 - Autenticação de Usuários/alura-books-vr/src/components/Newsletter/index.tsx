@@ -15,6 +15,7 @@ const NewsletterContainer = styled.div`
     
     @media screen and (max-width: 767.99px){
         width: 90%;
+        justify-content: space-between;
     }
     
     @media screen and (min-width: 1024px){

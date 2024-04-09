@@ -1,3 +1,5 @@
+import Container from "../../components/Container";
+import Sidebar from "../../components/Sidebar";
 import TitlePage from "../../components/TitlePage";
 
 
@@ -7,9 +9,9 @@ function Favoritos() {
     return (
         <>
             <TitlePage titlePage={pageName} />
-            <p>
-                favoritos
-            </p>
+            <Container>
+                <Sidebar />
+            </Container>
         </>
     );
 }
