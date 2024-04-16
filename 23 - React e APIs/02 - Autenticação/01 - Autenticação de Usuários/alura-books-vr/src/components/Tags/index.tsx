@@ -41,6 +41,7 @@ const TagsContainer = styled.div`
 
 `;
 
+
 interface ITags {
     listOfTags: Array<string>;
 }
@@ -61,7 +62,11 @@ function Tags({ listOfTags }: ITags) {
 			<h3>TÓPICOS VISITADOS RECENTEMENTE</h3>
 			<TagsContainer>
 				{listOfTags.map((tag: string, index: number) => (
-					<AbTag key={index} style={tagStyle} texto={tag} />
+					<AbTag to={`${
+                        tag
+                            .toLowerCase()
+                            .replace(/[^a-z]/gi,'-')
+                    }`} key={index} style={tagStyle} texto={tag} />
 				))}
 			</TagsContainer>
 		</Section>

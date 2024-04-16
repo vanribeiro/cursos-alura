@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface IMessage {
-    color?: string;
+    fontColor?: string;
     message: string
 }
 
@@ -17,10 +17,10 @@ const Message = styled.div<{$color: string}>`
 `;
 
 
-function ErrorMessage({ color, message }: IMessage) {
+function ErrorMessage({ fontColor, message }: IMessage) {
     
     return (
-        <Message $color={color}>
+        <Message $color={fontColor}>
             <p>
                 { message }
             </p>

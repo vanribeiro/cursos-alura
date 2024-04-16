@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import { ordersBooks } from "../../mock/data";
 import OrderSummary from "./OrderSummary";
+import { localhost } from "../../service/api";
+import { useEffect, useState } from "react";
+import { IOrderSummary } from "./interface";
 
 const Orders = styled.div`
     margin-top: 60px;
@@ -22,6 +24,15 @@ const List = styled.div`
 `;
 
 function OrdersList() {
+    const [ordersBooks, setOrdersBooks] = useState<Array<IOrderSummary>>([]);
+    useEffect(() => {
+        
+        fetch(`${localhost}/books-order`)
+        .then(res => res.json())
+        .then(data => setOrdersBooks(data))
+        .catch(error => error);
+        
+    }, []);
 
     return (
 		<>
@@ -31,7 +42,7 @@ function OrdersList() {
                     {ordersBooks.map((order) => (
                         <OrderSummary
                             key={order.orderNumber}
-                            order={order.orderNumber}
+                            orderNumber={order.orderNumber}
                             orderDate={order.orderDate}
                             total={order.total}
                             deliveryDate={order.deliveryDate}
