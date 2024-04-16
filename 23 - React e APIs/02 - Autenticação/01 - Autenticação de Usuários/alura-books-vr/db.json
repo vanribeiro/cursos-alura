@@ -1,0 +1,52 @@
+{
+    "book-list": [
+        {
+            "id": 1,
+            "title": "Liderança em Design",
+            "description": "Habilidades de gestão para alavancar sua carreira",
+            "author": "Vitor Zanini",
+            "price": 39.9,
+            "imageCover": "capa-01.png"
+        },
+        {
+            "id": 2,
+            "title": "JavaScript Assertivo",
+            "description": "Testes e qualidade de código em todas as camadas da aplicação",
+            "author": "Gabriel Ramos",
+            "price": 39.9,
+            "imageCover": "capa-02.png"
+        },
+        {
+            "id": 3,
+            "title": "Apache Kafka e Spring Boot",
+            "description": "Comunicação assíncrona entre microsserviços",
+            "author": "Gabriel Ramos",
+            "price": 39.9,
+            "imageCover": "capa-03.png"
+        }
+    ],
+    "books-order": [
+        {
+            "orderNumber": 89019041,
+            "orderDate": "26/05/2022",
+            "total": 48,
+            "deliveryDate": "30/05/2022"
+        },
+        {
+            "orderNumber": 89019049,
+            "orderDate": "27/05/2022",
+            "total": 101.5,
+            "deliveryDate": "01/06/2022"
+        },
+        {
+            "orderNumber": 89019100,
+            "orderDate": "18/08/2022",
+            "total": 59.9,
+            "deliveryDate": "23/08/2022"
+        }
+    ],
+    "tags": [
+        "Android", "Marketing Digital", "Agile",
+        "Startups", "HTML & CSS", "Python", "OO", "Java"
+    ]
+}

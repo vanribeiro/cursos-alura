@@ -3,8 +3,7 @@ import LoginImage from './assets/login-imagem.png';
 
 const Img = styled.img`
     max-width: 100%;
-
-	`
+`;
 
 const Figure = styled.figure`
     display: flex;
@@ -19,9 +18,6 @@ const Figure = styled.figure`
 		width: 40%;
 	}
 
-	/* @media screen and (min-width: 1024px){
-		width: 30%;
-	} */
 `;
 
 function ModalImage() {

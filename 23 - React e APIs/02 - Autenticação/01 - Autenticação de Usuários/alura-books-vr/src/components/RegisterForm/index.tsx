@@ -1,56 +1,9 @@
-import styled from 'styled-components';
 import { AbBotao, AbCampoTexto } from '../vcr-comp-lib';
 import { useEffect, useState } from 'react';
 import OpenedEyeIcon from './assets/olhos-abertos.png';
 import { viaCepBaseURL } from '../../service/api';
 import { ErrorMessage } from '../Message';
-
-const Form = styled.form`
-    width: 100%;
-    label{
-        margin: 8px 0;
-    }
-
-    input, input::placeholder, label span{
-        font-family: Poppins;
-    }
-
-    label span{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        font-size: 12.2px;
-        font-weight: 700;
-        line-height: 18.3px;
-
-    }
-
-    input::placeholder{
-        color: #A4A4A4;
-        font-size: 12.2px;
-        line-height: 18.3px;
-    }
-
-    button{
-        font-family: Poppins;
-        font-size: 12.2px;
-        font-weight: 700;
-        line-height: 18.3px;
-        text-align: center;
-        padding: 6px 12px;
-    }
-
-`;
-
-
-
-
-const ButtonContainer = styled.div`
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
+import { ButtonContainer, Form } from './style';
 
 const styleLabel: object = {
     width: '100%',
@@ -169,7 +122,7 @@ function RegisterForm() {
 					icon={OpenedEyeIcon}
 				/>
 				<ButtonContainer>
-					<AbBotao texto="Cadastrar" type="button" />
+					<AbBotao texto="Cadastrar" type="submit" />
 				</ButtonContainer>
 			</Form>
 		</>

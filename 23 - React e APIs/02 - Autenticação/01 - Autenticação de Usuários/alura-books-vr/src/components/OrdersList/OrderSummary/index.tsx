@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { AbBotao } from "../../vcr-comp-lib";
+import { IOrderSummary } from "../interface";
 
 const Article = styled.article`
     border-bottom: 1px solid #326589;
@@ -52,15 +53,8 @@ const Article = styled.article`
 
 `;
 
-interface IOrderSummary{
-    order: number;
-    orderDate: string;
-    total: number;
-    deliveryDate: string;
-}
-
 function OrderSummary({
-    order, orderDate, total, deliveryDate
+    orderNumber, orderDate, total, deliveryDate
 }: IOrderSummary) {
 
     return (
@@ -70,7 +64,7 @@ function OrderSummary({
 					<h3>Resumo da Compra</h3>
 
 					<p>
-						Pedido: <strong>{order}</strong>
+						Pedido: <strong>{orderNumber}</strong>
 					</p>
 					<p>
 						Data do pedido: <strong>{orderDate}</strong>

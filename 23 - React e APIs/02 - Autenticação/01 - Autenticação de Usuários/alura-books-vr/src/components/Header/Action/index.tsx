@@ -116,9 +116,9 @@ function Action() {
     return (
         <Section>
             <Favorites>
-                <a href="/favoritos">
+                <Link to="/favoritos">
                     <Img src={IconeFavoritos} alt="Ícone Favoritos" />
-                </a>
+                </Link>
             </Favorites>
             <ActionItem>
                 <Link to="/sacola">
