@@ -8,14 +8,13 @@ Este repositório contém código, anotações de exercícios e a parte prática
 04. [Cursos descontinuados](#descontinuados-pela-plataforma)
 
 ## Em Andamento:
-- [Aleatórios](/24%20-%20Aleatórios/)[^1]
-- [Impulsione sua aplicação React e consuma APIs](/23%20-%20React%20e%20APIs/)
+- [Melhore sua aplicação React com testes automatizados](/25%20-%20React%20e%20Testes%20Automatizados/)
 
 ## Pausado:
-- [Consultas com Oracle Database](/22%20-%20Consultas%20com%20Oracle%20Database/)
-- [Formação ASP.Net Core](/15%20-%20Forma%C3%A7%C3%A3o%20ASP.Net%20Core/)
+- [Impulsione sua aplicação React e consuma APIs](/23%20-%20React%20e%20APIs/)
 
 ## Finalizados:
+- [React: configurando e estruturando projetos com Vite](/24%20-%20Aleatórios/01%20-%20React%20com%20Vite/)[^1]
 - [SQL com MySQL Server da Oracle](/21%20-%20SQL%20com%20MySQL/)
 - [Formação Desenvolva seu primeiro app com React Native](/19%20-%20React%20Native/)
 - [Formação C# e Orientação a Objetos](/14%20-%20Forma%C3%A7%C3%A3o%20C%23%20e%20POO/)
