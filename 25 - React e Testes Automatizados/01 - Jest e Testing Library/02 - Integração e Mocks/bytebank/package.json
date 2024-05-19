@@ -13,8 +13,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "test-w": "react-scripts test --watch --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "test": "react-scripts test",
+    "test:watch": "react-scripts test --watchAll",
     "test:coverage": "npm run test -- --coverage --watchAll=false",
     "api": "json-server --watch db.json --port 8080",
     "format": "prettier --write \"src/**/*{.js,.jsx}\"",
@@ -50,5 +50,10 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+       "/node_modules/(?!(axios)/)"
+     ]
   }
 }

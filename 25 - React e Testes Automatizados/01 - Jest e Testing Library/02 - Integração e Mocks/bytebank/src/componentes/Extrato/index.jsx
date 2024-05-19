@@ -4,7 +4,7 @@ import Transacoes from './Transacoes';
 
 export default function Extrato({ transacoes }) {
   return (
-    <section className={estilos.container}>
+    <section className={estilos.container} data-testid="extrato">
       <h2 className={estilos.titulo}>Extrato</h2>
       <ul data-testid="lista-transacoes">
         {transacoes.map((transacao, indice) => {

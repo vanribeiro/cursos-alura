@@ -12,12 +12,12 @@ export default function Transacoes({ transacao, estilos }) {
         <h3
           data-testid="valorTransacao"
           className={estilos.valor}
-        >{`- R$ ${transacao.valor}`}</h3>
+        >{`- ${transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`}</h3>
       ) : (
         <h3
           data-testid="valorTransacao"
           className={estilos.valor}
-        >{` R$ ${transacao.valor}`}</h3>
+        >{`${transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`}</h3>
       )}
       <div className={estilos.divisor} />
     </li>

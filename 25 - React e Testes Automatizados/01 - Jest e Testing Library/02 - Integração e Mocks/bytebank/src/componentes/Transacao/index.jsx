@@ -5,7 +5,7 @@ import Formulario from './Formulario';
 
 export default function Transacao({ realizarTransacao }) {
   return (
-    <section className="container">
+    <section className="container" data-testid="transacao">
       <div className="detalhe__superior" />
       <div className={estilos.wrapper}>
         <Formulario realizarTransacao={realizarTransacao} />

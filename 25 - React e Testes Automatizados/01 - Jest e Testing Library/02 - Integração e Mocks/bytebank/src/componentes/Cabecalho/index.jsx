@@ -5,7 +5,7 @@ import avatarUsuario from '../../assets/avatar.svg';
 
 export default function Cabecalho() {
   return (
-    <header className={estilos.cabecalho}>
+    <header className={estilos.cabecalho} data-testid="cabecalho">
       <div className={estilos.container}>
         <Logo />
         <div className={estilos.usuario}>

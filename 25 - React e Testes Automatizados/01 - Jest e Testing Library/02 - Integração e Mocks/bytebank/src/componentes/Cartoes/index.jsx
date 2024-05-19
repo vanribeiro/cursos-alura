@@ -5,7 +5,7 @@ import cartaoDigital from './digital.svg';
 
 export default function Cartoes() {
   return (
-    <section className="container">
+    <section className="container" data-testid="meus-cartoes">
       <div className="detalhe__superior" />
       <div className={estilos.wrapper}>
         <h2>Meus cartões</h2>
