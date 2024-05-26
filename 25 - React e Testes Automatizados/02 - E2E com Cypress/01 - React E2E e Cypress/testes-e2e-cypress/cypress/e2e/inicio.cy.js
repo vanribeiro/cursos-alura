@@ -1,10 +1,9 @@
 describe('Bytebank home', () => {
-  it('should access home page successfully', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3000');
   });
 
   it('should render the home CTA with right text', () => {
-    cy.visit('http://localhost:3000');
     cy.get('[data-test="titulo-principal"]').contains(
       'Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!'
     );
@@ -12,11 +11,26 @@ describe('Bytebank home', () => {
 
   it('should have the bytebank benefits', () => {
 
-    cy.visit('http://localhost:3000');
     cy.get('h2').contains('Vantagens do nosso banco:');
     cy.contains('Conta e cartão gratuitos');
     cy.contains('Saques sem custo');
     cy.contains('Programa de pontos');
     cy.contains('Seguro Dispositivos');
+  });
+
+  it('should renders the buttons correctly', () => {
+
+    cy.getByData('botao-login').contains('Já tenho conta');
+    cy.getByData('botao-cadastro').contains('Abrir minha conta');
+    
+  });
+
+  it('should check the main title', () => {
+
+    cy.isTheCorrectText(
+      'titulo-principal',
+      'Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!'
+    );
+
   });
 })
