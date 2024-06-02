@@ -71,10 +71,14 @@ export default function ModalLoginUsuario({
         className={estilos.background__modal}
         onClick={aoFechar}
         aria-hidden="true"
+        data-test="modal-login-form"
       />
       ;
       <div className={estilos.janela__modal}>
-        <button className={estilos.fechar__modal} onClick={aoFechar}>
+        <button
+          className={estilos.fechar__modal}
+          onClick={aoFechar}
+          data-test="modal-login-form__close-button">
           X
         </button>
         <div className={estilos.modal__container}>

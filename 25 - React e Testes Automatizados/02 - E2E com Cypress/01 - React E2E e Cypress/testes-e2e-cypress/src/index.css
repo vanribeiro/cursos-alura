@@ -1,6 +1,5 @@
 html {
   display: flex;
-  flex-direction: column;
 }
 
 body {
@@ -9,6 +8,7 @@ body {
   flex: 1;
   flex-direction: column;
   background-color: #e3f9e5;
+  overflow-x: hidden;
 }
 
 .conteudo-pagina {

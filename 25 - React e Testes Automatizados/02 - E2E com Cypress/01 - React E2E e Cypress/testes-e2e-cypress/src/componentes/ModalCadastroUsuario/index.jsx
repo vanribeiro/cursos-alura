@@ -9,6 +9,7 @@ export default function ModalCadastroUsuario({ aberta, aoFechar }) {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [termos, setTermos] = useState(false);
   const [erro, setErro] = useState({});
 
   const onSubmit = async (event) => {
@@ -17,6 +18,7 @@ export default function ModalCadastroUsuario({ aberta, aoFechar }) {
       nome,
       email,
       senha,
+      termos
     };
 
     const result = await validaDadosFormulario(usuario);
@@ -27,32 +29,34 @@ export default function ModalCadastroUsuario({ aberta, aoFechar }) {
         message: result.message,
       });
       return;
+    } else{
+      api
+        .post('/public/cadastrar', usuario)
+        .then(() => {
+          setErro({
+            path: 'message-sucess',
+            message: 'Usuário cadastrado com sucesso!',
+          });
+          setNome('');
+          setEmail('');
+          setSenha('');
+          setTimeout(() => {
+            aoFechar();
+            setErro({
+              path: '',
+              message: '',
+            });
+          }, 1000);
+        })
+        .catch((erro) => {
+          setErro({
+            path: 'email',
+            message: erro?.response?.data?.message,
+          });
+        });
+
     }
 
-    api
-      .post('/public/cadastrar', usuario)
-      .then(() => {
-        setErro({
-          path: 'message-sucess',
-          message: 'Usuário cadastrado com sucesso!',
-        });
-        setNome('');
-        setEmail('');
-        setSenha('');
-        setTimeout(() => {
-          aoFechar();
-          setErro({
-            path: '',
-            message: '',
-          });
-        }, 1000);
-      })
-      .catch((erro) => {
-        setErro({
-          path: 'email',
-          message: erro?.response?.data?.message,
-        });
-      });
   };
 
   if (!aberta) {
@@ -133,15 +137,28 @@ export default function ModalCadastroUsuario({ aberta, aoFechar }) {
               )}
             </label>
             <div className={estilos.termo__container}>
-              <input
-                data-test="checkbox-input"
-                className={estilos.checkbox}
-                type="checkbox"
-              />
-              <p>
-                Li e estou ciente quanto às condições de tratamento dos meus
-                dados conforme descrito na Política de Privacidade do banco.
-              </p>
+              {erro.path === 'termos' ? (
+                <span data-test="mensagem-erro">{erro.message}</span>
+              ) : (
+                ''
+              )}
+              <label htmlFor="termos-de-uso" style={{
+                  fontWeight: 400, 
+                  display: 'flex', 
+                  flexDirection: 'row', 
+                  alignItems: 'flex-start', 
+                }}>
+                <input
+                  style={{marginRight: '16px'}}
+                  id="termos-de-uso"
+                    data-test="checkbox-input"
+                    className={estilos.checkbox}
+                    type="checkbox"
+                    onChange={(event) => setTermos(event.target.checked)}
+                />
+                  Li e estou ciente quanto às condições de tratamento dos meus
+                  dados conforme descrito na Política de Privacidade do banco.
+              </label>
             </div>
             <Botao acaoBotao="enviar" texto="Criar conta" />
           </form>
