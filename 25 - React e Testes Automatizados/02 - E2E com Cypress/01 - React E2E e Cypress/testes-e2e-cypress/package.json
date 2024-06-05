@@ -20,7 +20,12 @@
     "api": "json-server --watch db.json --port 8080",
     "format": "prettier --write \"src/**/*{.js,.jsx}\"",
     "lint": "eslint \"src/**/*{.js,.jsx}\" --quiet",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cy:open": "npx cypress open",
+    "cy:mobile": "npx cypress open --config viewportWidth=375,viewportHeight=667",
+    "cy:cli": "npx cypress run",
+    "cy:edge": "npx cypress run -- browser edge",
+    "cy:firefox": "npx cypress run -- browser firefox"
   },
   "jest": {
     "coverageThreshold": {
