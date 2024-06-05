@@ -2,7 +2,33 @@
 
 Comando para rodar o Cypress:
 
-`npx cypress open`
+- Versão Gráfica:
+  - `npx cypress open`
+- Versão CLI:
+  - `npx cypress run`
+  - Rodando navegadores instalados no dispositivo atual, exemplo:
+    - Edge: `npx cypress run -- browser edge`
+    - Firefox: `npx cypress run -- browser firefox`
+  - Rodando e resoluções menores, exemplo:
+    - `npx cypress open --config viewportWidth=375,viewportHeight=667`
+
+Também é possível configurar o navegador a ser testado em cada teste, exemplo:
+
+```javascript
+describe('Jornada do usuario', () => {
+
+    it('should ...', { browser: 'edge' } () => {
+      // assertions
+    });
+
+    it('should ...', { browser: 'firefox' } () => {
+      // assertions
+    });
+    
+});
+```
+
+
 
 ## ESLint
 
@@ -45,6 +71,30 @@ cy.contains('Enviar').click();
 cy.get('.btn').click()
 cy.get('#main').click();
 cy.get('button').click();
+```
+
+## Viewport:
+
+```javascript
+describe('Menu de navegação', () => {
+  context('Resolução de 720p', () => {
+    beforeEach(() => {
+      // Roda os testes como se fossem em um monitor de 720p de resolução
+      cy.viewport(1280, 720)
+    })
+
+    // seu teste aqui
+  })
+
+  context('Resolução do iphone-5 ', () => {
+    beforeEach(() => {
+      // roda os testes como se fossem em um dispositivo com a resolução de um iphone-5
+      cy.viewport('iphone-5')
+    })
+
+    // seu teste aqui
+  })
+})
 ```
 
 ## Links úteis: 

@@ -34,9 +34,100 @@
       "data": "05/01/2023",
       "mes": "Janeiro",
       "id": 5
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 6
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 7
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 8
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 9
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 10
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 11
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 12
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 13
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 14
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 15
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 16
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 17
+    },
+    {
+      "transacao": "Depósito",
+      "valor": "200",
+      "data": "04/06/2024",
+      "mes": "Junho",
+      "id": 18
     }
   ],
   "saldo": {
-    "valor": 3750
+    "valor": 6350
   }
 }

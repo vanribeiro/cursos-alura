@@ -72,7 +72,7 @@ export default function ModalCadastroUsuario({ aberta, aoFechar }) {
         aria-hidden="true"
       />
       <div className={estilos.janela__modal}>
-        <button className={estilos.fechar__modal} onClick={aoFechar}>
+        <button className={estilos.fechar__modal} onClick={aoFechar} data-test="modal-registry-form__close-button">
           X
         </button>
         <div className={estilos.modal__container}>

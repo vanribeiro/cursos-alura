@@ -15,13 +15,12 @@ async function validaDadosFormulario(user) {
       .string()
       .email('O email digitado é inválido')
       .required('O campo email é obrigatório'),
-    senha: yup.string().required('O campo de senha é obrigatório'),
-    termos: yup.bool().required('Você precisa concordar com os termos para usar nossos serviços')
+    senha: yup.string().required('O campo de senha é obrigatório')
   });
 
   try {
     if (user.nome === '') await schemaCadastro.validate(user);
-    if(user.email === '') await schemaCadastro.validate(user);
+    if (user.email === '') await schemaCadastro.validate(user);
     
     if (!user.nome) await schemaLogin.validate(user);
 
