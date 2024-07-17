@@ -2,12 +2,13 @@ import api from './api';
 
 export async function buscaTransacoes() {
   const userId = localStorage.getItem('userId');
-  try {
+
+  if (userId) {
     const resp = await api.get(`/users/${userId}/transations`);
     return resp.data;
-  } catch (err) {
-    return [];
   }
+  
+  return [];
 }
 
 export async function salvaTransacao(novaTransacao) {
