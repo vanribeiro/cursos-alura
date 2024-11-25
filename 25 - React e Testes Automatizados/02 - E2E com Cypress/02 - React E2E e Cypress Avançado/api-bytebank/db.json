@@ -59,6 +59,14 @@
         }
       ],
       "saldo": 3500
+    },
+    {
+      "id": "83014e2f-b14b-4320-a8ae-a4be4ed232e6",
+      "nome": "Vanessa Cristiane Ribeiro",
+      "email": "vanribeiro@contato.com.br",
+      "senha": "secreta123",
+      "transacoes": [],
+      "saldo": 0
     }
   ]
 }
