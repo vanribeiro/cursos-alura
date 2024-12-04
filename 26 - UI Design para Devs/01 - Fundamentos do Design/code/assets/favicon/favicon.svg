@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="favicon_512px.png"
+   inkscape:export-xdpi="3072"
+   inkscape:export-ydpi="3072"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="49.625"
+     inkscape:cx="5.3702771"
+     inkscape:cy="6.5491184"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1c1c1c;fill-opacity:1;stroke:none;stroke-width:20;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;paint-order:stroke markers fill"
+       id="rect234"
+       width="16"
+       height="16"
+       x="0"
+       y="-0.040302265" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="keys"
+     style="display:inline;fill:#f8f8f8;fill-opacity:1"
+     transform="matrix(1.0919848,0,0,1.0919848,-0.75117867,-0.37281093)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.5887px;font-family:Impact;-inkscape-font-specification:Impact;fill:#f8f8f8;fill-opacity:1;stroke:none;stroke-width:16.986;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;paint-order:stroke markers fill"
+       x="1.3181739"
+       y="11.887269"
+       id="text2663"><tspan
+         sodipodi:role="line"
+         id="tspan2661"
+         x="1.3181739"
+         y="11.887269"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Light';fill:#f8f8f8;fill-opacity:1;stroke-width:16.986">{  }</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="letters"
+     transform="translate(0.00234031,0.14403918)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.8949px;font-family:'Style Script';-inkscape-font-specification:'Style Script';fill:#eca769;stroke-width:23.6185;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;paint-order:stroke markers fill"
+       x="4.0675206"
+       y="12.322092"
+       id="text953"><tspan
+         sodipodi:role="line"
+         id="tspan951"
+         x="4.0675206"
+         y="12.322092"
+         style="stroke-width:23.6185">v</tspan></text>
+  </g>
+</svg>
