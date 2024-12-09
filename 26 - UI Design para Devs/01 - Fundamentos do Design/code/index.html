@@ -8,24 +8,59 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Roboto:wght@300;400;500&display=swap" 
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/modules/about-me.css">
     <title>Van Ribeiro</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="/home">
-                <img src="./assets/logo/square.png" alt="Van Ribeiro Logo" />
-            </a>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a class="header__logo-link" href="/">
+                    <img class="header__logo-img" src="./assets/logo/square.png" alt="Van Ribeiro Logo" />
+                </a>
+            </div>
+            <nav class="header__menu">
+                <ul class="header__menu__list">
+                    <li class="header__menu-item"><a class="header__menu-link" href="/home">Home</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="/news">News</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="/blog">Blog</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="/projetos">Projetos</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="/contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="/home">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="/news">News</a></li>
-                <li class="menu__item"><a class="menu__link" href="/blog">Blog</a></li>
-                <li class="menu__item"><a class="menu__link" href="/projetos">Projetos</a></li>
-                <li class="menu__item"><a class="menu__link" href="/contato">Contato</a></li>
-            </ul>
-        </nav>
     </header>
+    <main>
+        <div class="container">
+            <section class="about-me__section">
+                <figure class="about-me__img-profile-container">
+                    <img 
+                        class="about-me__img-profile" 
+                        src="./assets/me/vanessa-ribeiro.jpg" 
+                        alt="Minha foto para perfis em redes sociais"
+                    >
+                </figure>
+                <article class="about-me__article">
+                    <h2 class="about-me__subtitle">Van Ribeiro</h2>
+                    <h1 class="about-me__title">Front-end Developer</h1>
+                    <p class="about-me__description">
+                        Alguém que curte tecnologias web e busca melhorar suas habilidades de programação e solução de problemas, resolvendo desafios e criando pequenos projetos.
+                    </p>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">Van Ribeiro - <a class="footer__link" href="mailto:vanribeiro.dev@gmail.com">vanribeiro.dev@gmail.com</a></p>
+        </div>
+    </footer>
 </body>
 </html>
