@@ -1,0 +1,72 @@
+.pagination{
+    --button-color: var(--bg-dark);
+    --button-bg: rgba(195, 154, 118, 0.9);
+}
+
+.pagination__container{
+    padding: var(--section-padding);
+    display: flex;
+    justify-content: center;
+    height: 70px;
+}
+
+.pagination__list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.pagination__list-item > button{
+    padding: 8px;
+}
+
+.pagination__button{
+    color: var(--text-color);
+    font-size: var(--font-14px);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__list-item--previous > button,
+.pagination__list-item--next > button{
+    padding: 0;
+    text-align: center;
+}
+
+.pagination__button--previous,
+.pagination__button--next,
+.pagination__button--last{
+    border: solid 1px var(--pagination-border-color);
+    line-height: 0;
+}
+
+.pagination__button--last{
+    width: auto;
+}
+
+.pagination__button--current-page{
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    font-weight: var(--weight-black);
+}
+
+.pagination__button[data-current-page-status="first"]:disabled,
+.pagination__button[data-current-page-status="last"]:disabled{
+    opacity: 0.4;
+}
+
+
+.pagination__button--dots,
+.pagination__button--current-page
+.pagination__button[data-current-page-status="first"]:disabled,
+.pagination__button[data-current-page-status="last"]:disabled{
+    cursor: default;
+}

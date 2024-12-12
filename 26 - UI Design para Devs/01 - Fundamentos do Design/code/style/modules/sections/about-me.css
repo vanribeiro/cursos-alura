@@ -22,21 +22,22 @@
 .about-me__description{
     font-weight: var(--weight-light);
     color: var(--text);
-    line-height: 1.5;
+    line-height: var(--secondary-line-height);
 }
 
 .about-me__title{
-    color: var(--title);
+    color: var(--page-title-color);
+    font-size: var(--page-title-size);
     font-weight: var(--weight-black);
-    letter-spacing: 1px;
-    font-size: 2.5em;
+    line-height: var(--primary-line-height);
+    letter-spacing: var(--primary-letter-spacing);
     width: 220px;
 }
 
 .about-me__subtitle{
-    color: var(--author-name);
+    color: var(--author-name-color);
     font-weight: var(--weight-regular);
-    font-size: 1.5em;
+    font-size: var(--page-subtitle-size);
 }
 
 .about-me__img-profile-container,
@@ -65,7 +66,6 @@
 
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
     .about-me__section {
         max-width: 480px;
@@ -73,7 +73,6 @@
     }
 }
 
-/* Large Desktop */
 @media (min-width: 1200px) {
     .about-me__section {
         max-width: 570px;

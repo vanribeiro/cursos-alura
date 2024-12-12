@@ -6,6 +6,6 @@
 .footer__link,
 .footer__copyright {
     font-weight: var(--weight-light);
-    font-size: 14px;
+    font-size: var(--font-14px);
 }
 

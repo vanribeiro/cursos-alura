@@ -1,21 +1,42 @@
 :root {
-    
-    --bg-dark: #33261b;
-    --title: #eca769;
-    --subtitle: #FDE9D7;
-    --text: #FDE9D7;
-    --author-name: #FDF5EE;
+
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-large-desktop: 1200px;
 
     --primary-font: 'Lato', sans-serif;
+    --primary-line-height: 1.2;
+    --primary-letter-spacing: 1px;
+
     --secondary-font: 'Roboto', sans-serif;
+    --secondary-line-height: 1.5;
+
     --weight-light: 300;
     --weight-regular: 400;
     --weight-medium: 500;
     --weight-bold: 700;
     --weight-black: 900;
 
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
-    --breakpoint-large-desktop: 1200px;
+    --font-14px: 0.875em;
+    --font-16px: 1em;
+    --font-20px: 1.25em;
+    --font-24px: 1.5em;
+    --font-28px: 1.75em;
+    --font-32px: 2em;
+    --font-36px: 2.25em;
+    --font-40px: 2.5em;
+
+    --page-title-size: var(--font-40px);
+    --page-subtitle-size: var(--font-24px);
+    --author-post-size: var(--font-14px);
+
+    --bg-dark: #33261b;
+    --page-title-color: #eca769;
+    --page-subtitle-color: #FDE9D7;
+    --text-color: #FDE9D7;
+    --author-post-color: #FDF5EE;
+
+    --section-padding: 0px 24px;
     
+    --pagination-border-color:rgba(195, 154, 118, 0.79);
 }
