@@ -1,8 +1,4 @@
 .blog__section{
-    --tag-color: var(--bg-dark);
-    --tag-bg: rgba(195, 154, 118, 0.79);
-    --tag-size: 0.875rem;
-
     padding: var(--section-padding);
 }
 

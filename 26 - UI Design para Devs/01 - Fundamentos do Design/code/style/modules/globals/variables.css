@@ -37,6 +37,12 @@
     --author-post-color: #FDF5EE;
 
     --section-padding: 0px 24px;
-    
-    --pagination-border-color:rgba(195, 154, 118, 0.79);
+
+    --pagination-button-border-color:rgba(195, 154, 118, 0.79);
+    --pagination-button-color: var(--bg-dark);
+    --pagination-button-bg: rgba(195, 154, 118, 0.9);
+
+    --tag-color: var(--bg-dark);
+    --tag-bg: rgba(195, 154, 118, 0.79);
+    --tag-size: 0.875rem;
 }
