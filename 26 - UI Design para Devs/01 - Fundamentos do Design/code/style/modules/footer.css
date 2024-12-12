@@ -1,0 +1,11 @@
+.footer {
+    text-align: center;
+    height: 70px;
+}
+
+.footer__link,
+.footer__copyright {
+    font-weight: var(--weight-light);
+    font-size: 14px;
+}
+

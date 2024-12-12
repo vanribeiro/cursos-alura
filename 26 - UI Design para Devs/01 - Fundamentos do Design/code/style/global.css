@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: var(--text);
+    background-color: var(--bg-dark);
+}
+
+body, a {
+    font-family: var(--secondary-font);
+    font-weight: var(--weight-regular);
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);
+    margin: 0;
+}
