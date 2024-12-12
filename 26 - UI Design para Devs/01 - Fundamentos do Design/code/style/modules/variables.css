@@ -1,4 +1,5 @@
 :root {
+    
     --bg-dark: #33261b;
     --title: #eca769;
     --subtitle: #FDE9D7;
@@ -12,4 +13,9 @@
     --weight-medium: 500;
     --weight-bold: 700;
     --weight-black: 900;
+
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-large-desktop: 1200px;
+    
 }
