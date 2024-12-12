@@ -1,0 +1,21 @@
+:root {
+    
+    --bg-dark: #33261b;
+    --title: #eca769;
+    --subtitle: #FDE9D7;
+    --text: #FDE9D7;
+    --author-name: #FDF5EE;
+
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+    --weight-black: 900;
+
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-large-desktop: 1200px;
+    
+}
