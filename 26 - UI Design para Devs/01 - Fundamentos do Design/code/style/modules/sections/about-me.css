@@ -21,7 +21,6 @@
 
 .about-me__description{
     font-weight: var(--weight-light);
-    color: var(--text);
     line-height: var(--secondary-line-height);
 }
 

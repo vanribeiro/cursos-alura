@@ -30,7 +30,7 @@
     --page-subtitle-size: var(--font-24px);
     --author-post-size: var(--font-14px);
 
-    --bg-dark: #33261b;
+    --bg-dark: #18120d;
     --page-title-color: #eca769;
     --page-subtitle-color: #FDE9D7;
     --text-color: #FDE9D7;
@@ -41,6 +41,9 @@
     --pagination-button-border-color:rgba(195, 154, 118, 0.79);
     --pagination-button-color: var(--bg-dark);
     --pagination-button-bg: rgba(195, 154, 118, 0.9);
+
+    --load-more-button-color: var(--bg-dark);
+    --load-more-button-bg: rgb(195, 154, 118);;
 
     --tag-color: var(--bg-dark);
     --tag-bg: rgba(195, 154, 118, 0.79);
