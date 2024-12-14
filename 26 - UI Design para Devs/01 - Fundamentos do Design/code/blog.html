@@ -29,11 +29,11 @@
             </div>
             <nav class="header__menu">
                 <ul class="header__menu__list">
-                    <li class="header__menu-item"><a class="header__menu-link" href="./index.html">Home</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="news.html">News</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="blog.html">Blog</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="projetos.html">Projetos</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="contato.html">Contato</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="./index.html">Home</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="news.html">News</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="blog.html">Blog</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="projetos.html">Projetos</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,57 +41,50 @@
     <main>
         <div class="container">
             <section class="blog__section">
-                <div class="blog__header">
+                <header class="page-title__container">
                     <h1 class="page-title">Blog</h1>
                     <h2 class="page-subtitle">
                         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
                     </h2>
-                </div>
+                    <hr class="content-divisor content-divisor--header">
+                </header>
                 <ul class="blog__article-list">
-                    <li class="blog__article-list-item">
+                    <li class="blog__article-list-item list-style--none">
                         <article class="blog__article">
                             <ul class="blog__category-list">
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 01
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="blog__category-list-item">
-                                    <a class="blog__link" href="#">
-                                        <span class="blog__category-tag">
-                                            category 02
+                                            javascript
                                         </span>
                                     </a>
                                 </li>
                             </ul>
                             <a class="blog__link blog__link--post-snippet" href="#">
                                 <h3 class="blog__post-title">
-                                    Lorem ipsum dolor sit amet
+                                    Formatando números e moedas com toLocaleString()
                                 </h3>
                                 <p class="blog__snippet">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
+                                    O método Number.prototype.toLocaleString() permite formatar um número de acordo com a nacionalidade desejada.
                                 </p>
                             </a>
-                            <p class="blog__author-post">01/01/2024 - <a class="blog__link" href="#">Van Ribeiro</a></p>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
                         </article>
-                        <hr class="blog__article-divisor">
                     </li>
-                    <li class="blog__article-list-item">
+                    <li class="blog__article-list-item list-style--none">
                         <article class="blog__article">
                             <ul class="blog__category-list">
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 01
+                                            banco de dados
                                         </span>
                                     </a>
                                 </li>
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 02
+                                            back-end
                                         </span>
                                     </a>
                                 </li>
@@ -104,24 +97,23 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
                                 </p>
                             </a>
-                            <p class="blog__author-post">01/01/2024 - <a class="blog__link" href="#">Van Ribeiro</a></p>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
                         </article>
-                        <hr class="blog__article-divisor">
                     </li>
-                    <li class="blog__article-list-item">
+                    <li class="blog__article-list-item list-style--none">
                         <article class="blog__article">
                             <ul class="blog__category-list">
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 01
+                                            html
                                         </span>
                                     </a>
                                 </li>
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 02
+                                            css
                                         </span>
                                     </a>
                                 </li>
@@ -134,24 +126,16 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
                                 </p>
                             </a>
-                            <p class="blog__author-post">01/01/2024 - <a class="blog__link" href="#">Van Ribeiro</a></p>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
                         </article>
-                        <hr class="blog__article-divisor">
                     </li>
-                    <li class="blog__article-list-item">
+                    <li class="blog__article-list-item list-style--none">
                         <article class="blog__article">
                             <ul class="blog__category-list">
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 01
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="blog__category-list-item">
-                                    <a class="blog__link" href="#">
-                                        <span class="blog__category-tag">
-                                            category 02
+                                            inteligência artificial
                                         </span>
                                     </a>
                                 </li>
@@ -164,24 +148,23 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
                                 </p>
                             </a>
-                            <p class="blog__author-post">01/01/2024 - <a class="blog__link" href="#">Van Ribeiro</a></p>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
                         </article>
-                        <hr class="blog__article-divisor">
                     </li>
-                    <li class="blog__article-list-item">
+                    <li class="blog__article-list-item list-style--none">
                         <article class="blog__article">
                             <ul class="blog__category-list">
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 01
+                                            carreira
                                         </span>
                                     </a>
                                 </li>
-                                <li class="blog__category-list-item">
+                                <li class="blog__category-list-item list-style--none">
                                     <a class="blog__link" href="#">
                                         <span class="blog__category-tag">
-                                            category 02
+                                            mercado de trabalho
                                         </span>
                                     </a>
                                 </li>
@@ -194,9 +177,8 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
                                 </p>
                             </a>
-                            <p class="blog__author-post">01/01/2024 - <a class="blog__link" href="#">Van Ribeiro</a></p>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
                         </article>
-                        <hr class="blog__article-divisor">
                     </li>
                 </ul>
             </section>

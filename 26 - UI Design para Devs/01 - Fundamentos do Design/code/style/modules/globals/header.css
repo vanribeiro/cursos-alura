@@ -46,8 +46,10 @@
     gap: 32px;
 }
 
-.header__menu-item {
-    font-family: var(--weight-light);
+.header__menu-item > a {
+    font-family: var(--primary-font);
+    font-weight: var(--weight-light);
+    letter-spacing: var(--primary-letter-spacing);
 }
 
 @media (min-width: 768px) {

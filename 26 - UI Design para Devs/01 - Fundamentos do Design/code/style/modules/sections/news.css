@@ -1,0 +1,109 @@
+.news__link:hover{
+    text-decoration: none;
+}
+
+.news__certifications-badge{
+    height: 88px;
+}
+
+.news__certifications-badges__list{
+    display: inline-flex;
+    gap: 32px;
+}
+
+.news__subsection {
+    width: 99%;
+    margin-bottom: 48px;
+}
+
+.news__subsections{
+    display: grid;
+}
+
+.news__last-posts__title{
+    font-weight: var(--weight-bold);
+    color: var(--blog-title-post-color);
+    letter-spacing: var(--secondary-letter-spacing);
+}
+
+.news__last-posts__author{
+    margin-top: 4px;
+}
+
+.news__last-posts__author > .news__published-date {
+    font-size: var(--font-12px);
+}
+
+.news__last-posts__author > span {
+    font-family: var(--primary-font);
+    font-size: var(--font-14px);
+    font-weight: var(--weight-light);
+    letter-spacing: var(--secondary-letter-spacing);
+    color: var(--blog-author-color);
+}
+
+.news__last-posts__list-item{
+    padding: 24px 0px;
+}
+
+.news__last-posts__snippet{
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.content-divisor--news{
+    border: solid var(--content-divisor) 0.5px;
+    opacity: 0.7;
+}
+
+.news__subsection__header .bi{
+    margin-right: 16px;
+}
+
+.news__subsection__title{
+    color: var(--news-subsection-title-color);
+}
+
+@media (min-width: 1024px) {
+    .news__subsection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news__subsections{
+        grid-template-columns: 30% auto;
+        grid-template-rows: repeat(3, 300px);
+        column-gap: 64px;
+        row-gap: 48px;
+    }
+
+    .news__last-posts{
+        grid-column-start: 1;
+        grid-column-end: 2; 
+    }
+
+    .news__github,
+    .news__courses,
+    .news__certifications-badges{
+        grid-column-start: 2;
+        grid-column-end: 3; 
+    }
+
+    .news__github {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .news__courses {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .news__subsections{
+        grid-template-columns: 23% auto;
+    }
+}

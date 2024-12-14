@@ -8,8 +8,11 @@
     --primary-line-height: 1.2;
     --primary-letter-spacing: 1px;
 
+    --page-title-letter-spacing: 1.5px;
+    
     --secondary-font: 'Roboto', sans-serif;
     --secondary-line-height: 1.5;
+    --secondary-letter-spacing: 0.8px;
 
     --weight-light: 300;
     --weight-regular: 400;
@@ -17,6 +20,7 @@
     --weight-bold: 700;
     --weight-black: 900;
 
+    --font-12px: 0.75em;
     --font-14px: 0.875em;
     --font-16px: 1em;
     --font-20px: 1.25em;
@@ -45,7 +49,16 @@
     --load-more-button-color: var(--bg-dark);
     --load-more-button-bg: rgb(195, 154, 118);;
 
-    --tag-color: var(--bg-dark);
-    --tag-bg: rgba(195, 154, 118, 0.79);
+    --tag-color: rgba(195, 154, 118, 0.79);
+    --tag-border-color: var(--tag-color);
     --tag-size: 0.875rem;
+
+    --content-divisor: rgba(195, 154, 118, 0.79);
+    --content-divisor--header: #eca769;
+
+    --news-subsection-title-color: #eca769;
+    --news-last-posts-title: rgba(195, 154, 118, 0.9);
+    
+    --blog-title-post-color: #e5c09e;
+    --blog-author-color: rgba(195, 154, 118, 0.79);
 }

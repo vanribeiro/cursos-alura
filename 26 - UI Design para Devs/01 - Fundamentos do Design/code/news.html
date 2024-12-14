@@ -14,11 +14,12 @@
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Roboto:wght@300;400;500&display=swap" 
         rel="stylesheet"
     >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/modules/sections/news.css">
     <title>News</title>
 </head>
 <body>
-    <div class="background"></div>
     <header class="header">
         <div class="container header__container">
             <div class="header__logo">
@@ -28,16 +29,134 @@
             </div>
             <nav class="header__menu">
                 <ul class="header__menu__list">
-                    <li class="header__menu-item"><a class="header__menu-link" href="./index.html">Home</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="news.html">News</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="blog.html">Blog</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="projetos.html">Projetos</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="contato.html">Contato</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="./index.html">Home</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="news.html">News</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="blog.html">Blog</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="projetos.html">Projetos</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    <main>
+        <section class="news__section padding-section--mobile">
+            <div class="container">
+                <header class="page-title__container">
+                    <h1 class="page-title">News</h1>
+                    <hr class="content-divisor content-divisor--header">
+                    <h2 class="page-subtitle">
+                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                    </h2>
+                </header>
+                <div class="news__subsections">
+                    <section class="news__subsection news__last-posts">
+                        <header class="news__subsection__header">
+                            <h3 class="news__subsection__title">
+                                <i class="bi bi-book"></i> Últimos posts
+                            </h3>
+                            <hr class="content-divisor content-divisor--news">
+                        </header>
+                        <ul class="news__last-posts__list">
+                            <li class="news__last-posts__list-item list-style--none">
+                                <a class="news__link" href="./blog.html">
+                                    <h5 class="news__last-posts__title">
+                                        Formatando números e moedas com toLocaleString() 
+                                    </h5>
+                                    <p class="news__last-posts__snippet">
+                                        O método Number.prototype.toLocaleString() permite formatar um número de acordo com a nacionalidade desejada.                                    </p>
+                                    <p class="news__last-posts__author">
+                                        <span class="news__published-date">12/12/2024 - </span>
+                                        <span class="news__author-name" href="#">Van Ribeiro</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="news__last-posts__list-item list-style--none">
+                                <a class="news__link" href="./blog.html">
+                                    <h5 class="news__last-posts__title">
+                                        Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor
+                                    </h5>
+                                    <p class="news__last-posts__snippet">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. 
+                                    </p>
+                                    <p class="news__last-posts__author">
+                                        <span class="news__published-date">08/10/2024 - </span>
+                                        <span class="news__author-name" href="#">Van Ribeiro</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="news__last-posts__list-item list-style--none">
+                                <a class="news__link" href="./blog.html">
+                                    <h5 class="news__last-posts__title">
+                                        Sed quis nunc augue
+                                    </h5>
+                                    <p class="news__last-posts__snippet">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. 
+                                    </p>
+                                    <p class="news__last-posts__author">
+                                        <span class="news__published-date">21/07/2024 - </span>
+                                        <span class="news__author-name" href="#">Van Ribeiro</span>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="news__subsection news__github">
+                        <header class="news__subsection__header">
+                            <h3 class="news__subsection__title">
+                                <i class="bi bi-github"></i>
+                                Github
+                            </h3>
+                            <hr class="content-divisor content-divisor--news">
+                        </header>
+                    </section>
+                    <section class="news__subsection news__courses">
+                        <header class="news__subsection__header">
+                            <h3 class="news__subsection__title">
+                                <i class="bi bi-journal-bookmark"></i>
+                                Cursos em andamento
+                            </h3>
+                            <hr class="content-divisor content-divisor--news">
+                        </header>
+                    </section>
+                    <section class="news__subsection news__certifications-badges">
+                        <header class="news__subsection__header">
+                            <h3 class="news__subsection__title">
+                                <i class="bi bi-flag"></i>
+                                Certificações
+                            </h3>
+                            <hr class="content-divisor content-divisor--news">
+                        </header>
+                        <ul class="news__certifications-badges__list">
+                            <li class="news__certifications-badges__list-item list-style--none">
+                                <a 
+                                    title="Badge - Microsoft Certified: Azure Fundamentals" 
+                                    href="https://www.credly.com/badges/2e4075ec-eeea-431c-9f49-f63a1574badc/public_url">
+                                    <figure class="news__certifications--az-900">
+                                        <img
+                                            class="news__certifications-badge" 
+                                            src="./assets/badges/microsoft-certified-azure-fundamentals.png" 
+                                            alt="microsoft certified azure fundamentals certification badge">
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="news__certifications-badges__list-item list-style--none">
+                                <a 
+                                    title="Badge - LFC131: Green Software for Practitioners"
+                                    href="https://www.credly.com/badges/7f61e654-e0a8-4990-89e1-1fce9f016228/public_url">
+                                    <figure class="news__certifications--lfc131">
+                                        <img
+                                            class="news__certifications-badge" 
+                                            src="./assets/badges/lfc131-green-software-for-practitioners.png" 
+                                            alt="lfc131 green software for practitioners certification badge">
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="container">
             <p class="footer__copyright">Van Ribeiro - <a class="footer__link" href="mailto:vanribeiro.dev@gmail.com">vanribeiro.dev@gmail.com</a></p>

@@ -13,7 +13,7 @@ body{
 }
 
 a {
-    color: var(--text);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -21,13 +21,8 @@ a:hover{
     text-decoration: underline;
 }
 
-nav ul{
-    padding: 0;
-    margin: 0;
-}
-
+nav ul,
 nav ul li{
-    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -46,14 +41,17 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: var(--font-40px);
+    letter-spacing: var(--page-title-letter-spacing);
 }
 
 h2 {
+    letter-spacing: var(--primary-letter-spacing);
     font-size: var(--font-32px);
 }
 
 h3 {
     font-size: var(--font-28px);
+    letter-spacing: var(--primary-letter-spacing);
 }
 
 h4 {
@@ -64,8 +62,17 @@ h5 {
     font-size: var(--font-20px);
 }
 
-h5 {
+h6 {
     font-size: var(--font-16px);
+}
+
+.list-style--none{
+   list-style: none; 
+}
+
+.page-title__container{
+    margin-top: 36px;
+    margin-bottom: 72px;
 }
 
 .page-title{
@@ -76,4 +83,37 @@ h5 {
     color: var(--page-subtitle-color);
     font-size: var(--page-subtitle-size);
     font-weight: var(--weight-light);
+    letter-spacing: var(--primary-letter-spacing);
+}
+
+.content-divisor{
+    margin: 16px auto;
+    background: transparent;
+}
+
+.content-divisor--header {
+    border: none;
+    background: var(--content-divisor--header);
+    height: 1px;
+}
+
+.dot-separator{
+    padding: 0px 8px;
+    font-size: 1.2em;
+    line-height: 0;
+}
+
+.padding-section--mobile{
+    padding: 0 24px;
+}
+
+.img-responsive{
+    max-width: 100%;
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .padding-section--mobile{
+        padding: 0;
+    }
 }
