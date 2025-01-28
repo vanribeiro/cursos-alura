@@ -15,28 +15,268 @@
         rel="stylesheet"
     >
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/modules/sections/blog.css">
+    <link rel="stylesheet" href="./style/modules/globals/pagination.css">
     <title>Blog</title>
 </head>
 <body>
-    <div class="background">
-        <div class="background-left"></div>
-        <div class="background-right"></div>
-    </div>
-    <header>
-        <div class="logo">
-            <a href="/home">
-                <img src="./assets/logo/square.png" alt="Van Ribeiro Logo" />
-            </a>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a class="header__logo-link" href="/">
+                    <img class="header__logo-img" src="./assets/logo/square.png" alt="Van Ribeiro Logo" />
+                </a>
+            </div>
+            <nav class="header__menu">
+                <ul class="header__menu__list">
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="./index.html">Home</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="news.html">News</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="blog.html">Blog</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="projetos.html">Projetos</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="/home">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="/news">News</a></li>
-                <li class="menu__item"><a class="menu__link" href="/blog">Blog</a></li>
-                <li class="menu__item"><a class="menu__link" href="/projectos">Projetos</a></li>
-                <li class="menu__item"><a class="menu__link" href="/contato">Contato</a></li>
-            </ul>
-        </nav>
     </header>
+    <main>
+        <div class="container">
+            <section class="blog__section">
+                <header class="page-title__container">
+                    <h1 class="page-title">Blog</h1>
+                    <h2 class="page-subtitle">
+                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                    </h2>
+                    <hr class="content-divisor content-divisor--header">
+                </header>
+                <ul class="blog__article-list">
+                    <li class="blog__article-list-item list-style--none">
+                        <article class="blog__article">
+                            <ul class="blog__category-list">
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            javascript
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="blog__link blog__link--post-snippet" href="#">
+                                <h3 class="blog__post-title">
+                                    Formatando números e moedas com toLocaleString()
+                                </h3>
+                                <p class="blog__snippet">
+                                    O método Number.prototype.toLocaleString() permite formatar um número de acordo com a nacionalidade desejada.
+                                </p>
+                            </a>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
+                        </article>
+                    </li>
+                    <li class="blog__article-list-item list-style--none">
+                        <article class="blog__article">
+                            <ul class="blog__category-list">
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            banco de dados
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            back-end
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="blog__link blog__link--post-snippet" href="#">
+                                <h3 class="blog__post-title">
+                                    Lorem ipsum dolor sit amet
+                                </h3>
+                                <p class="blog__snippet">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
+                                </p>
+                            </a>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
+                        </article>
+                    </li>
+                    <li class="blog__article-list-item list-style--none">
+                        <article class="blog__article">
+                            <ul class="blog__category-list">
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            html
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            css
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="blog__link blog__link--post-snippet" href="#">
+                                <h3 class="blog__post-title">
+                                    Lorem ipsum dolor sit amet
+                                </h3>
+                                <p class="blog__snippet">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
+                                </p>
+                            </a>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
+                        </article>
+                    </li>
+                    <li class="blog__article-list-item list-style--none">
+                        <article class="blog__article">
+                            <ul class="blog__category-list">
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            inteligência artificial
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="blog__link blog__link--post-snippet" href="#">
+                                <h3 class="blog__post-title">
+                                    Lorem ipsum dolor sit amet
+                                </h3>
+                                <p class="blog__snippet">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
+                                </p>
+                            </a>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
+                        </article>
+                    </li>
+                    <li class="blog__article-list-item list-style--none">
+                        <article class="blog__article">
+                            <ul class="blog__category-list">
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            carreira
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="blog__category-list-item list-style--none">
+                                    <a class="blog__link" href="#">
+                                        <span class="blog__category-tag">
+                                            mercado de trabalho
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="blog__link blog__link--post-snippet" href="#">
+                                <h3 class="blog__post-title">
+                                    Lorem ipsum dolor sit amet
+                                </h3>
+                                <p class="blog__snippet">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas arcu vel ex consectetur, laoreet interdum turpis porttitor. Pellentesque posuere magna dolor, non feugiat erat semper non. Sed quis nunc augue. 
+                                </p>
+                            </a>
+                            <p class="blog__author-post">01/01/2024 <span class="dot-separator">&#8901;</span> <a class="blog__link" href="#">Van Ribeiro</a></p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <div class="pagination">
+                <div class="pagination__container">
+                    <ol class="pagination__list">
+                        <li class="pagination__list-item pagination__list-item--previous">
+                            <button 
+                                type="button" 
+                                href="#" 
+                                class="pagination__button pagination__button--previous"
+                                data-current-page-status="first"
+                                disabled
+                            >
+                            &#10092;
+                        </button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button
+                                type="button"
+                                href="#"
+                                class="pagination__button" 
+                                data-page-number="1"
+                            >1
+                            </button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button
+                                type="button"
+                                href="#"
+                                class="pagination__button pagination__button--current-page"
+                                data-page-number="2"
+                            >2
+                            </button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button
+                                type="button"
+                                href="#"
+                                class="pagination__button"
+                                data-page-number="3"
+                            >3
+                            </button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button
+                                type="button"
+                                href="#"
+                                class="pagination__button pagination__button--dots"
+                                data-page-number="4"
+                            >...
+                            </button>
+                        </li>
+                        <li class="pagination__list-item">
+                            <button
+                                type="button"
+                                href="#"
+                                class="pagination__button pagination__list-item--last"
+                                data-page-number="10"
+                                data-current-page-status="first"
+                            >10
+                            </button>
+                        </li>
+                        <li class="pagination__list-item pagination__list-item--next">
+                            <button
+                                type="button"
+                                href="#"
+                                class="pagination__button pagination__button--next"
+                                data-current-page-status="first"
+                                >
+                                &#10093;
+                            </button>
+                        </li>
+                        <li class="pagination__list-item pagination__list-item--last">
+                            <button 
+                                type="button" 
+                                href="#" 
+                                class="pagination__button pagination__button--last"
+                                data-current-page-status="first"
+                            >
+                            última
+                        </button>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="load-more">
+                <div class="load-more__container">
+                    <button class="load-more__button" type="button">ver mais</button>
+                    <p class="load-more__counter"><span>05</span> de <span>50 posts</span> </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">Van Ribeiro - <a class="footer__link" href="mailto:vanribeiro.dev@gmail.com">vanribeiro.dev@gmail.com</a></p>
+        </div>
+    </footer>
 </body>
 </html>

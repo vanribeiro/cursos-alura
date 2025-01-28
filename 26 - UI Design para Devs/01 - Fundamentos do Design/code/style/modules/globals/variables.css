@@ -1,0 +1,64 @@
+:root {
+
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-large-desktop: 1200px;
+
+    --primary-font: 'Lato', sans-serif;
+    --primary-line-height: 1.2;
+    --primary-letter-spacing: 1px;
+
+    --page-title-letter-spacing: 1.5px;
+    
+    --secondary-font: 'Roboto', sans-serif;
+    --secondary-line-height: 1.5;
+    --secondary-letter-spacing: 0.8px;
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+    --weight-black: 900;
+
+    --font-12px: 0.75em;
+    --font-14px: 0.875em;
+    --font-16px: 1em;
+    --font-20px: 1.25em;
+    --font-24px: 1.5em;
+    --font-28px: 1.75em;
+    --font-32px: 2em;
+    --font-36px: 2.25em;
+    --font-40px: 2.5em;
+
+    --page-title-size: var(--font-40px);
+    --page-subtitle-size: var(--font-24px);
+    --author-post-size: var(--font-14px);
+
+    --bg-dark: #18120d;
+    --page-title-color: #eca769;
+    --page-subtitle-color: #FDE9D7;
+    --text-color: #FDE9D7;
+    --author-post-color: #FDF5EE;
+
+    --section-padding: 0px 24px;
+
+    --pagination-button-border-color:rgba(195, 154, 118, 0.79);
+    --pagination-button-color: var(--bg-dark);
+    --pagination-button-bg: rgba(195, 154, 118, 0.9);
+
+    --load-more-button-color: var(--bg-dark);
+    --load-more-button-bg: rgb(195, 154, 118);;
+
+    --tag-color: rgba(195, 154, 118, 0.79);
+    --tag-border-color: var(--tag-color);
+    --tag-size: 0.875rem;
+
+    --content-divisor: rgba(195, 154, 118, 0.79);
+    --content-divisor--header: #eca769;
+
+    --news-subsection-title-color: #eca769;
+    --news-last-posts-title: rgba(195, 154, 118, 0.9);
+    
+    --blog-title-post-color: #e5c09e;
+    --blog-author-color: rgba(195, 154, 118, 0.79);
+}

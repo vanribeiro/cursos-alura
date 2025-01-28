@@ -15,10 +15,11 @@
         rel="stylesheet"
     >
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/modules/about-me.css">
+    <link rel="stylesheet" href="./style/modules/sections/about-me.css">
     <title>Van Ribeiro</title>
 </head>
 <body>
+    <div class="background"></div>
     <header class="header">
         <div class="container header__container">
             <div class="header__logo">
@@ -28,18 +29,18 @@
             </div>
             <nav class="header__menu">
                 <ul class="header__menu__list">
-                    <li class="header__menu-item"><a class="header__menu-link" href="/home">Home</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="/news">News</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="/blog">Blog</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="/projetos">Projetos</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="/contato">Contato</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="./index.html">Home</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="news.html">News</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="blog.html">Blog</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="projetos.html">Projetos</a></li>
+                    <li class="header__menu-item list-style--none"><a class="header__menu-link" href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <section class="about-me__section">
+            <section class="about-me__section padding-section--mobile">
                 <figure class="about-me__img-profile-container">
                     <img 
                         class="about-me__img-profile" 
@@ -48,8 +49,10 @@
                     >
                 </figure>
                 <article class="about-me__article">
-                    <h2 class="about-me__subtitle">Van Ribeiro</h2>
-                    <h1 class="about-me__title">Front-end Developer</h1>
+                    <header>
+                        <h2 class="about-me__subtitle">Van Ribeiro</h2>
+                        <h1 class="about-me__title">Front-end Developer</h1>
+                    </header>
                     <p class="about-me__description">
                         Alguém que curte tecnologias web e busca melhorar suas habilidades de programação e solução de problemas, resolvendo desafios e criando pequenos projetos.
                     </p>
