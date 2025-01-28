@@ -46,7 +46,7 @@
 }
 
 .modal-header .btn-close {
-    background: url("assets/close.svg");
+    background: url("../assets/close.svg");
     margin: auto 0;
     padding: 0;
     display: block;
@@ -110,6 +110,23 @@ form {
 .modal-title {
     font-size: 20px !important;
     font-family: "Inter", sans-serif;
+}
+
+.bag-icon{
+    font-size: 24px;
+    color: #ffffff;
+}
+
+a.bag-link .translate-middle{
+    transform: translate(-50%, -25%) !important;
+}
+
+a.bag-link .bag-items-counter-container{
+    background-color: #9353ff;
+}
+
+a.bag-link .bag-items-counter{
+    color: #ffffff;
 }
 
 @media(min-width: 768px) {

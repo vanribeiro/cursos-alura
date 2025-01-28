@@ -1,7 +1,8 @@
 
-import { carregarItensDaSacola } from "./js/carregarItensDaSacola.js";
-import { imprimirCamisetas } from "./js/imprimirCamisetas.js";
-import { imprimirUmDeCadaCategoria } from "./js/imprimirUmDeCadaCategoria.js";
+import { carregarItensDaSacola } from "./carregarItensDaSacola.js";
+import { imprimirCamisetas } from "./imprimirCamisetas.js";
+import { imprimirUmDeCadaCategoria } from "./imprimirUmDeCadaCategoria.js";
+import { getItemsFromLocalStorage } from "./localstorage.js";
 
 
 // Chama a função para carregar os itens da sacola ao carregar a página
@@ -36,6 +37,21 @@ fetch("./json/produtos.json")
   .then((produtosJSON) => {
     if (isPaginaCamisetas()) {
       separarCamisetas(produtosJSON);
-    } else imprimirUmDeCadaCategoria(produtosJSON);
+    } 
+    
+    imprimirUmDeCadaCategoria(produtosJSON);
   })
   .catch((error) => console.error("Erro ao carregar o arquivo JSON:", error));
+
+const bagLink = document.querySelector('.bag-link');
+const bagBadgeCounter = document.querySelector('.bag-items-counter');
+
+if(bagLink) {
+  const items = getItemsFromLocalStorage('sacola');
+  const itemsQuantity = items.length || 0;
+
+  if(bagBadgeCounter) {
+    bagBadgeCounter.innerText = itemsQuantity;
+  }
+  // console.log()
+}
