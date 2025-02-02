@@ -1,4 +1,5 @@
 import { adicionarProdutoAoLocalStorage } from "./adicionarProdutoAoLocalStorage.js";
+import { getItemsFromLocalStorage, setItemsInLocalStorage } from "./localStorage.utils.js";
 
 function adicionarProduto(camiseta) {
   adicionarProdutoAoLocalStorage({
@@ -7,6 +8,12 @@ function adicionarProduto(camiseta) {
     descricao: camiseta.descricao,
     imagens: camiseta.imagens
   });
+}
+
+function addFavoriteIcon(button, isFavorite) {
+  !isFavorite
+    ? button.innerHTML = "<i class='bi bi-heart'></i>"
+    : button.innerHTML = "<i class='bi bi-heart-fill'></i>";
 }
 
 export function imprimirUmDeCadaCategoria(produtos) {
@@ -36,6 +43,9 @@ export function imprimirUmDeCadaCategoria(produtos) {
             <p class="card-text">${produto.descricao}</p>
             <p class="fw-bold">${produto.preco}</p>
             <button type="button" class="btn btn-primary botao-lilas rounded-0 border-0" data-bs-toggle="modal" data-bs-target="#modal${categoria}">Ver mais</button>
+              <button type="button" class="favorite-button" id="favorite-btn-${produto.nome.replace(/\s+/g, "-")}">
+                <i class="bi bi-heart"></i>
+              </button>
           </div>
         `;
   
@@ -112,6 +122,9 @@ export function imprimirUmDeCadaCategoria(produtos) {
             </div>
       <div class="modal-footer">
               <button type="button" class="btn botao-lilas" id="adicionar-btn-${produto.nome.replace(/\s+/g, "-")}">Adicionar à sacola</button>
+              <button type="button" class="favorite-button" id="favorite-btn-${produto.nome.replace(/\s+/g, "-")}">
+                <i class="bi bi-heart"></i>
+              </button>
             </div>
           </div>
         `;
@@ -128,6 +141,24 @@ export function imprimirUmDeCadaCategoria(produtos) {
   
         const botao = document.querySelector(`#adicionar-btn-${produto.nome.replace(/\s+/g, "-")}`);
         botao.addEventListener("click", () => adicionarProduto(produto));
+
+        const favoriteButton = document.querySelector(`#favorite-btn-${produto.nome.replace(/\s+/g, "-")}`);
+        favoriteButton.addEventListener("click", function () {
+          const favorites = getItemsFromLocalStorage('favoritos');
+          const index = favorites.indexOf(produto.nome);
+
+          if(index !== -1) {
+            favorites.splice(index, 1);
+          } else {
+            favorites.push(produto.nome);
+          }
+
+          setItemsInLocalStorage('favoritos', favorites);
+          
+          addFavoriteIcon(this, index === -1);
+          console.log(favorites)
+
+        });
 
 
         if(card) {

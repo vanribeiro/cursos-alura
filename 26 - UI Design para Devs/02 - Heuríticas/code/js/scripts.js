@@ -1,7 +1,7 @@
 import { carregarItensDaSacola } from "./carregarItensDaSacola.js";
 import { imprimirCamisetas } from "./imprimirCamisetas.js";
 import { imprimirUmDeCadaCategoria } from "./imprimirUmDeCadaCategoria.js";
-import { getItemsFromLocalStorage } from "./localstorage.js";
+import { getItemsFromLocalStorage } from "./localStorage.utils.js";
 
 function isPaginaCamisetas() {
   return window.location.pathname.includes("/camisetas.html");
