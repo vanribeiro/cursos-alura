@@ -1,3 +1,6 @@
 {
-    "oracledevtools.query.openResultsWindow": "Below"
+    "oracledevtools.query.openResultsWindow": "Below",
+    "cSpell.words": [
+        "localstorage"
+    ]
 }
