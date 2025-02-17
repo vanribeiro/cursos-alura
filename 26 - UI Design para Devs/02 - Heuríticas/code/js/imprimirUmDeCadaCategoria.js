@@ -16,6 +16,12 @@ function addFavoriteIcon(button, isFavorite) {
     : button.innerHTML = "<i class='bi bi-heart-fill'></i>";
 }
 
+function isProductItemOnTheBag(produto) {
+  const bag = getItemsFromLocalStorage('sacola');
+  const itemsBagName = bag.map(item => item.nome);
+  return itemsBagName.includes(produto.nome);
+}
+
 export function imprimirUmDeCadaCategoria(produtos) {
   const row = document.querySelector("#produtos");
   if(row) {
@@ -64,6 +70,7 @@ export function imprimirUmDeCadaCategoria(produtos) {
               <img class="modal-imagem" src="${produto.imagens.desktop}" alt="${produto.nome
           }">
               <div>
+                <div id="mensagem-carrinho-${produto.nome.replace(/\s+/g, "-")}"></div>
                 <h3>${produto.nome}</h3>
                 <p class="modal-description">${produto.descricao}</p>
   
@@ -156,7 +163,14 @@ export function imprimirUmDeCadaCategoria(produtos) {
           setItemsInLocalStorage('favoritos', favorites);
           
           addFavoriteIcon(this, index === -1);
-          console.log(favorites)
+          
+          const alertWarning = document.querySelector(`#mensagem-carrinho-${produto.nome.replace(/\s+/g, "-")}`);
+
+          console.log(isProductItemOnTheBag(produto))
+          if(isProductItemOnTheBag(produto)){
+            alertWarning.innerHTML = '<div class="alert alert-warning" role="alert">Este produto já está no seu carrinho.</div>';
+          }
+          
 
         });
 
