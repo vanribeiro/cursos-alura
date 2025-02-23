@@ -43,11 +43,10 @@
     background-color: black;
     color: white;
     align-items: center;
-    justify-content: space-between;
 }
 
 .modal-header .btn-close {
-    background: url("../assets/close.svg");
+    background: url("assets/close.svg");
     margin: auto 0;
     padding: 0;
     display: block;
@@ -113,23 +112,6 @@ form {
     font-family: "Inter", sans-serif;
 }
 
-.bag-icon{
-    font-size: 24px;
-    color: #ffffff;
-}
-
-a.bag-link .translate-middle{
-    transform: translate(-50%, -25%) !important;
-}
-
-a.bag-link .bag-items-counter-container{
-    background-color: #9353ff;
-}
-
-a.bag-link .bag-items-counter{
-    color: #ffffff;
-}
-
 @media(min-width: 768px) {
 
     .div-novidades {
@@ -153,53 +135,3 @@ a.bag-link .bag-items-counter{
     }
 
 }
-
-.favorite-button {
-    border: none;
-    background-color: transparent;
-    font-size: 24px;
-}
-
-.favorite-button .bi.bi-heart:hover, 
-.favorite-button .bi.bi-heart-fill {
-    color: red;
-}
-
-.form__search{
-    gap: 8px
-}
-
-.form__input-search-group{
-    position: relative;
-}
-
-#suggestions-search{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100%;
-    right: 10%;
-    z-index: 10000;
-    margin-top: 1px;
-    max-height: 200px;
-    overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid black;
-    border-radius: 0.25rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.suggestion {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-.accordion-button {
-    color: #9353FF;
-}
-
-.accordion-button:not(.collapsed) {
-    color: black;
-    background-color: #9353FF;
-}
-
