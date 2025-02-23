@@ -193,3 +193,13 @@ a.bag-link .bag-items-counter{
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
+.accordion-button {
+    color: #9353FF;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #9353FF;
+}
+

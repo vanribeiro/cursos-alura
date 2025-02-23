@@ -28,7 +28,7 @@ const template = `
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Lojas</a>
+            <a class="nav-link" href="faq.html">F.A.Q.</a>
           </li>
         </ul>
         <form class="d-flex form__search" role="search">
