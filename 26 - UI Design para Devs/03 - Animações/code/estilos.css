@@ -28,6 +28,15 @@
 
 .botao-lilas {
     background-color: #9353FF;
+    transition: background-color 0.3s ease-in;
+    border: 1px solid #9353FF !important;
+}
+
+.botao-lilas:hover {
+    color: #9353FF;
+    border: 1px solid #9353FF !important;
+    background-color: #FFF;
+    transition: background-color 0.3s ease-in;
 }
 
 .btn {
