@@ -2,18 +2,24 @@
 
 Este repositório contém código, anotações de exercícios e a parte prática dos cursos que fiz ou estou fazendo na Alura:
 
-01. [Cursos em andamento](#em-andamento)
-02. [Cursos pausados](#pausado)
-03. [Cursos finalizados](#finalizados)
-04. [Cursos descontinuados](#descontinuados-pela-plataforma)
+- [Meus Cursos da Alura](#meus-cursos-da-alura)
+  - [Em Andamento](#em-andamento)
+  - [Pausado](#pausado)
+  - [Finalizados](#finalizados)
+  - [Descontinuados pela plataforma](#descontinuados-pela-plataforma)
 
-## Em Andamento:
+## Em Andamento
+
+- [UI para Devs - Animações](/26%20-%20UI%20Design%20para%20Devs/03%20-%20Animações/)
+- [Single SPA: orquestrando micro front-ends](/27%20-%20MFEs%20e%20Single%20SPA/01%20-%20Orquestrando%20MFEs/)
+
+## Pausado
+
+- [Impulsione sua aplicação React e consuma APIs](/23%20-%20React%20e%20APIs/)
 - [Melhore sua aplicação React com testes automatizados](/25%20-%20React%20e%20Testes%20Automatizados/)
 
-## Pausado:
-- [Impulsione sua aplicação React e consuma APIs](/23%20-%20React%20e%20APIs/)
+## Finalizados
 
-## Finalizados:
 - [React: configurando e estruturando projetos com Vite](/24%20-%20Aleatórios/01%20-%20React%20com%20Vite/) [*](#footer-note)
 - [SQL com MySQL Server da Oracle](/21%20-%20SQL%20com%20MySQL/)
 - [Formação Desenvolva seu primeiro app com React Native](/19%20-%20React%20Native/)
@@ -33,8 +39,10 @@ Este repositório contém código, anotações de exercícios e a parte prática
 - [Vetores e Animação com SVG CSS e JS](/00%20-%20Vetores%20e%20Anima%C3%A7%C3%A3o%20com%20SVG%20CSS%20JS%20-%20Allura/)[*](#footer-note)
 - [Arquitetura CSS](01%20-%20Arquitetura%20CSS/) [*](#footer-note)
 
-## Descontinuados pela plataforma:
+## Descontinuados pela plataforma
+
 Optei por parar o curso:
+
 - [Criando uma SPA com JS Puro](03%20-%20Criando%20uma%20SPA%20com%20JS%20Puro/)
 - [ASP.Net Core - MVC](16%20-%20ASP.Net%20Core%20-%20MVC/)
 
