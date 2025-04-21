@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "ts-important-stuff", 
-    "plugin:prettier/recommended"
-  ]
-}
