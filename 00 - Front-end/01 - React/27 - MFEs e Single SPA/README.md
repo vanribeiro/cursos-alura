@@ -20,3 +20,7 @@ Dominando a arquitetura de micro-frontends com React e Single SPA - [Link](https
 
 1. [Single-SPA: integrando micro-frontends com Parcels](https://cursos.alura.com.br/course/single-spa-integrando-micro-frontends-parcels)
 2. [Single-SPA: otimizando seu ambiente de desenvolvimento](https://cursos.alura.com.br/course/single-spa-otimizando-ambiente-desenvolvimento)
+
+### Repositório dos cursos
+
+Devido a alguns problemas de versão do Node e outros problemas, optei por colocar os cursos dessa formação [num outro repositório](https://github.com/vanribeiro/mfe-home-hub-alura).
